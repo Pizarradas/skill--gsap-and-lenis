@@ -1,0 +1,10 @@
+import gsap from "gsap"; import { ScrollTrigger } from "gsap/ScrollTrigger"; import Lenis from "lenis"; import Snap from "lenis/snap";
+import { iniciarMovimiento } from "./orquestador.js";
+const mov = iniciarMovimiento({ perfil: "gsap+lenis", gsap, ScrollTrigger, Lenis });
+ScrollTrigger.normalizeScroll(true);
+gsap.to(window, { scrollTo: 300, duration: 1 });
+const tl = gsap.timeline({ scrollTrigger: { scrub: 1, snap: { snapTo: 0.25 } } });
+tl.scrollTrigger.tweenTo(300, { duration: 1 });
+const s = new Snap(mov.lenis, { type: "mandatory" });
+gsap.ticker.lagSmoothing(0);
+ScrollTrigger.scrollerProxy(document.body, {});

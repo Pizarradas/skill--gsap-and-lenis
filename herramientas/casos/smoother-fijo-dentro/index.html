@@ -1,0 +1,10 @@
+<!doctype html><html lang="es"><meta charset="utf8"><title>Campaña</title>
+<style>body{margin:0;font:18px sans-serif} header{position:fixed;top:0;left:0;right:0;height:50px;background:#222;color:#fff;z-index:9} .b{height:900px;position:relative;border-bottom:1px solid #999;overflow:hidden} .pieza{position:absolute;left:100px;top:300px;width:200px;height:200px;background:#c33} .pieza.dos{left:400px;background:#36c}</style>
+<div id="smooth-wrapper"><div id="smooth-content"><main><header>Cabecera</header><div class="b">1</div><div class="b"><div class="pieza uno" data-speed="0.5"></div><div class="pieza dos" data-speed="1.5"></div></div><div class="b">3</div><div class="b">4</div></main></div></div>
+<script type="importmap">{"imports":{"gsap":"../gp/index.js","gsap/ScrollTrigger":"../gp/ScrollTrigger.js","gsap/ScrollSmoother":"../gp/ScrollSmoother.js","lenis":"../l/lenis.mjs"}}</script>
+<script type="module">
+import gsap from "gsap"; import { ScrollTrigger } from "gsap/ScrollTrigger"; import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { iniciarMovimiento } from "./orquestador.js";
+const mov = window.mov = iniciarMovimiento({ perfil: "gsap-smoother", gsap, ScrollTrigger, ScrollSmoother, raiz: "#smooth-wrapper", content: "#smooth-content", opciones: { smoother: { smooth: 0.5, effects: true } } });
+window.gsap=gsap;window.ScrollTrigger=ScrollTrigger; window.listo = true;
+</script></html>

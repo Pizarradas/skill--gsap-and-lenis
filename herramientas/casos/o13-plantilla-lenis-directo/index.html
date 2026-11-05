@@ -1,0 +1,5 @@
+<!doctype html><title>x</title><link rel="stylesheet" href="../../lenis.css"><style>.panel{height:300px;overflow:auto}</style><div class="panel"><div id="pi" style="height:3000px"></div></div>
+<script type="importmap">{"imports":{"gsap":"../../gp/index.js","gsap/ScrollTrigger":"../../gp/ScrollTrigger.js","lenis":"../../l/lenis.mjs"}}</script>
+<script type="module">import gsap from "gsap"; import { ScrollTrigger } from "gsap/ScrollTrigger"; import Lenis from "lenis"; import { iniciarMovimiento } from "./orquestador.js";
+const mov = window.mov = iniciarMovimiento({ perfil: "gsap+lenis", gsap, ScrollTrigger, Lenis, raiz: ".panel", content: "#pi" });
+window.parar = () => mov.lenis.stop(); window.listo = true;</script>

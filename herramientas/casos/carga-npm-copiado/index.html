@@ -1,0 +1,35 @@
+<!doctype html><html lang="es"><meta charset="utf8"><title>Landing</title>
+<link rel="stylesheet" href="lib/lenis.css">
+<style>
+html{scrollbar-gutter:stable} body{margin:0;font:18px sans-serif}
+.hero{height:100vh;display:grid;place-content:center;gap:10px;background:#123;color:#fff}
+.hero>*{margin:0}
+.pinzona{height:100vh;background:#eee;overflow:hidden;display:grid;place-content:center}
+.barra{width:400px;height:40px;background:#c33;transform-origin:left}
+.tramo{height:120vh;background:#def;padding:40px}
+#compra{height:60vh;background:#fde}
+nav{position:fixed;top:10px;right:10px;z-index:5}
+</style>
+<nav><button id="cta">Comprar</button></nav>
+<section class="hero"><h1 class="h">Producto</h1><p class="h">Subtítulo</p><button class="h">Ver</button></section>
+<section class="tramo">Tramo 1</section>
+<section class="pinzona"><div class="barra"></div></section>
+<section class="tramo">Tramo 2</section>
+<section id="compra">Compra</section>
+<script type="importmap">{"imports":{"gsap":"./lib/index.js","gsap/ScrollTrigger":"./lib/ScrollTrigger.js","lenis":"./lib/lenis.mjs"}}</script>
+<script type="module">
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
+import { iniciarMovimiento } from "./orquestador.js";
+const mov = iniciarMovimiento({ perfil: "gsap+lenis", gsap, ScrollTrigger, Lenis });
+window.mov = mov; window.gsap = gsap; window.ScrollTrigger = ScrollTrigger;
+mov.añadir(({ reducido }) => {
+  if (reducido) gsap.set(".h", { opacity: 1, y: 0 });
+  else gsap.timeline({ defaults: { duration: .4 } }).from(".h", { opacity: 0, y: 30, stagger: .1 });
+  gsap.fromTo(".barra", { scaleX: 0 }, { scaleX: 1, ease: "none", id: "barra", scrollTrigger: { id: "pin", trigger: ".pinzona", pin: true, start: "top top", end: "+=1200", scrub: true } });
+});
+mov.actualizar();
+document.querySelector("#cta").addEventListener("click", () => mov.irA("#compra"));
+window.listo = true;
+</script></html>

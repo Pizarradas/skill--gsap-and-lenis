@@ -1,0 +1,4 @@
+<!doctype html><title>x</title><div class="b"></div>
+<script src="gsap.min.js"></script><script src="ScrollTrigger.min.js"></script><script src="lenis.min.js"></script><script src="orquestador.js"></script>
+<script>const mov = Plantillas.iniciarMovimiento({ perfil: "gsap+lenis", gsap, ScrollTrigger, Lenis });
+mov.añadir(() => { gsap.to(".b", { x: 10, scrollTrigger: { scrub: true } }); });</script>

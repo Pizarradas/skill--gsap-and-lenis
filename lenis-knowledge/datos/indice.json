@@ -1,0 +1,2222 @@
+{
+ "version": "1.3.27",
+ "fichas": [
+  {
+   "id": "fun-css",
+   "titulo": "La hoja lenis.css, regla por regla",
+   "capa": "01-fundamentos",
+   "tipo": "referencia",
+   "ambito": "core",
+   "resumen": "Qué hace cada regla de lenis.css, cuál es imprescindible y qué falla sin ella. autoToggle no funciona sin la hoja, y stop() deja de bloquear el teclado.",
+   "api": [
+    "LenisOptions.autoToggle",
+    "Lenis.stop",
+    "Lenis.isStopped",
+    "Lenis.className"
+   ],
+   "requiere": [
+    "fun-instalacion"
+   ],
+   "relacionadas": [
+    "com-stop-start",
+    "com-clases",
+    "com-anidado"
+   ],
+   "etiquetas": [
+    "css",
+    "estilos",
+    "overflow"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-css.md"
+  },
+  {
+   "id": "fun-cuando-usarlo",
+   "titulo": "Cuándo usar Lenis y cuándo no",
+   "capa": "01-fundamentos",
+   "tipo": "concepto",
+   "ambito": "transversal",
+   "resumen": "Criterios para decidir: sincronizar escenas y efectos justifica Lenis; una web de contenido o una tabla de datos rara vez. Costes y alternativas nativas.",
+   "api": [
+    "LenisOptions.syncTouch",
+    "LenisOptions.respectReducedMotion"
+   ],
+   "requiere": [
+    "fun-que-es",
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "cal-accesibilidad",
+    "cal-rendimiento",
+    "cal-limitaciones",
+    "int-canvas-webgl"
+   ],
+   "etiquetas": [
+    "decision",
+    "criterio",
+    "alternativas"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-cuando-usarlo.md"
+  },
+  {
+   "id": "fun-instalacion",
+   "titulo": "Instalar Lenis por las tres vías",
+   "capa": "01-fundamentos",
+   "tipo": "guia",
+   "ambito": "core",
+   "resumen": "Mismo rango de versión por empaquetador, script clásico y módulos con import map. Rutas exactas probadas en Chrome, y trampas de CSS y Snap.",
+   "api": [
+    "Lenis",
+    "Snap",
+    "LenisOptions.autoRaf"
+   ],
+   "requiere": [],
+   "relacionadas": [
+    "fun-css",
+    "fun-licencia",
+    "com-raf",
+    "snp-snap"
+   ],
+   "etiquetas": [
+    "instalacion",
+    "cdn",
+    "importmap",
+    "empaquetador"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-instalacion.md"
+  },
+  {
+   "id": "fun-licencia",
+   "titulo": "Licencia de Lenis",
+   "capa": "01-fundamentos",
+   "tipo": "referencia",
+   "ambito": "transversal",
+   "resumen": "Lenis y sus paquetes se distribuyen con licencia MIT: uso comercial libre, conservando el aviso de copyright en las copias.",
+   "api": [],
+   "requiere": [],
+   "relacionadas": [
+    "fun-que-es",
+    "fun-instalacion"
+   ],
+   "etiquetas": [
+    "licencia",
+    "mit",
+    "legal"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-licencia.md"
+  },
+  {
+   "id": "fun-modelo",
+   "titulo": "Cómo funciona Lenis, del gesto al scroll nativo",
+   "capa": "01-fundamentos",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Flujo completo: evento, VirtualScroll, filtros, targetScroll, Animate en raf, escritura en el scroll nativo y evento scroll. Por qué no usa transform.",
+   "api": [
+    "Lenis.targetScroll",
+    "Lenis.animatedScroll",
+    "Lenis.actualScroll",
+    "Lenis.scroll",
+    "Lenis.raf",
+    "Lenis.isScrolling",
+    "Lenis.on",
+    "VirtualScrollData.deltaY",
+    "VirtualScrollData.deltaX",
+    "VirtualScrollData.event",
+    "FromToOptions.onUpdate"
+   ],
+   "requiere": [
+    "fun-que-es"
+   ],
+   "relacionadas": [
+    "com-raf",
+    "opc-filtros",
+    "opc-suavizado",
+    "com-sticky-fixed",
+    "api-eventos"
+   ],
+   "etiquetas": [
+    "arquitectura",
+    "flujo",
+    "nativo",
+    "transform"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-modelo.md"
+  },
+  {
+   "id": "fun-que-es",
+   "titulo": "Qué es Lenis",
+   "capa": "01-fundamentos",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Biblioteca de scroll suave que anima el scroll nativo del navegador. Nació para sincronizar WebGL y DOM; el suavizado fue una consecuencia.",
+   "api": [
+    "Lenis",
+    "Snap"
+   ],
+   "requiere": [],
+   "relacionadas": [
+    "fun-modelo",
+    "fun-instalacion",
+    "fun-cuando-usarlo",
+    "fun-licencia"
+   ],
+   "etiquetas": [
+    "introduccion",
+    "scroll",
+    "suavizado"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-que-es.md"
+  },
+  {
+   "id": "opc-automatico",
+   "titulo": "Opciones automáticas y configuración sin código",
+   "capa": "02-opciones",
+   "tipo": "guia",
+   "ambito": "core",
+   "resumen": "autoRaf, autoResize, anchors, autoToggle, allowNestedScroll, naiveDimensions, stopInertiaOnNavigate y respectReducedMotion, y la línea única sin compilación.",
+   "api": [
+    "LenisOptions.autoRaf",
+    "LenisOptions.autoResize",
+    "LenisOptions.anchors",
+    "LenisOptions.autoToggle",
+    "LenisOptions.allowNestedScroll",
+    "LenisOptions.naiveDimensions",
+    "LenisOptions.stopInertiaOnNavigate",
+    "LenisOptions.respectReducedMotion",
+    "Lenis.prefersReducedMotion"
+   ],
+   "requiere": [
+    "fun-instalacion"
+   ],
+   "relacionadas": [
+    "opc-referencia",
+    "com-anclas",
+    "com-stop-start",
+    "com-raf",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "automatico",
+    "reduced-motion",
+    "navegacion",
+    "sin-codigo"
+   ],
+   "estado": "verificado",
+   "ruta": "02-opciones/opc-automatico.md"
+  },
+  {
+   "id": "opc-contenedores",
+   "titulo": "wrapper, content y eventsTarget",
+   "capa": "02-opciones",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Qué elemento se desplaza, cuál se mide y cuál escucha gestos. Diferencias entre ventana y contenedor, y errores de creación.",
+   "api": [
+    "LenisOptions.wrapper",
+    "LenisOptions.content",
+    "LenisOptions.eventsTarget",
+    "Lenis.rootElement",
+    "Lenis.limit"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "com-dimensiones",
+    "com-anidado",
+    "com-clases",
+    "opc-referencia"
+   ],
+   "etiquetas": [
+    "wrapper",
+    "contenedor",
+    "eventos"
+   ],
+   "estado": "verificado",
+   "ruta": "02-opciones/opc-contenedores.md"
+  },
+  {
+   "id": "opc-filtros",
+   "titulo": "Filtros de gestos, prevent, virtualScroll y data-lenis-*",
+   "capa": "02-opciones",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Orden exacto de los filtros de Lenis, qué consecuencias tiene cortar en cada uno, y cómo usar prevent, virtualScroll, allowNestedScroll y atributos data-lenis-*.",
+   "api": [
+    "LenisOptions.prevent",
+    "LenisOptions.virtualScroll",
+    "LenisOptions.allowNestedScroll",
+    "VirtualScrollData.deltaX",
+    "VirtualScrollData.deltaY",
+    "VirtualScrollData.event",
+    "Lenis.on"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "com-anidado",
+    "opc-gestos",
+    "opc-tactil",
+    "com-stop-start",
+    "api-eventos"
+   ],
+   "etiquetas": [
+    "filtros",
+    "prevent",
+    "virtualScroll",
+    "atributos"
+   ],
+   "estado": "verificado",
+   "ruta": "02-opciones/opc-filtros.md"
+  },
+  {
+   "id": "opc-gestos",
+   "titulo": "Gestos de rueda, orientación y multiplicadores",
+   "capa": "02-opciones",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Cómo se elige el delta según orientation y gestureOrientation, qué hace smoothWheel, por qué un gesto lateral queda nativo y cuándo actúan los multiplicadores.",
+   "api": [
+    "LenisOptions.orientation",
+    "LenisOptions.gestureOrientation",
+    "LenisOptions.smoothWheel",
+    "LenisOptions.wheelMultiplier",
+    "LenisOptions.touchMultiplier",
+    "VirtualScrollData.deltaX",
+    "VirtualScrollData.deltaY"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "opc-tactil",
+    "com-horizontal",
+    "opc-filtros"
+   ],
+   "etiquetas": [
+    "gestos",
+    "rueda",
+    "multiplicador",
+    "orientacion"
+   ],
+   "estado": "verificado",
+   "ruta": "02-opciones/opc-gestos.md"
+  },
+  {
+   "id": "opc-referencia",
+   "titulo": "Referencia de LenisOptions",
+   "capa": "02-opciones",
+   "tipo": "referencia",
+   "ambito": "core",
+   "resumen": "Las 26 opciones de Lenis con valor por defecto contrastado con el constructor, cuándo se leen y qué ficha las explica.",
+   "api": [
+    "LenisOptions.wrapper",
+    "LenisOptions.content",
+    "LenisOptions.eventsTarget",
+    "LenisOptions.smoothWheel",
+    "LenisOptions.syncTouch",
+    "LenisOptions.syncTouchLerp",
+    "LenisOptions.touchInertiaExponent",
+    "LenisOptions.duration",
+    "LenisOptions.easing",
+    "LenisOptions.lerp",
+    "LenisOptions.infinite",
+    "LenisOptions.orientation",
+    "LenisOptions.gestureOrientation",
+    "LenisOptions.touchMultiplier",
+    "LenisOptions.wheelMultiplier",
+    "LenisOptions.autoResize",
+    "LenisOptions.prevent",
+    "LenisOptions.virtualScroll",
+    "LenisOptions.overscroll",
+    "LenisOptions.autoRaf",
+    "LenisOptions.anchors",
+    "LenisOptions.autoToggle",
+    "LenisOptions.allowNestedScroll",
+    "LenisOptions.naiveDimensions",
+    "LenisOptions.stopInertiaOnNavigate",
+    "LenisOptions.respectReducedMotion",
+    "Lenis.options"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "opc-suavizado",
+    "opc-gestos",
+    "opc-tactil",
+    "opc-contenedores",
+    "opc-filtros",
+    "opc-automatico"
+   ],
+   "etiquetas": [
+    "opciones",
+    "referencia",
+    "valores"
+   ],
+   "estado": "verificado",
+   "ruta": "02-opciones/opc-referencia.md"
+  },
+  {
+   "id": "opc-suavizado",
+   "titulo": "lerp frente a duration y easing",
+   "capa": "02-opciones",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Si hay duration, gana a lerp en todas las rutas: rueda, scrollTo y Snap. Qué calcula cada modo, cómo forzar lerp y por qué lerp no es una fracción por fotograma.",
+   "api": [
+    "LenisOptions.lerp",
+    "LenisOptions.duration",
+    "LenisOptions.easing",
+    "ScrollToOptions.lerp",
+    "ScrollToOptions.duration",
+    "ScrollToOptions.easing",
+    "SnapOptions.lerp",
+    "SnapOptions.duration",
+    "SnapOptions.easing",
+    "FromToOptions.lerp",
+    "FromToOptions.duration",
+    "FromToOptions.easing",
+    "FromToOptions.onStart",
+    "FromToOptions.onUpdate"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "opc-referencia",
+    "api-scrollto",
+    "snp-snap",
+    "com-raf"
+   ],
+   "etiquetas": [
+    "lerp",
+    "duration",
+    "easing",
+    "suavizado"
+   ],
+   "estado": "verificado",
+   "ruta": "02-opciones/opc-suavizado.md"
+  },
+  {
+   "id": "opc-tactil",
+   "titulo": "Toque, syncTouch e iOS",
+   "capa": "02-opciones",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Las dos rutas de toque, inercia de syncTouch, parada al tocar y selección en iOS. Separa lo ejecutado con toque() de lo que exige un dispositivo real.",
+   "api": [
+    "LenisOptions.syncTouch",
+    "LenisOptions.syncTouchLerp",
+    "LenisOptions.touchInertiaExponent",
+    "LenisOptions.touchMultiplier",
+    "Lenis.isTouching",
+    "Lenis.isIos",
+    "Lenis.velocity"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "opc-gestos",
+    "opc-filtros",
+    "opc-suavizado",
+    "com-infinito",
+    "cal-limitaciones"
+   ],
+   "etiquetas": [
+    "toque",
+    "syncTouch",
+    "ios",
+    "movil",
+    "inercia"
+   ],
+   "estado": "revisar",
+   "ruta": "02-opciones/opc-tactil.md"
+  },
+  {
+   "id": "api-eventos",
+   "titulo": "Eventos de Lenis y scrollend",
+   "capa": "03-api",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Eventos scroll y virtual-scroll, cuándo se emiten y datos que reciben, además del scrollend propio, que no llega a document.",
+   "api": [
+    "Lenis.on",
+    "Lenis.off",
+    "VirtualScrollData.deltaX",
+    "VirtualScrollData.deltaY",
+    "VirtualScrollData.event",
+    "Lenis.userData"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "api-metodos",
+    "opc-filtros",
+    "com-raf"
+   ],
+   "etiquetas": [
+    "eventos",
+    "scroll",
+    "virtual-scroll",
+    "scrollend"
+   ],
+   "estado": "verificado",
+   "ruta": "03-api/api-eventos.md"
+  },
+  {
+   "id": "api-instancia",
+   "titulo": "Instancia de Lenis, propiedades y estado",
+   "capa": "03-api",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Constructor y todas las propiedades de la instancia: posiciones, velocidad, dirección, estado, globales. Corrige direction, time e isStopped del README.",
+   "api": [
+    "Lenis",
+    "Lenis.options",
+    "Lenis.time",
+    "Lenis.isTouching",
+    "Lenis.isIos",
+    "Lenis.userData",
+    "Lenis.lastVelocity",
+    "Lenis.velocity",
+    "Lenis.direction",
+    "Lenis.targetScroll",
+    "Lenis.animatedScroll",
+    "Lenis.dimensions",
+    "Lenis.overflow",
+    "Lenis.rootElement",
+    "Lenis.limit",
+    "Lenis.isHorizontal",
+    "Lenis.actualScroll",
+    "Lenis.scroll",
+    "Lenis.progress",
+    "Lenis.isScrolling",
+    "Lenis.isStopped",
+    "Lenis.isLocked",
+    "Lenis.isSmooth",
+    "Lenis.prefersReducedMotion",
+    "Lenis.className"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "api-metodos",
+    "api-eventos",
+    "opc-referencia",
+    "com-clases"
+   ],
+   "etiquetas": [
+    "api",
+    "propiedades",
+    "estado"
+   ],
+   "estado": "verificado",
+   "ruta": "03-api/api-instancia.md"
+  },
+  {
+   "id": "api-metodos",
+   "titulo": "Métodos de Lenis",
+   "capa": "03-api",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "raf, on, off, resize, stop, start y destroy: qué hace cada uno de verdad, qué efectos laterales tiene y qué deja sin limpiar.",
+   "api": [
+    "Lenis.raf",
+    "Lenis.on",
+    "Lenis.off",
+    "Lenis.resize",
+    "Lenis.stop",
+    "Lenis.start",
+    "Lenis.destroy",
+    "Lenis.scrollTo"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "api-instancia",
+    "api-scrollto",
+    "api-eventos",
+    "com-raf",
+    "com-stop-start",
+    "com-dimensiones"
+   ],
+   "etiquetas": [
+    "api",
+    "metodos",
+    "destroy",
+    "raf"
+   ],
+   "estado": "verificado",
+   "ruta": "03-api/api-metodos.md"
+  },
+  {
+   "id": "api-scrollto",
+   "titulo": "lenis.scrollTo(), objetivos y opciones",
+   "capa": "03-api",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Tabla completa de objetivos y opciones de scrollTo, con lock, force, programmatic, immediate y userData probados, y qué callbacks se ejecutan en cada caso.",
+   "api": [
+    "Lenis.scrollTo",
+    "ScrollToOptions.offset",
+    "ScrollToOptions.immediate",
+    "ScrollToOptions.lock",
+    "ScrollToOptions.duration",
+    "ScrollToOptions.easing",
+    "ScrollToOptions.lerp",
+    "ScrollToOptions.onStart",
+    "ScrollToOptions.onComplete",
+    "ScrollToOptions.force",
+    "ScrollToOptions.programmatic",
+    "ScrollToOptions.userData",
+    "Lenis.userData"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "opc-suavizado",
+    "com-anclas",
+    "com-stop-start",
+    "api-eventos"
+   ],
+   "etiquetas": [
+    "scrollTo",
+    "api",
+    "lock",
+    "force"
+   ],
+   "estado": "verificado",
+   "ruta": "03-api/api-scrollto.md"
+  },
+  {
+   "id": "com-anclas",
+   "titulo": "Anclas y enlaces internos",
+   "capa": "04-comportamiento",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Sin anchors, un enlace #id salta de forma nativa y durante una animación se pierde. Con anchors se anima, conserva la URL y admite opciones de scrollTo.",
+   "api": [
+    "LenisOptions.anchors",
+    "Lenis.scrollTo",
+    "ScrollToOptions.offset"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "api-scrollto",
+    "opc-automatico",
+    "rec-menu-anclas"
+   ],
+   "etiquetas": [
+    "anclas",
+    "enlaces",
+    "hash",
+    "scroll-margin"
+   ],
+   "estado": "verificado",
+   "ruta": "04-comportamiento/com-anclas.md"
+  },
+  {
+   "id": "com-anidado",
+   "titulo": "Scroll anidado",
+   "capa": "04-comportamiento",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Áreas con scroll propio dentro de una página con Lenis: allowNestedScroll, data-lenis-prevent, prevent o una segunda instancia, y qué hace overscroll.",
+   "api": [
+    "LenisOptions.allowNestedScroll",
+    "LenisOptions.prevent",
+    "LenisOptions.overscroll",
+    "LenisOptions.wrapper",
+    "Lenis.scrollTo"
+   ],
+   "requiere": [
+    "fun-modelo",
+    "opc-filtros"
+   ],
+   "relacionadas": [
+    "opc-filtros",
+    "opc-contenedores",
+    "com-stop-start",
+    "rec-modal"
+   ],
+   "etiquetas": [
+    "scroll",
+    "anidado",
+    "overscroll",
+    "modal"
+   ],
+   "estado": "verificado",
+   "ruta": "04-comportamiento/com-anidado.md"
+  },
+  {
+   "id": "com-clases",
+   "titulo": "Clases CSS de estado",
+   "capa": "04-comportamiento",
+   "tipo": "referencia",
+   "ambito": "core",
+   "resumen": "Clases que Lenis pone en la raíz según su estado, cuándo cambian y por qué borra cualquier otra clase tuya que empiece por lenis-.",
+   "api": [
+    "Lenis.className",
+    "Lenis.rootElement",
+    "Lenis.isScrolling",
+    "Lenis.isStopped",
+    "Lenis.isLocked",
+    "Lenis.isSmooth"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "fun-css",
+    "com-stop-start",
+    "api-instancia"
+   ],
+   "etiquetas": [
+    "css",
+    "clases",
+    "estado"
+   ],
+   "estado": "verificado",
+   "ruta": "04-comportamiento/com-clases.md"
+  },
+  {
+   "id": "com-dimensiones",
+   "titulo": "Dimensiones, limit y resize",
+   "capa": "04-comportamiento",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "limit se guarda en caché con 250 ms de retardo: consecuencias tras cambiar contenido, y las salidas: resize(), autoResize y naiveDimensions.",
+   "api": [
+    "LenisOptions.autoResize",
+    "LenisOptions.naiveDimensions",
+    "LenisOptions.content",
+    "Lenis.resize",
+    "Lenis.limit",
+    "Lenis.dimensions"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "opc-contenedores",
+    "api-metodos",
+    "cal-errores"
+   ],
+   "etiquetas": [
+    "dimensiones",
+    "limit",
+    "resize",
+    "observer"
+   ],
+   "estado": "verificado",
+   "ruta": "04-comportamiento/com-dimensiones.md"
+  },
+  {
+   "id": "com-horizontal",
+   "titulo": "Scroll horizontal",
+   "capa": "04-comportamiento",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "orientation horizontal: maquetación necesaria, conversión de la rueda vertical, medidas en X y posición de objetivos, en ventana y en contenedor.",
+   "api": [
+    "LenisOptions.orientation",
+    "LenisOptions.gestureOrientation",
+    "Lenis.isHorizontal",
+    "Lenis.limit",
+    "Lenis.scrollTo",
+    "Lenis.overflow"
+   ],
+   "requiere": [
+    "fun-modelo",
+    "opc-gestos"
+   ],
+   "relacionadas": [
+    "opc-gestos",
+    "rec-horizontal",
+    "snp-elementos"
+   ],
+   "etiquetas": [
+    "horizontal",
+    "orientacion",
+    "eje"
+   ],
+   "estado": "verificado",
+   "ruta": "04-comportamiento/com-horizontal.md"
+  },
+  {
+   "id": "com-infinito",
+   "titulo": "Scroll infinito",
+   "capa": "04-comportamiento",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "infinite elimina el límite y envuelve la posición con módulo. Qué parte hace Lenis, qué contenido hay que duplicar y cómo cambian scroll, progress y scrollTo.",
+   "api": [
+    "LenisOptions.infinite",
+    "Lenis.scroll",
+    "Lenis.animatedScroll",
+    "Lenis.progress",
+    "Lenis.limit",
+    "LenisOptions.syncTouch"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "opc-tactil",
+    "api-scrollto"
+   ],
+   "etiquetas": [
+    "infinito",
+    "bucle",
+    "modulo"
+   ],
+   "estado": "verificado",
+   "ruta": "04-comportamiento/com-infinito.md"
+  },
+  {
+   "id": "com-raf",
+   "titulo": "El reloj de Lenis, autoRaf o bucle propio",
+   "capa": "04-comportamiento",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Lenis no se mueve solo: necesita autoRaf o llamadas a raf(time) en milisegundos. Independencia de fotogramas, pausas, y qué pasa de verdad al mezclar relojes.",
+   "api": [
+    "Lenis.raf",
+    "LenisOptions.autoRaf",
+    "Lenis.time",
+    "Lenis.destroy",
+    "Lenis.isScrolling"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "opc-suavizado",
+    "int-gsap",
+    "api-metodos",
+    "int-canvas-webgl"
+   ],
+   "etiquetas": [
+    "raf",
+    "reloj",
+    "bucle",
+    "sincronizacion"
+   ],
+   "estado": "verificado",
+   "ruta": "04-comportamiento/com-raf.md"
+  },
+  {
+   "id": "com-restauracion",
+   "titulo": "Restauración de scroll y cambios de vista",
+   "capa": "04-comportamiento",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Lenis no toca history.scrollRestoration. Qué pasa al recargar, cómo fijar la posición al cambiar de vista sin recarga y el estado que puede quedar colgado.",
+   "api": [
+    "Lenis.scrollTo",
+    "Lenis.resize",
+    "Lenis.isScrolling",
+    "LenisOptions.stopInertiaOnNavigate",
+    "ScrollToOptions.immediate",
+    "ScrollToOptions.force"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "opc-automatico",
+    "com-dimensiones",
+    "rec-navegacion",
+    "int-contrato"
+   ],
+   "etiquetas": [
+    "restauracion",
+    "navegacion",
+    "historial",
+    "recarga"
+   ],
+   "estado": "verificado",
+   "ruta": "04-comportamiento/com-restauracion.md"
+  },
+  {
+   "id": "com-sticky-fixed",
+   "titulo": "position sticky y fixed",
+   "capa": "04-comportamiento",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "sticky y fixed funcionan sin adaptación porque Lenis escribe el scroll real. Excepciones: ancestros, contenedores y el efecto de Snap en sticky.",
+   "api": [
+    "Lenis.scrollTo",
+    "SnapElementOptions.ignoreSticky"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "snp-elementos",
+    "cal-limitaciones",
+    "com-stop-start"
+   ],
+   "etiquetas": [
+    "sticky",
+    "fixed",
+    "posicionamiento"
+   ],
+   "estado": "verificado",
+   "ruta": "04-comportamiento/com-sticky-fixed.md"
+  },
+  {
+   "id": "com-stop-start",
+   "titulo": "stop, start, isStopped, isLocked y autoToggle",
+   "capa": "04-comportamiento",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Parar frente a bloquear, qué impide cada uno, papel de overflow y lenis.css, y el funcionamiento asíncrono de autoToggle.",
+   "api": [
+    "Lenis.stop",
+    "Lenis.start",
+    "Lenis.isStopped",
+    "Lenis.isLocked",
+    "Lenis.overflow",
+    "LenisOptions.autoToggle",
+    "ScrollToOptions.force",
+    "ScrollToOptions.lock"
+   ],
+   "requiere": [
+    "fun-modelo",
+    "fun-css"
+   ],
+   "relacionadas": [
+    "api-scrollto",
+    "opc-filtros",
+    "com-anidado",
+    "rec-modal"
+   ],
+   "etiquetas": [
+    "stop",
+    "start",
+    "overflow",
+    "modal",
+    "autoToggle"
+   ],
+   "estado": "verificado",
+   "ruta": "04-comportamiento/com-stop-start.md"
+  },
+  {
+   "id": "snp-api",
+   "titulo": "Métodos y callbacks de Snap",
+   "capa": "05-snap",
+   "tipo": "api",
+   "ambito": "snap",
+   "resumen": "add, addElement, addElements, next, previous, goTo, start, stop, resize y destroy. Orden de puntos, currentSnapIndex y fallos de destroy.",
+   "api": [
+    "Snap.add",
+    "Snap.addElement",
+    "Snap.addElements",
+    "Snap.next",
+    "Snap.previous",
+    "Snap.goTo",
+    "Snap.start",
+    "Snap.stop",
+    "Snap.resize",
+    "Snap.destroy",
+    "Snap.snaps",
+    "Snap.elements",
+    "Snap.currentSnapIndex",
+    "Snap.isStopped",
+    "Snap.onSnapDebounced",
+    "SnapItem.value",
+    "OnSnapCallback.index",
+    "SnapOptions.onSnapStart",
+    "SnapOptions.onSnapComplete"
+   ],
+   "requiere": [
+    "snp-snap"
+   ],
+   "relacionadas": [
+    "snp-snap",
+    "snp-elementos",
+    "api-scrollto",
+    "com-stop-start"
+   ],
+   "etiquetas": [
+    "snap",
+    "api",
+    "metodos",
+    "callbacks"
+   ],
+   "estado": "verificado",
+   "ruta": "05-snap/snp-api.md"
+  },
+  {
+   "id": "snp-elementos",
+   "titulo": "Encajar en elementos, align, sticky y transform",
+   "capa": "05-snap",
+   "tipo": "api",
+   "ambito": "snap",
+   "resumen": "addElement mide el elemento y aplica align. Incluye fallos reales de la versión: start en horizontal, contenedores y ancestros sticky que quedan rotos.",
+   "api": [
+    "Snap.addElement",
+    "Snap.addElements",
+    "Snap.resize",
+    "SnapElementOptions.align",
+    "SnapElementOptions.ignoreSticky",
+    "SnapElementOptions.ignoreTransform"
+   ],
+   "requiere": [
+    "snp-snap"
+   ],
+   "relacionadas": [
+    "snp-api",
+    "com-sticky-fixed",
+    "com-horizontal",
+    "opc-contenedores",
+    "rec-secciones-snap"
+   ],
+   "etiquetas": [
+    "snap",
+    "elementos",
+    "align",
+    "sticky"
+   ],
+   "estado": "verificado",
+   "ruta": "05-snap/snp-elementos.md"
+  },
+  {
+   "id": "snp-snap",
+   "titulo": "lenis/snap, puntos de encaje",
+   "capa": "05-snap",
+   "tipo": "plugin",
+   "ambito": "snap",
+   "resumen": "Clase Snap: añade encaje a Lenis tras un gesto. Tipos mandatory, proximity y lock, distanceThreshold, debounce y cómo se calcula el destino.",
+   "api": [
+    "Snap",
+    "SnapOptions.type",
+    "SnapOptions.distanceThreshold",
+    "SnapOptions.debounce",
+    "SnapOptions.lerp",
+    "SnapOptions.duration",
+    "SnapOptions.easing",
+    "SnapOptions.onSnapStart",
+    "SnapOptions.onSnapComplete",
+    "Snap.options",
+    "Snap.distanceThreshold",
+    "Snap.viewport"
+   ],
+   "requiere": [
+    "fun-modelo",
+    "opc-suavizado"
+   ],
+   "relacionadas": [
+    "snp-api",
+    "snp-elementos",
+    "rec-secciones-snap",
+    "opc-filtros"
+   ],
+   "etiquetas": [
+    "snap",
+    "encaje",
+    "debounce",
+    "secciones"
+   ],
+   "estado": "verificado",
+   "ruta": "05-snap/snp-snap.md"
+  },
+  {
+   "id": "int-angular",
+   "titulo": "Lenis en Angular",
+   "capa": "06-integracion",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Sin paquete oficial: adaptador entrar con afterNextRender y DestroyRef, directiva para contenedores, NavigationEnd, zone.js y detección de cambios por fotograma.",
+   "api": [
+    "Lenis.destroy",
+    "Lenis.scrollTo",
+    "Lenis.resize",
+    "Lenis.raf",
+    "Lenis.on",
+    "LenisOptions.autoRaf",
+    "LenisOptions.wrapper",
+    "LenisOptions.content"
+   ],
+   "requiere": [
+    "int-contrato"
+   ],
+   "relacionadas": [
+    "int-gsap",
+    "int-typescript",
+    "rec-navegacion"
+   ],
+   "etiquetas": [
+    "angular",
+    "afternextrender",
+    "destroyref",
+    "directiva",
+    "zone"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-angular.md"
+  },
+  {
+   "id": "int-canvas-webgl",
+   "titulo": "Sincronizar una escena de canvas o WebGL con Lenis",
+   "capa": "06-integracion",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Patrón motor.alDibujar para cualquier motor: un bucle para Lenis y el dibujo, leer scroll, alinear con el DOM en ventana y contenedor, y liberar. Three.js como caso.",
+   "api": [
+    "Lenis.raf",
+    "Lenis.scroll",
+    "Lenis.animatedScroll",
+    "Lenis.velocity",
+    "Lenis.progress",
+    "Lenis.limit",
+    "Lenis.on",
+    "Lenis.destroy",
+    "LenisOptions.autoRaf"
+   ],
+   "requiere": [
+    "int-contrato",
+    "com-raf"
+   ],
+   "relacionadas": [
+    "int-gsap",
+    "rec-canvas-sync",
+    "rec-parallax",
+    "cal-rendimiento",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "canvas",
+    "webgl",
+    "three",
+    "escena",
+    "render",
+    "bucle",
+    "velocity"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-canvas-webgl.md"
+  },
+  {
+   "id": "int-contrato",
+   "titulo": "Contrato de integración de Lenis con cualquier tecnología",
+   "capa": "06-integracion",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Entrar, cambiar y salir sobre ventana, contenedor o escena: las cinco columnas, bucle único, adaptador entrar y salir, compartir la instancia y entornos sin window.",
+   "api": [
+    "Lenis.destroy",
+    "Lenis.raf",
+    "Lenis.resize",
+    "Lenis.scrollTo",
+    "Lenis.limit",
+    "LenisOptions.autoRaf",
+    "LenisOptions.wrapper",
+    "LenisOptions.content",
+    "ScrollToOptions.immediate",
+    "ScrollToOptions.force"
+   ],
+   "requiere": [
+    "fun-modelo",
+    "com-raf"
+   ],
+   "relacionadas": [
+    "int-navegacion",
+    "int-vanilla",
+    "int-gsap",
+    "int-canvas-webgl",
+    "com-restauracion",
+    "com-dimensiones",
+    "rec-navegacion",
+    "cal-errores"
+   ],
+   "etiquetas": [
+    "agnostico",
+    "ciclo-de-vida",
+    "limpieza",
+    "bucle",
+    "navegacion",
+    "servidor"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-contrato.md"
+  },
+  {
+   "id": "int-gsap",
+   "titulo": "Lenis con GSAP y ScrollTrigger",
+   "capa": "06-integracion",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Un solo reloj con gsap.ticker, unidad de tiempo de raf, por qué ScrollTrigger.update y qué hace realmente lagSmoothing(0), medido con rueda real y scrub.",
+   "api": [
+    "Lenis.raf",
+    "Lenis.on",
+    "Lenis.destroy",
+    "Lenis.resize",
+    "Lenis.limit",
+    "LenisOptions.autoRaf"
+   ],
+   "requiere": [
+    "int-contrato",
+    "com-raf"
+   ],
+   "relacionadas": [
+    "int-canvas-webgl",
+    "com-dimensiones",
+    "com-sticky-fixed",
+    "rec-parallax",
+    "cal-conflictos",
+    "cal-errores"
+   ],
+   "etiquetas": [
+    "gsap",
+    "scrolltrigger",
+    "ticker",
+    "scrub",
+    "lagsmoothing"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-gsap.md"
+  },
+  {
+   "id": "int-navegacion",
+   "titulo": "Navegación sin recarga con Lenis",
+   "capa": "06-integracion",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Por qué un cambio de vista deja inercia y límites viejos, la función colocar (cortar, medir y colocar) y qué orden falla, probado en ventana y contenedor.",
+   "api": [
+    "Lenis.resize",
+    "Lenis.scrollTo",
+    "Lenis.limit",
+    "Lenis.targetScroll",
+    "LenisOptions.stopInertiaOnNavigate",
+    "ScrollToOptions.immediate",
+    "ScrollToOptions.force"
+   ],
+   "requiere": [
+    "int-contrato"
+   ],
+   "relacionadas": [
+    "rec-navegacion",
+    "com-restauracion",
+    "com-dimensiones",
+    "api-scrollto",
+    "int-gsap"
+   ],
+   "etiquetas": [
+    "navegacion",
+    "rutas",
+    "inercia",
+    "resize",
+    "reinicio"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-navegacion.md"
+  },
+  {
+   "id": "int-nextjs",
+   "titulo": "Lenis en Next.js",
+   "capa": "06-integracion",
+   "tipo": "guia",
+   "ambito": "react",
+   "resumen": "App Router: ReactLenis ya es de cliente, funciones en options desde el servidor, reinicio de scroll con usePathname, y por qué Link no basta en plena inercia.",
+   "api": [
+    "LenisProps.root",
+    "LenisProps.options",
+    "funciones.useLenis",
+    "Lenis.scrollTo",
+    "Lenis.resize",
+    "ScrollToOptions.immediate"
+   ],
+   "requiere": [
+    "int-contrato"
+   ],
+   "relacionadas": [
+    "int-react",
+    "int-gsap",
+    "rec-navegacion"
+   ],
+   "etiquetas": [
+    "next",
+    "app-router",
+    "servidor",
+    "hidratacion"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-nextjs.md"
+  },
+  {
+   "id": "int-react",
+   "titulo": "Lenis en React",
+   "capa": "06-integracion",
+   "tipo": "guia",
+   "ambito": "react",
+   "resumen": "Paquete oficial lenis/react: ReactLenis, useLenis, LenisRef, cambio de ruta, opciones que no recrean, GSAP aparte y un bucle del README que no funciona.",
+   "api": [
+    "LenisProps.root",
+    "LenisProps.options",
+    "LenisProps.autoRaf",
+    "LenisProps.children",
+    "LenisProps.className",
+    "LenisRef.wrapper",
+    "LenisRef.content",
+    "LenisRef.lenis",
+    "funciones.useLenis",
+    "Lenis.scrollTo",
+    "Lenis.resize"
+   ],
+   "requiere": [
+    "int-contrato"
+   ],
+   "relacionadas": [
+    "int-nextjs",
+    "int-gsap",
+    "int-typescript",
+    "rec-navegacion"
+   ],
+   "etiquetas": [
+    "react",
+    "useLenis",
+    "reactlenis",
+    "contexto"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-react.md"
+  },
+  {
+   "id": "int-svelte",
+   "titulo": "Lenis en Svelte y SvelteKit",
+   "capa": "06-integracion",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Sin paquete oficial: el adaptador entrar con onMount, {@attach} para un contenedor, afterNavigate en SvelteKit para la ruta y lo que cambia en SvelteKit 3.",
+   "api": [
+    "Lenis.destroy",
+    "Lenis.scrollTo",
+    "Lenis.resize",
+    "Lenis.raf",
+    "Lenis.on",
+    "LenisOptions.wrapper",
+    "LenisOptions.content"
+   ],
+   "requiere": [
+    "int-contrato"
+   ],
+   "relacionadas": [
+    "int-gsap",
+    "rec-navegacion"
+   ],
+   "etiquetas": [
+    "svelte",
+    "sveltekit",
+    "onmount",
+    "attach",
+    "afternavigate"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-svelte.md"
+  },
+  {
+   "id": "int-typescript",
+   "titulo": "Tipos de Lenis en TypeScript",
+   "capa": "06-integracion",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Qué exporta cada entrada, qué resolución de módulos funciona, LenisRef y LenisExposed, por qué LenisExposed no se puede importar y los globales de window.",
+   "api": [
+    "LenisRef.wrapper",
+    "LenisRef.content",
+    "LenisRef.lenis",
+    "LenisExposed.wrapper",
+    "LenisExposed.content",
+    "LenisExposed.lenis",
+    "LenisProps.options",
+    "funciones.useLenis",
+    "Lenis.isScrolling",
+    "Lenis.on"
+   ],
+   "requiere": [
+    "int-contrato"
+   ],
+   "relacionadas": [
+    "int-react",
+    "int-vue-nuxt",
+    "api-eventos"
+   ],
+   "etiquetas": [
+    "typescript",
+    "tipos",
+    "modulos",
+    "tsconfig"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-typescript.md"
+  },
+  {
+   "id": "int-vanilla",
+   "titulo": "Lenis sin framework",
+   "capa": "06-integracion",
+   "tipo": "guia",
+   "ambito": "core",
+   "resumen": "Las tres vías de carga, cuándo está listo el DOM, páginas que se descartan, instancia única, navegación parcial desde servidor y bfcache.",
+   "api": [
+    "LenisOptions.autoRaf",
+    "LenisOptions.anchors",
+    "Lenis.destroy",
+    "Lenis.resize",
+    "Lenis.scrollTo"
+   ],
+   "requiere": [
+    "int-contrato"
+   ],
+   "relacionadas": [
+    "fun-instalacion",
+    "fun-css",
+    "int-wordpress",
+    "int-webflow"
+   ],
+   "etiquetas": [
+    "vanilla",
+    "script",
+    "importmap",
+    "multipagina",
+    "cms"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-vanilla.md"
+  },
+  {
+   "id": "int-vue-nuxt",
+   "titulo": "Lenis en Vue y Nuxt",
+   "capa": "06-integracion",
+   "tipo": "guia",
+   "ambito": "vue",
+   "resumen": "Paquetes lenis/vue y lenis/nuxt: VueLenis, plugin, useLenis, LenisExposed, opciones en línea que recrean la instancia, cambio de ruta, GSAP aparte y Vue 3.5 obligatorio.",
+   "api": [
+    "LenisExposed.wrapper",
+    "LenisExposed.content",
+    "LenisExposed.lenis",
+    "funciones.useLenis",
+    "Lenis.scrollTo",
+    "Lenis.resize",
+    "Lenis.on"
+   ],
+   "requiere": [
+    "int-contrato"
+   ],
+   "relacionadas": [
+    "int-gsap",
+    "int-typescript",
+    "rec-navegacion"
+   ],
+   "etiquetas": [
+    "vue",
+    "nuxt",
+    "vuelenis",
+    "plugin",
+    "useLenis"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-vue-nuxt.md"
+  },
+  {
+   "id": "int-webcomponents",
+   "titulo": "Lenis en Web Components y Lit",
+   "capa": "06-integracion",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Custom Elements como contrato nativo: connectedCallback sin hijos, mover el nodo, Shadow DOM y scrollTo, y los ganchos de Lit.",
+   "api": [
+    "LenisOptions.wrapper",
+    "LenisOptions.content",
+    "LenisOptions.anchors",
+    "Lenis.destroy",
+    "Lenis.scrollTo"
+   ],
+   "requiere": [
+    "int-contrato"
+   ],
+   "relacionadas": [
+    "int-vanilla",
+    "opc-contenedores",
+    "com-anclas"
+   ],
+   "etiquetas": [
+    "web-components",
+    "custom-elements",
+    "shadow-dom",
+    "lit"
+   ],
+   "estado": "verificado",
+   "ruta": "06-integracion/int-webcomponents.md"
+  },
+  {
+   "id": "int-webflow",
+   "titulo": "Lenis en Webflow",
+   "capa": "06-integracion",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Fragmento sin compilación del README en el código personalizado, qué resuelve cada opción, contrastado una a una. Webflow no se ejecutó; el fragmento, sí.",
+   "api": [
+    "LenisOptions.autoRaf",
+    "LenisOptions.autoToggle",
+    "LenisOptions.anchors",
+    "LenisOptions.allowNestedScroll",
+    "LenisOptions.naiveDimensions",
+    "LenisOptions.stopInertiaOnNavigate"
+   ],
+   "requiere": [
+    "int-contrato",
+    "int-vanilla"
+   ],
+   "relacionadas": [
+    "fun-instalacion",
+    "fun-css",
+    "opc-automatico",
+    "com-anclas",
+    "rec-modal",
+    "cal-conflictos"
+   ],
+   "etiquetas": [
+    "webflow",
+    "no-code",
+    "cdn",
+    "codigo-personalizado"
+   ],
+   "estado": "revisar",
+   "ruta": "06-integracion/int-webflow.md"
+  },
+  {
+   "id": "int-wordpress",
+   "titulo": "Lenis en WordPress",
+   "capa": "06-integracion",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Encolar Lenis y su CSS, el código en línea cancela defer, editor y personalizador, y constructores. Basado en documentación: WordPress no se ejecutó.",
+   "api": [
+    "LenisOptions.autoRaf",
+    "LenisOptions.anchors",
+    "Lenis.destroy",
+    "Lenis.stop",
+    "Lenis.start"
+   ],
+   "requiere": [
+    "int-contrato",
+    "int-vanilla"
+   ],
+   "relacionadas": [
+    "int-gsap",
+    "fun-instalacion",
+    "rec-modal",
+    "cal-conflictos"
+   ],
+   "etiquetas": [
+    "wordpress",
+    "php",
+    "cms",
+    "enqueue"
+   ],
+   "estado": "revisar",
+   "ruta": "06-integracion/int-wordpress.md"
+  },
+  {
+   "id": "cal-accesibilidad",
+   "titulo": "Accesibilidad de Lenis: movimiento reducido, foco y teclado",
+   "capa": "07-calidad",
+   "tipo": "guia",
+   "ambito": "core",
+   "resumen": "Qué hace respectReducedMotion de verdad, medido con prefers-reduced-motion real; teclado y Tab con rueda real; foco perdido en plena inercia y al usar stop().",
+   "api": [
+    "LenisOptions.respectReducedMotion",
+    "Lenis.prefersReducedMotion",
+    "ScrollToOptions.onStart",
+    "ScrollToOptions.onComplete",
+    "ScrollToOptions.lock",
+    "Lenis.stop",
+    "Lenis.start",
+    "Lenis.scrollTo"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "opc-automatico",
+    "com-stop-start",
+    "com-anclas",
+    "rec-modal",
+    "int-canvas-webgl",
+    "cal-limitaciones"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "reduced-motion",
+    "teclado",
+    "foco",
+    "tab"
+   ],
+   "estado": "verificado",
+   "ruta": "07-calidad/cal-accesibilidad.md"
+  },
+  {
+   "id": "cal-conflictos",
+   "titulo": "Conflictos de Lenis con CSS y otras bibliotecas",
+   "capa": "07-calidad",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "scroll-behavior, CSS scroll-snap, overflow en body, scroll nativo en plena animación, y ScrollSmoother, normalizeScroll y ScrollToPlugin de GSAP, medido.",
+   "api": [
+    "Lenis.scrollTo",
+    "Lenis.stop",
+    "Lenis.start",
+    "LenisOptions.autoToggle",
+    "ScrollToOptions.immediate",
+    "ScrollToOptions.force",
+    "Lenis.isScrolling"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "int-gsap",
+    "cal-limitaciones",
+    "cal-errores",
+    "snp-snap",
+    "rec-modal",
+    "opc-automatico"
+   ],
+   "etiquetas": [
+    "conflictos",
+    "css",
+    "scroll-behavior",
+    "scroll-snap",
+    "overflow",
+    "gsap"
+   ],
+   "estado": "verificado",
+   "ruta": "07-calidad/cal-conflictos.md"
+  },
+  {
+   "id": "cal-depuracion",
+   "titulo": "Depurar Lenis",
+   "capa": "07-calidad",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Orden de inspección: clases de la raíz, estado de la instancia, relojes por fotograma, oyentes, medidas y eventos, con utilidades que se pueden pegar en consola.",
+   "api": [
+    "Lenis.className",
+    "Lenis.isScrolling",
+    "Lenis.isStopped",
+    "Lenis.isLocked",
+    "Lenis.isSmooth",
+    "Lenis.options",
+    "Lenis.dimensions",
+    "Lenis.limit",
+    "Lenis.actualScroll",
+    "Lenis.animatedScroll",
+    "Lenis.targetScroll",
+    "Lenis.rootElement",
+    "Lenis.on",
+    "Lenis.off",
+    "Lenis.time"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "cal-errores",
+    "cal-rendimiento",
+    "com-clases",
+    "api-instancia",
+    "api-eventos",
+    "int-contrato"
+   ],
+   "etiquetas": [
+    "depuracion",
+    "consola",
+    "estado",
+    "inspeccion"
+   ],
+   "estado": "verificado",
+   "ruta": "07-calidad/cal-depuracion.md"
+  },
+  {
+   "id": "cal-errores",
+   "titulo": "Errores comunes de Lenis",
+   "capa": "07-calidad",
+   "tipo": "diagnostico",
+   "ambito": "transversal",
+   "resumen": "Síntoma, causa y solución probados: la rueda no mueve nada, scroll lento, NaN con la página clavada, sin desplazarse, límite viejo, scrollTo mudo, modales y clases perdidas.",
+   "api": [
+    "Lenis.raf",
+    "Lenis.resize",
+    "Lenis.limit",
+    "Lenis.scrollTo",
+    "Lenis.isStopped",
+    "LenisOptions.autoRaf",
+    "LenisOptions.wrapper",
+    "LenisOptions.content",
+    "ScrollToOptions.force"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "cal-depuracion",
+    "cal-conflictos",
+    "cal-limitaciones",
+    "com-raf",
+    "com-dimensiones",
+    "com-stop-start",
+    "int-contrato",
+    "int-gsap"
+   ],
+   "etiquetas": [
+    "errores",
+    "diagnostico",
+    "soluciones",
+    "troubleshooting"
+   ],
+   "estado": "verificado",
+   "ruta": "07-calidad/cal-errores.md"
+  },
+  {
+   "id": "cal-limitaciones",
+   "titulo": "Limitaciones oficiales de Lenis, contrastadas una a una",
+   "capa": "07-calidad",
+   "tipo": "referencia",
+   "ambito": "transversal",
+   "resumen": "Las seis limitaciones del README frente al código y a pruebas reales: cuáles se confirman, cuáles matizar y cuáles no se pudieron ejecutar.",
+   "api": [
+    "LenisOptions.allowNestedScroll",
+    "LenisOptions.syncTouch",
+    "LenisOptions.prevent",
+    "Lenis.isIos"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "cal-conflictos",
+    "cal-errores",
+    "cal-rendimiento",
+    "com-anidado",
+    "opc-filtros",
+    "opc-tactil",
+    "snp-snap"
+   ],
+   "etiquetas": [
+    "limitaciones",
+    "iframe",
+    "safari",
+    "scroll-snap",
+    "ios"
+   ],
+   "estado": "revisar",
+   "ruta": "07-calidad/cal-limitaciones.md"
+  },
+  {
+   "id": "cal-rendimiento",
+   "titulo": "Rendimiento de Lenis, medido",
+   "capa": "07-calidad",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Coste real de raf, resize, oyente wheel no pasivo y tamaño, medido en una máquina concreta. Qué consume de verdad y qué no, y cuándo el coste no es de Lenis.",
+   "api": [
+    "Lenis.raf",
+    "Lenis.resize",
+    "Lenis.limit",
+    "Lenis.dimensions",
+    "LenisOptions.naiveDimensions",
+    "LenisOptions.autoResize",
+    "LenisOptions.allowNestedScroll"
+   ],
+   "requiere": [
+    "fun-modelo",
+    "com-raf"
+   ],
+   "relacionadas": [
+    "com-dimensiones",
+    "cal-depuracion",
+    "cal-limitaciones",
+    "int-canvas-webgl",
+    "opc-filtros"
+   ],
+   "etiquetas": [
+    "rendimiento",
+    "medicion",
+    "raf",
+    "wheel",
+    "tamano"
+   ],
+   "estado": "verificado",
+   "ruta": "07-calidad/cal-rendimiento.md"
+  },
+  {
+   "id": "rec-barra-progreso",
+   "titulo": "Barra de progreso de lectura",
+   "capa": "08-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Una barra que refleja cuánto se ha recorrido, ligada a lenis.progress, sin reflujo y al día cuando cambia la longitud del contenido.",
+   "api": [
+    "Lenis.progress",
+    "Lenis.limit",
+    "Lenis.on",
+    "Lenis.off",
+    "Lenis.resize"
+   ],
+   "requiere": [
+    "api-eventos"
+   ],
+   "relacionadas": [
+    "api-instancia",
+    "com-dimensiones",
+    "cal-rendimiento",
+    "rec-parallax"
+   ],
+   "etiquetas": [
+    "scroll",
+    "progreso",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "08-recetas/rec-barra-progreso.md"
+  },
+  {
+   "id": "rec-canvas-sync",
+   "titulo": "Canvas sincronizado con el scroll",
+   "capa": "08-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Dibuja un canvas con el valor exacto de Lenis y en su mismo paso, con bucle externo o por eventos, sin gastar en reposo.",
+   "api": [
+    "Lenis.raf",
+    "LenisOptions.autoRaf",
+    "Lenis.scroll",
+    "Lenis.progress",
+    "Lenis.velocity",
+    "Lenis.on"
+   ],
+   "requiere": [
+    "com-raf",
+    "api-eventos"
+   ],
+   "relacionadas": [
+    "int-canvas-webgl",
+    "cal-rendimiento",
+    "rec-parallax"
+   ],
+   "etiquetas": [
+    "canvas",
+    "webgl",
+    "sincronizacion",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "08-recetas/rec-canvas-sync.md"
+  },
+  {
+   "id": "rec-horizontal",
+   "titulo": "Scroll horizontal, de página y por sección",
+   "capa": "08-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Dos soluciones de scroll horizontal, orientation para una página o contenedor y sticky más transform para una sección de una página vertical.",
+   "api": [
+    "LenisOptions.orientation",
+    "LenisOptions.gestureOrientation",
+    "Lenis.isHorizontal",
+    "LenisOptions.wrapper",
+    "LenisOptions.content"
+   ],
+   "requiere": [
+    "com-horizontal",
+    "opc-gestos"
+   ],
+   "relacionadas": [
+    "opc-contenedores",
+    "com-sticky-fixed",
+    "cal-accesibilidad",
+    "rec-secciones-snap"
+   ],
+   "etiquetas": [
+    "horizontal",
+    "sticky",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "08-recetas/rec-horizontal.md"
+  },
+  {
+   "id": "rec-menu-anclas",
+   "titulo": "Menú de anclas con foco y sección activa",
+   "capa": "08-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Enlaces internos con scroll suave, foco accesible, URL al día y sección activa marcada, también dentro de Shadow DOM.",
+   "api": [
+    "LenisOptions.anchors",
+    "Lenis.scrollTo",
+    "ScrollToOptions.offset",
+    "ScrollToOptions.onComplete"
+   ],
+   "requiere": [
+    "com-anclas",
+    "api-scrollto"
+   ],
+   "relacionadas": [
+    "cal-accesibilidad",
+    "rec-nav-direccion",
+    "rec-scroll-to-top",
+    "com-restauracion"
+   ],
+   "etiquetas": [
+    "anclas",
+    "navegacion",
+    "foco",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "08-recetas/rec-menu-anclas.md"
+  },
+  {
+   "id": "rec-modal",
+   "titulo": "Modal con el fondo bloqueado",
+   "capa": "08-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Detiene el scroll de fondo con un dialog abierto y deja desplazarse su contenido, con rueda y toque, incluso con varios modales.",
+   "api": [
+    "Lenis.stop",
+    "Lenis.start",
+    "Lenis.isStopped",
+    "LenisOptions.autoToggle",
+    "LenisOptions.prevent"
+   ],
+   "requiere": [
+    "com-stop-start",
+    "opc-filtros"
+   ],
+   "relacionadas": [
+    "com-anidado",
+    "com-clases",
+    "cal-accesibilidad",
+    "fun-css"
+   ],
+   "etiquetas": [
+    "modal",
+    "dialog",
+    "stop",
+    "anidado",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "08-recetas/rec-modal.md"
+  },
+  {
+   "id": "rec-nav-direccion",
+   "titulo": "Cabecera que se oculta según la dirección",
+   "capa": "08-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Oculta la cabecera al bajar y la muestra al subir, sin parpadeo, con foco de teclado y scroll nativo.",
+   "api": [
+    "Lenis.direction",
+    "Lenis.scroll",
+    "Lenis.velocity",
+    "Lenis.on"
+   ],
+   "requiere": [
+    "api-eventos"
+   ],
+   "relacionadas": [
+    "api-instancia",
+    "com-sticky-fixed",
+    "cal-accesibilidad",
+    "rec-menu-anclas"
+   ],
+   "etiquetas": [
+    "navegacion",
+    "direccion",
+    "cabecera",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "08-recetas/rec-nav-direccion.md"
+  },
+  {
+   "id": "rec-navegacion",
+   "titulo": "Cambio de vista sin recarga",
+   "capa": "08-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Coloca el scroll al cambiar de vista, arriba, en el hash o en la posición guardada, cortando inercia y con el límite actualizado.",
+   "api": [
+    "Lenis.resize",
+    "Lenis.scrollTo",
+    "ScrollToOptions.immediate",
+    "ScrollToOptions.force",
+    "LenisOptions.stopInertiaOnNavigate",
+    "Lenis.limit"
+   ],
+   "requiere": [
+    "com-restauracion",
+    "int-contrato"
+   ],
+   "relacionadas": [
+    "com-anclas",
+    "com-stop-start",
+    "rec-menu-anclas"
+   ],
+   "etiquetas": [
+    "navegacion",
+    "historial",
+    "restauracion",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "08-recetas/rec-navegacion.md"
+  },
+  {
+   "id": "rec-parallax",
+   "titulo": "Parallax sincronizado con Lenis",
+   "capa": "08-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Elementos que se mueven a otra velocidad que el scroll, en el mismo paso que Lenis, midiendo una sola vez.",
+   "api": [
+    "Lenis.on",
+    "Lenis.scroll",
+    "Lenis.actualScroll",
+    "Lenis.dimensions",
+    "Lenis.prefersReducedMotion"
+   ],
+   "requiere": [
+    "api-eventos",
+    "com-raf"
+   ],
+   "relacionadas": [
+    "cal-rendimiento",
+    "cal-accesibilidad",
+    "int-gsap",
+    "rec-canvas-sync"
+   ],
+   "etiquetas": [
+    "parallax",
+    "sincronizacion",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "08-recetas/rec-parallax.md"
+  },
+  {
+   "id": "rec-scroll-to-top",
+   "titulo": "Botón de volver arriba",
+   "capa": "08-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Botón que aparece tras un umbral, vuelve arriba con Lenis y deja el foco en un lugar útil.",
+   "api": [
+    "Lenis.scrollTo",
+    "ScrollToOptions.duration",
+    "ScrollToOptions.easing",
+    "ScrollToOptions.onComplete",
+    "ScrollToOptions.onStart",
+    "ScrollToOptions.lock"
+   ],
+   "requiere": [
+    "api-scrollto"
+   ],
+   "relacionadas": [
+    "cal-accesibilidad",
+    "com-stop-start",
+    "rec-menu-anclas"
+   ],
+   "etiquetas": [
+    "scrollto",
+    "boton",
+    "foco",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "08-recetas/rec-scroll-to-top.md"
+  },
+  {
+   "id": "rec-secciones-snap",
+   "titulo": "Secciones con ajuste de scroll",
+   "capa": "08-recetas",
+   "tipo": "patron",
+   "ambito": "snap",
+   "resumen": "Ajuste a secciones con lenis/snap, con limpieza segura, lista que cambia y soluciones para eje horizontal y contenedores desplazados.",
+   "api": [
+    "Snap",
+    "Snap.addElements",
+    "Snap.add",
+    "Snap.goTo",
+    "Snap.stop",
+    "Snap.start",
+    "Snap.destroy",
+    "SnapOptions.type",
+    "SnapOptions.debounce",
+    "SnapOptions.distanceThreshold",
+    "SnapOptions.onSnapComplete"
+   ],
+   "requiere": [
+    "snp-snap",
+    "snp-api"
+   ],
+   "relacionadas": [
+    "snp-elementos",
+    "rec-horizontal",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "snap",
+    "secciones",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "08-recetas/rec-secciones-snap.md"
+  },
+  {
+   "id": "ver-historial",
+   "titulo": "Historial de versiones contrastado",
+   "capa": "09-versiones",
+   "tipo": "referencia",
+   "ambito": "transversal",
+   "resumen": "Qué cambió de verdad entre 1.0.43 y 1.3.27, separado en API, conducta, correcciones e interno, con cambios que RELEASES.md no menciona.",
+   "api": [
+    "LenisOptions.respectReducedMotion",
+    "LenisOptions.naiveDimensions",
+    "LenisOptions.stopInertiaOnNavigate",
+    "LenisOptions.touchInertiaExponent",
+    "Lenis.prefersReducedMotion",
+    "Lenis.overflow",
+    "Lenis.isIos",
+    "SnapOptions.distanceThreshold",
+    "Snap.next",
+    "Snap.previous",
+    "Snap.goTo"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "ver-migracion",
+    "ver-v2",
+    "opc-referencia",
+    "snp-snap",
+    "fun-instalacion"
+   ],
+   "etiquetas": [
+    "versiones",
+    "historial",
+    "releases",
+    "npm"
+   ],
+   "estado": "verificado",
+   "ruta": "09-versiones/ver-historial.md"
+  },
+  {
+   "id": "ver-migracion",
+   "titulo": "Migrar a lenis 1.3 desde @studio-freight/lenis y versiones anteriores",
+   "capa": "09-versiones",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Paquetes renombrados, opciones retiradas que se ignoran sin avisar, cambios de valores por defecto y pasos para actualizar a 1.3.27.",
+   "api": [
+    "LenisOptions.smoothWheel",
+    "LenisOptions.orientation",
+    "LenisOptions.gestureOrientation",
+    "LenisOptions.wheelMultiplier",
+    "LenisOptions.syncTouch",
+    "LenisOptions.eventsTarget",
+    "LenisOptions.touchInertiaExponent",
+    "LenisOptions.naiveDimensions",
+    "Lenis.isScrolling",
+    "Lenis.isSmooth",
+    "Snap.addElement",
+    "SnapOptions.type",
+    "SnapOptions.debounce"
+   ],
+   "requiere": [
+    "fun-instalacion"
+   ],
+   "relacionadas": [
+    "ver-historial",
+    "ver-v2",
+    "int-react",
+    "int-vue-nuxt",
+    "snp-snap",
+    "fun-css"
+   ],
+   "etiquetas": [
+    "migracion",
+    "npm",
+    "paquetes",
+    "versiones"
+   ],
+   "estado": "verificado",
+   "ruta": "09-versiones/ver-migracion.md"
+  },
+  {
+   "id": "ver-v2",
+   "titulo": "Lenis v2, plan y prerrelease",
+   "capa": "09-versiones",
+   "tipo": "referencia",
+   "ambito": "transversal",
+   "resumen": "V2-ROADMAP.md es un plan. En npm solo hay prereleases 2.0.0-dev con la etiqueta dev, y latest sigue en 1.3.27. No migres producción.",
+   "api": null,
+   "requiere": null,
+   "relacionadas": [
+    "ver-historial",
+    "ver-migracion",
+    "opc-referencia"
+   ],
+   "etiquetas": [
+    "versiones",
+    "v2",
+    "roadmap"
+   ],
+   "estado": "verificado",
+   "ruta": "09-versiones/ver-v2.md"
+  },
+  {
+   "id": "tar-rutas",
+   "titulo": "Rutas por intención, síntoma, decisión y tecnología",
+   "capa": "10-tareas",
+   "tipo": "referencia",
+   "ambito": "transversal",
+   "resumen": "Punto de entrada del sistema. Lleva de lo que quieres hacer, o de lo que falla, a la ficha exacta y a la plantilla reutilizable.",
+   "api": null,
+   "requiere": null,
+   "relacionadas": [
+    "fun-que-es",
+    "int-contrato",
+    "cal-errores"
+   ],
+   "etiquetas": [
+    "indice",
+    "diagnostico",
+    "decision"
+   ],
+   "estado": "verificado",
+   "ruta": "10-tareas/tar-rutas.md"
+  }
+ ]
+}

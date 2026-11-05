@@ -1,0 +1,5 @@
+<!doctype html><title>x</title><style>.pieza{position:sticky;top:0}.carrusel{overflow:auto}</style><div class="b"></div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js"></script><script src="globales/orquestador.js"></script>
+<script>const mov = Plantillas.iniciarMovimiento({ perfil: "gsap+lenis", gsap, ScrollTrigger, Lenis, opciones: { lenis: { lerp: 0.1 } } });
+mov.añadir(() => { gsap.to(".b", { x: 10, scrollTrigger: { scrub: true, snap: { snapTo: 0.5, delay: 0.4 } } }); });
+document.querySelector(".b").addEventListener("click", () => { mov.bloquear(); mov.irA("#fin"); });</script>

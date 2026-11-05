@@ -1,0 +1,5 @@
+<!doctype html><title>x</title><div id="area" data-lenis-prevent style="height:200px;overflow:auto"><div style="height:1500px"></div></div>
+<script src="../../g/gsap.min.js"></script><script src="../../g/ScrollTrigger.min.js"></script><script src="../../g/ScrollToPlugin.min.js"></script><script src="../../l/lenis.min.js"></script>
+<script>gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+const lenis = new Lenis(); const paso = (t) => lenis.raf(t * 1000); gsap.ticker.add(paso); lenis.on("scroll", ScrollTrigger.update);
+gsap.to("#area", { scrollTo: 600, duration: 0.2 });</script>

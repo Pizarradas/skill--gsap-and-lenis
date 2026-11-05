@@ -1,0 +1,2 @@
+import gsap from "gsap"; import { ScrollTrigger } from "gsap/ScrollTrigger"; import Lenis from "lenis"; import Snap from "lenis/snap"; const lenis = new Lenis(); const paso=(t)=>lenis.raf(t*1000); gsap.ticker.add(paso); lenis.on("scroll",ScrollTrigger.update);
+gsap.to('.a',{x:1,scrollTrigger:{snap:0.25}});

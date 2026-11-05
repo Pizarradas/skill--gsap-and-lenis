@@ -1,0 +1,768 @@
+{
+  "reglas": [
+    {
+      "id": "O01",
+      "titulo": "autoRaf y gsap.ticker a la vez",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Quita autoRaf: true y deja gsap.ticker.add((t) => lenis.raf(t * 1000)).",
+      "evidencia": "cmb-reloj",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "autoRaf\\s*:\\s*true",
+            "ticker\\.add",
+            "\\.raf\\("
+          ],
+          "ninguno": []
+        },
+        {
+          "archivos": "js",
+          "todos": [
+            "<(?:ReactLenis|VueLenis|vue-lenis)\\b",
+            "ticker\\.add",
+            "\\.raf\\("
+          ],
+          "ninguno": [
+            "autoRaf\\s*:\\s*false",
+            "autoRaf=\\{false\\}",
+            "auto-raf=[\"']false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O02",
+      "titulo": "Dos instancias de Lenis sobre la misma raíz",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "lenis",
+        "gsap+lenis"
+      ],
+      "correccion": "Destruye la anterior antes de crear otra. Comprobación en ejecución: el análisis estático no distingue ventana de contenedor.",
+      "evidencia": "cmb-salida",
+      "detecta": []
+    },
+    {
+      "id": "O03",
+      "titulo": "ScrollSmoother y Lenis juntos",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis",
+        "gsap-smoother"
+      ],
+      "correccion": "Elige uno con cmb-smoother y retira el otro, incluidas sus clases.",
+      "evidencia": "cmb-smoother",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "ScrollSmoother\\.create|new ScrollSmoother\\(|\\bperfil\\s*:\\s*[\"\\'`]gsap-smoother[\"\\'`]",
+            "new Lenis\\b|ReactLenis|VueLenis|useLenis|\\bperfil\\s*:\\s*[\"\\'`](?:gsap\\+)?lenis[\"\\'`]"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O04",
+      "titulo": "Falta lenis.on('scroll', ScrollTrigger.update)",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Añade lenis.on('scroll', ScrollTrigger.update) al crear la instancia.",
+      "evidencia": "cmb-reloj",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "new Lenis\\b|ReactLenis|VueLenis|useLenis",
+            "scrollTrigger\\s*:|ScrollTrigger\\.create"
+          ],
+          "ninguno": [
+            "ScrollTrigger\\.update"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O05",
+      "titulo": "lenis.raf recibe segundos",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Multiplica por 1000: lenis.raf(time * 1000).",
+      "evidencia": "cmb-reloj",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "ticker\\.add\\(\\s*(?:async\\s+)?(?:function\\b[^(]*)?\\(?\\s*(\\w+)\\b[^)=]*\\)?\\s*(?:=>)?\\s*\\{?[\\s\\S]{0,200}?\\.raf\\(\\s*\\1\\s*\\)"
+          ],
+          "ninguno": []
+        },
+        {
+          "archivos": "js",
+          "todos": [
+            "(?:(?:const|let|var)\\s+(\\w+)\\s*=\\s*(?:async\\s+)?(?:function\\b[^(]*)?\\(?\\s*(\\w+)\\b[^)=]*\\)?\\s*(?:=>)?\\s*\\{?|function\\s+(\\w+)\\s*\\(\\s*(\\w+)\\b[^)]*\\)\\s*\\{)[\\s\\S]{0,200}?\\.raf\\(\\s*(?:\\2|\\4)\\s*\\)[\\s\\S]*?ticker\\.add\\(\\s*(?:\\1|\\3)\\s*[,)]"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O06",
+      "titulo": "lagSmoothing(0) sin un tiempo real que seguir",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Quítalo: tras un bloqueo largo salta. Solo se justifica con audio o vídeo; si lo usas, restaura 500, 33 al salir.",
+      "evidencia": "cmb-reloj",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "lagSmoothing\\(\\s*0\\s*\\)",
+            "@lenis"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O07",
+      "titulo": "normalizeScroll con Lenis",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Quítalo. Si hace falta en móvil, usa otro perfil en esa vista.",
+      "evidencia": "cmb-normalize",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "normalizeScroll\\(\\s*(?!false\\b|\\))[^)\\s]|normalizeScroll\\s*:\\s*true",
+            "@lenis"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O08",
+      "titulo": "Mover el scroll sin pasar por Lenis",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "lenis",
+        "gsap+lenis"
+      ],
+      "correccion": "Usa lenis.scrollTo; toma el destino de st.start, st.end o labelToScroll. La detección no cubre st.scroll() ni window.scrollTo, que fallan igual.",
+      "evidencia": "cmb-scroll-programatico",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "@lenis",
+            "\\.(?:to|fromTo)\\(\\s*(?:window|document(?:\\.(?:documentElement|body|scrollingElement))?|[\"'`](?:html|body)[\"'`])\\s*,\\s*(?:\\{[^{}]*\\}\\s*,\\s*)?\\{[^}]*\\bscrollTo\\b\\s*[:,}]"
+          ],
+          "ninguno": [
+            "\\bwrapper\\s*:(?!\\s*window\\b)|new Lenis\\(\\s*\\{[^}]*\\bwrapper\\b(?!\\s*:\\s*window\\b)",
+            "\\braiz\\s*:(?!\\s*window\\b)"
+          ]
+        },
+        {
+          "archivos": "js",
+          "todos": [
+            "@lenis",
+            "(?<!\\btl)(?<!\\btimeline)\\.tweenTo\\(|\\b(?:scrollTrigger|st)\\.scroll\\(\\s*[^)\\s]"
+          ],
+          "ninguno": []
+        },
+        {
+          "archivos": "js",
+          "todos": [
+            "@lenis",
+            "\\bwindow\\.scroll(?:To|By)?\\(|\\bdocument\\.documentElement\\.scrollTop\\s*=(?!=)"
+          ],
+          "ninguno": [
+            "\\bwrapper\\s*:(?!\\s*window\\b)|new Lenis\\(\\s*\\{[^}]*\\bwrapper\\b(?!\\s*:\\s*window\\b)",
+            "\\braiz\\s*:(?!\\s*window\\b)"
+          ],
+          "salvo_tras": "\\.destroy\\(\\)",
+          "salvo_antes": "new Lenis\\b|iniciarMovimiento\\("
+        },
+        {
+          "archivos": "js",
+          "todos": [
+            "@lenis",
+            "\\.(?:to|fromTo)\\(\\s*(?!(?:window|document(?:\\.(?:documentElement|body|scrollingElement))?|[\"'`](?:html|body)[\"'`])\\s*,)[^,]+\\s*,\\s*(?:\\{[^{}]*\\}\\s*,\\s*)?\\{[^}]*\\bscrollTo\\b\\s*[:,}]"
+          ],
+          "ninguno": [
+            "data-lenis-prevent"
+          ],
+          "severidad": "aviso",
+          "nota": "ScrollToPlugin sobre otro destino: solo es la excepción de orq-propiedad si es un área con data-lenis-prevent, y si no es el contenedor de Lenis."
+        }
+      ]
+    },
+    {
+      "id": "O09",
+      "titulo": "snap de ScrollTrigger con Lenis sin delay suficiente",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Usa lenis/snap, o delay de 0.3 o más: sin él, el destino cambia entre lerp y duration.",
+      "evidencia": "cmb-snap",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "@lenis",
+            "\\bsnap\\s*:(?!\\s*\\{[^}]*\\bdelay\\s*:\\s*(?:0?\\.[3-9]|[1-9]))",
+            "scrollTrigger\\s*:|ScrollTrigger\\.create"
+          ],
+          "ninguno": [
+            "new Snap\\("
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O10",
+      "titulo": "snap de ScrollTrigger y lenis/snap a la vez",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Deja solo lenis/snap.",
+      "evidencia": "cmb-snap",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "new Snap\\(",
+            "\\bsnap\\s*:",
+            "scrollTrigger\\s*:|ScrollTrigger\\.create"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O11",
+      "titulo": "CSS scroll-snap mandatory con Lenis",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "lenis",
+        "gsap+lenis"
+      ],
+      "correccion": "Quita scroll-snap-type y usa lenis/snap.",
+      "evidencia": "cmb-snap",
+      "detecta": [
+        {
+          "archivos": "js|css|html",
+          "todos": [
+            "@lenis",
+            "(?m)(?:^|[\\s,}>;])(?:html|body|:root)(?:\\.[\\w-]+)*\\s*(?:,[^{}]*)?\\{[^}]*scroll-snap-type\\s*:[^;}]*mandatory"
+          ],
+          "ninguno": []
+        },
+        {
+          "archivos": "js|css|html",
+          "todos": [
+            "@lenis",
+            "scroll-snap-type\\s*:[^;}]*mandatory"
+          ],
+          "ninguno": [],
+          "severidad": "aviso",
+          "nota": "Medido solo en la raíz de Lenis. No afecta a un carrusel interior con data-lenis-prevent; sí, si este selector es el contenedor de Lenis."
+        }
+      ]
+    },
+    {
+      "id": "O12",
+      "titulo": "ScrollTrigger sin scroller con Lenis en contenedor",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Pasa scroller a cada instancia, o ScrollTrigger.defaults({ scroller }) antes de crearlas.",
+      "evidencia": "cmb-contenedor",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "@lenis",
+            "\\bwrapper\\s*:(?!\\s*window\\b)|new Lenis\\(\\s*\\{[^}]*\\bwrapper\\b(?!\\s*:\\s*window\\b)",
+            "scrollTrigger\\s*:|ScrollTrigger\\.create"
+          ],
+          "ninguno": [
+            "\\bscroller\\s*:",
+            "defaults\\(\\s*\\{[^}]*\\bscroller\\b"
+          ],
+          "nota": "Estático: un disparador que deba seguir a la ventana no lleva scroller y es correcto, como con un Lenis en un cajón. Comprueba solo los que deban seguir al contenedor."
+        }
+      ]
+    },
+    {
+      "id": "O13",
+      "titulo": "lenis.stop() en contenedor con overflow en hoja",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "lenis",
+        "gsap+lenis"
+      ],
+      "correccion": "Mantén el contenedor con scroll: overflow hidden en línea, o .caja.lenis-stopped:not(.lenis-autoToggle) { overflow: hidden !important }.",
+      "evidencia": "cmb-modal",
+      "detecta": [
+        {
+          "archivos": "js|css|html",
+          "todos": [
+            "\\bwrapper\\s*:(?!\\s*window\\b)|new Lenis\\(\\s*\\{[^}]*\\bwrapper\\b(?!\\s*:\\s*window\\b)|\\braiz\\s*:(?!\\s*window\\b)",
+            "lenis\\w*(?:\\.current)?\\??\\.stop\\(\\)"
+          ],
+          "ninguno": [
+            "\\.lenis-stopped\\s*:not",
+            "\\.lenis-stopped\\b[^{}]*\\{[^}]*overflow\\s*:\\s*hidden",
+            "\\.style\\.overflow\\s*=\\s*[\"\\'`]hidden",
+            "setProperty\\(\\s*[\"'`]overflow[\"'`]\\s*,\\s*[\"'`]hidden"
+          ],
+          "nota": "Estático: no ve la especificidad. Si el overflow del contenedor va en un selector de id, como #panel{overflow:auto}, gana a lenis.css y scrollTop se conserva: compruébalo en el navegador antes de cambiarlo. Ver cmb-modal."
+        }
+      ]
+    },
+    {
+      "id": "O14",
+      "titulo": "Observer con preventDefault no detiene a Lenis",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Llama a lenis.stop() mientras Observer pagina, y mueve con lenis.scrollTo y force; o usa data-lenis-prevent en el área.",
+      "evidencia": "cmb-observer",
+      "detecta": [
+        {
+          "archivos": "js|html",
+          "todos": [
+            "@lenis",
+            "Observer\\.create|ScrollTrigger\\.observe",
+            "preventDefault\\s*:\\s*true"
+          ],
+          "ninguno": [
+            "lenis\\w*(?:\\.current)?\\??\\.stop\\(\\)",
+            "\\.bloquear\\(\\)",
+            "data-lenis-prevent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O15",
+      "titulo": "Observer sigue activo con el modal abierto",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "observer.disable() al abrir y enable() al cerrar.",
+      "evidencia": "cmb-modal",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "lenis\\w*(?:\\.current)?\\??\\.stop\\(\\)|\\.bloquear\\(\\)",
+            "Observer\\.create"
+          ],
+          "ninguno": [
+            "\\.disable\\(\\)",
+            "force\\s*:\\s*true"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O16",
+      "titulo": "scrub numérico alto sobre Lenis",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Usa scrub: true. Un valor numérico suaviza por segunda vez: reserva hasta 0.3 para un efecto deliberado.",
+      "evidencia": "cmb-scrub",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "@lenis",
+            "\\bscrub\\s*:\\s*(?:[1-9]|0?\\.[4-9]|0?\\.3\\d*[1-9])"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O17",
+      "titulo": "Lenis horizontal sin horizontal: true en ScrollTrigger",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Añade horizontal: true a cada instancia, o ScrollTrigger.defaults({ horizontal: true }).",
+      "evidencia": "cmb-horizontal",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "orientation\\s*:\\s*[\\\"']horizontal",
+            "scrollTrigger\\s*:|ScrollTrigger\\.create"
+          ],
+          "ninguno": [
+            "horizontal\\s*:\\s*true"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O18",
+      "titulo": "lenis.resize() antes de ScrollTrigger.refresh()",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Cuelga lenis.resize() del evento refresh, o llámalo después.",
+      "evidencia": "cmb-medidas",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "lenis\\w*(?:\\.current)?\\??\\.resize\\(\\)\\s*;?\\s*ScrollTrigger\\.refresh\\("
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O19",
+      "titulo": "Snap.addElement sobre un elemento fijado",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Añade posiciones de ScrollTrigger con snap.add(st.start), y recalcula en refresh. Demostrado; es aviso porque la detección no sabe si ese elemento es el fijado.",
+      "evidencia": "cmb-snap",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "\\.addElements?\\(",
+            "\\bpin\\s*:"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O20",
+      "titulo": "lenis.velocity con ScrollTrigger disponible",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Usa self.getVelocity(), en px/s: lenis.velocity cambia con la frecuencia. Sin infinite.",
+      "evidencia": "cmb-velocidad",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "lenis\\w*(?:\\.current)?\\??\\.velocity",
+            "scrollTrigger\\s*:|ScrollTrigger\\.create"
+          ],
+          "ninguno": [
+            "infinite\\s*:\\s*true"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O21",
+      "titulo": "scrub numérico con infinite",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Usa scrub: true con un efecto periódico.",
+      "evidencia": "cmb-infinito",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "infinite\\s*:\\s*true",
+            "scrub\\s*:\\s*\\.?\\d"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O22",
+      "titulo": "lenis.destroy() sin quitar el reloj del ticker",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "gsap.ticker.remove(paso) con la misma función, en la salida.",
+      "evidencia": "cmb-salida",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "ticker\\.add",
+            "lenis\\w*(?:\\.current)?\\??\\.destroy\\(\\)"
+          ],
+          "ninguno": [
+            "ticker\\.remove"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O23",
+      "titulo": "syncTouch con Draggable sin data-lenis-prevent-touch",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Marca el elemento con data-lenis-prevent-touch.",
+      "evidencia": "cmb-gestos",
+      "detecta": [
+        {
+          "archivos": "js|html",
+          "todos": [
+            "syncTouch\\s*:\\s*true",
+            "Draggable\\.create|new Draggable"
+          ],
+          "ninguno": [
+            "data-lenis-prevent"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O24",
+      "titulo": "respectReducedMotion: false",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "lenis",
+        "gsap+lenis"
+      ],
+      "correccion": "Quítalo: Lenis seguiría animando con la preferencia activa.",
+      "evidencia": "cmb-reducido",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "respectReducedMotion\\s*:\\s*false"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O25",
+      "titulo": "ScrollToPlugin sin atender el movimiento reducido",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap"
+      ],
+      "correccion": "En la rama reduce de gsap.matchMedia, usa duration: 0.",
+      "evidencia": "cmb-reducido",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "gsap\\.to\\([^,]*,\\s*\\{[^}]*scrollTo\\s*:"
+          ],
+          "ninguno": [
+            "prefers-reduced-motion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O26",
+      "titulo": "overflow-x: hidden en html y body con sticky",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap",
+        "lenis",
+        "gsap+lenis",
+        "ninguno"
+      ],
+      "correccion": "Usa overflow-x: clip.",
+      "evidencia": "cmb-css",
+      "detecta": [
+        {
+          "archivos": "css|html",
+          "todos": [
+            "(?m)(?:^|[\\s,}>;])html\\s*(?:,[^{}]*)?\\{[^}]*overflow-x\\s*:\\s*hidden",
+            "(?m)(?:^|[\\s,}>;])body\\s*(?:,[^{}]*)?\\{[^}]*overflow-x\\s*:\\s*hidden",
+            "position\\s*:\\s*sticky"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O27",
+      "titulo": "La barra desaparece con lenis.stop() y hay pines",
+      "severidad": "aviso",
+      "perfiles": [
+        "lenis",
+        "gsap+lenis"
+      ],
+      "correccion": "html { scrollbar-gutter: stable }. No fuerces overflow-y: scroll: libera el teclado.",
+      "evidencia": "cmb-modal",
+      "detecta": [
+        {
+          "archivos": "js|css",
+          "todos": [
+            "lenis\\w*(?:\\.current)?\\??\\.stop\\(\\)",
+            "\\bpin\\s*:"
+          ],
+          "ninguno": [
+            "scrollbar-gutter"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O28",
+      "titulo": "Flip sin refresh en onComplete",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap",
+        "gsap-smoother",
+        "gsap+lenis"
+      ],
+      "correccion": "ScrollTrigger.refresh() en onComplete: en vuelo mide el tamaño anterior.",
+      "evidencia": "cmb-flip-split",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "Flip\\.from\\(",
+            "scrollTrigger\\s*:|ScrollTrigger\\.create"
+          ],
+          "ninguno": [
+            "onComplete[^}]*refresh"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O29",
+      "titulo": "Ancla a un elemento fijado",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap",
+        "gsap+lenis"
+      ],
+      "correccion": "Apunta al espaciador o a un elemento previo, o usa lenis.scrollTo(st.start). Demostrado; sin detección estática.",
+      "evidencia": "cmb-anclas",
+      "detecta": []
+    },
+    {
+      "id": "O30",
+      "titulo": "scrollerProxy con Lenis",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Quítalo: Lenis usa scroll nativo. No rompe, pero sobra.",
+      "evidencia": "cmb-contenedor",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "@lenis",
+            "scrollerProxy"
+          ],
+          "ninguno": []
+        }
+      ]
+    },
+    {
+      "id": "O31",
+      "titulo": "sticky o fixed con ScrollSmoother",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap-smoother"
+      ],
+      "correccion": "Saca lo fijo de content y usa pin en lugar de sticky. Demostrado; es aviso porque la detección no ve si está dentro de content.",
+      "evidencia": "cmb-smoother",
+      "detecta": [
+        {
+          "archivos": "js|css",
+          "todos": [
+            "@smoother",
+            "position\\s*:\\s*(sticky|fixed)"
+          ],
+          "ninguno": [],
+          "filtro": "fuera-del-contenido"
+        }
+      ]
+    },
+    {
+      "id": "O32",
+      "titulo": "autoRaf con GSAP sin reloj compartido",
+      "severidad": "aviso",
+      "perfiles": [
+        "gsap+lenis"
+      ],
+      "correccion": "Pasa el reloj a gsap.ticker: tras un bloqueo, scroll y tweens se separan 668 ms.",
+      "evidencia": "cmb-reloj",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "autoRaf\\s*:\\s*true|<(?:ReactLenis|VueLenis|vue-lenis)\\b",
+            "scrollTrigger\\s*:|ScrollTrigger\\.create"
+          ],
+          "ninguno": [
+            "\\.raf\\(",
+            "autoRaf\\s*:\\s*false",
+            "autoRaf=\\{false\\}",
+            "auto-raf=[\"']false"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "O33",
+      "titulo": "Animar smoother.scrollTop con un tween",
+      "severidad": "bloqueante",
+      "perfiles": [
+        "gsap-smoother"
+      ],
+      "correccion": "Anima la posición de la ventana, con ScrollToPlugin o un objeto propio y window.scrollTo, o usa mov.irA. Tras el tween, la rueda siguiente deja el contenido parado.",
+      "evidencia": "cmb-smoother",
+      "detecta": [
+        {
+          "archivos": "js",
+          "todos": [
+            "@smoother",
+            "\\.(?:to|from|fromTo)\\(\\s*(?:\\w+\\.)?\\w*[sS]moother\\w*(?:\\.get\\(\\))?\\s*,[^}]*\\bscrollTop\\b"
+          ],
+          "ninguno": []
+        }
+      ]
+    }
+  ]
+}

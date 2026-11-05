@@ -1,0 +1,16 @@
+<!doctype html><html lang="es"><meta charset="utf8"><title>Mal5</title>
+<header><a id="m1" href="#destino">Destino</a> <a id="m2" href="#fijada">Fijada</a> <button id="b1">Destino JS</button></header><section class="s">1</section><section id="fijada" class="pinz"><div class="caja"></div></section><section class="s">3</section><section id="destino" class="s">Destino</section><section class="s">5</section>
+<script src="../g/gsap.min.js"></script><script src="../g/ScrollTrigger.min.js"></script><script src="../g/ScrollToPlugin.min.js"></script><script src="../l/lenis.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+const lenis = new Lenis();
+const paso = (t) => lenis.raf(t * 1000);
+gsap.ticker.add(paso);
+lenis.on("scroll", ScrollTrigger.update);
+gsap.timeline().to(window, { scrollTo: 300, duration: 1 });
+const t = gsap.to(".caja", { x: 300 });
+const tw = gsap.to(".caja", { x: 300, ease: "none", scrollTrigger: { start: 0, end: 500, scrub: true } });
+tw.scrollTrigger.scroll(400);
+window.scrollTo(0, 500);
+lenis.destroy();
+</script></html>

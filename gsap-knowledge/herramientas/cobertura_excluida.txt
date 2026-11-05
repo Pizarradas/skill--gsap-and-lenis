@@ -1,0 +1,2 @@
+# Páginas oficiales que no aportan conocimiento propio
+resources.md  # portada con enlaces de bienvenida

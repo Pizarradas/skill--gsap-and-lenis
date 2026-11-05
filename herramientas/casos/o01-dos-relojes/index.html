@@ -1,0 +1,12 @@
+<!doctype html><html lang="es"><meta charset="utf8"><title>Mal</title><link rel="stylesheet" href="../lenis.css"><style>html{scrollbar-gutter:stable;scroll-padding-top:60px}body{margin:0}header{position:fixed;top:0;left:0;right:0;height:60px;background:#222;z-index:9}.s{height:900px;border-bottom:1px solid #999}.pinz{height:600px;background:#eee}.caja{width:100px;height:100px;background:#c33}</style>
+<header><a id="m1" href="#destino">Destino</a> <a id="m2" href="#fijada">Fijada</a> <button id="b1">Destino JS</button></header><section class="s">1</section><section id="fijada" class="pinz"><div class="caja"></div></section><section class="s">3</section><section id="destino" class="s">Destino</section><section class="s">5</section>
+<script src="../g/gsap.min.js"></script><script src="../g/ScrollTrigger.min.js"></script><script src="../g/ScrollToPlugin.min.js"></script><script src="../l/lenis.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+const lenis = window.lenis = new Lenis({ autoRaf: true, anchors: true });
+lenis.on("scroll", ScrollTrigger.update);
+gsap.ticker.add((t) => lenis.raf(t * 1000));
+gsap.to(".caja", { x: 300, ease: "none", scrollTrigger: { id: "pin", trigger: ".pinz", pin: true, start: "top 60px", end: "+=1000", scrub: true } });
+document.querySelector("#b1").addEventListener("click", () => gsap.to(window, { scrollTo: { y: "#destino", offsetY: 60 }, duration: 1 }));
+window.listo = true;
+</script></html>

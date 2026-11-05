@@ -1,0 +1,25 @@
+<!-- GENERADO por herramientas/generar_indices.py: no editar a mano -->
+
+# 07 · Scroll
+
+| Ficha | Tipo | Ámbito | Resumen |
+|---|---|---|---|
+| [ScrollTrigger.batch(), coordinar muchos elementos](scr-batch.md) | api | ScrollTrigger | Crea una instancia por elemento y agrupa en arrays los callbacks ocurridos casi a la vez. Ideal para revelar rejillas con escalonado sin un bucle de animaciones. |
+| [Métodos estáticos de ScrollTrigger](scr-estaticos.md) | referencia | ScrollTrigger | Tabla de los métodos globales de ScrollTrigger con config, defaults, búsqueda de instancias, medición del viewport, activación y métodos obsoletos. |
+| [Scroll horizontal, nativo y simulado con containerAnimation](scr-horizontal.md) | concepto | ScrollTrigger | Dos horizontales distintos, horizontal true para scroll real y pin más tween para el simulado, con containerAnimation para disparar animaciones dentro de la pista. |
+| [Propiedades y métodos de una instancia de ScrollTrigger](scr-instancia.md) | referencia | ScrollTrigger | Tabla de lectura de una instancia (progress, direction, isActive, start, end) y sus métodos (kill, disable, enable, scroll, getVelocity, next, previous, tweenTo). |
+| [ScrollTrigger.normalizeScroll(), scroll en el hilo de JavaScript](scr-normalize.md) | api | ScrollTrigger | Intercepta rueda y toque para desplazar desde JavaScript. Evita saltos de pin, oculta menos la barra de direcciones móvil y corrige jitter de iOS, a cambio de ser scroll-jacking. |
+| [Observer, referencia completa de opciones y propiedades](scr-observer-api.md) | referencia | Observer | Todas las opciones de ObserverVars, los callbacks, las propiedades de la instancia y los métodos estáticos de Observer. |
+| [Observer, intención de movimiento unificada](scr-observer.md) | plugin | Observer | Detecta rueda, toque, puntero y scroll con una sola API, con direcciones, deltas y velocidad. Base de las páginas que cambian de sección sin scroll real. |
+| [pin, fijar un elemento durante un tramo de scroll](scr-pin.md) | concepto | ScrollTrigger | Qué hace pin en el DOM (pin-spacer, position fixed, padding), opciones pinSpacing, pinType, pinReparent, anticipatePin, y causas de pines que saltan. |
+| [refresh, cuándo y cómo se recalculan las posiciones](scr-refresh.md) | concepto | ScrollTrigger | Diferencia entre refresh y update, qué dispara un refresco, orden de creación, sort, refreshPriority, invalidateOnRefresh, saveStyles y memoria del scroll. |
+| [ScrollTrigger.scrollerProxy(), integrar otro scroll](scr-scrollerproxy.md) | api | ScrollTrigger | Sustituye los getters y setters de scroll de un elemento para que ScrollTrigger funcione con librerías de scroll suave o desplazamientos propios. |
+| [ScrollToPlugin, animar la posición de scroll](scr-scrollto.md) | plugin | ScrollToPlugin | Anima el scroll de ventana o contenedor hasta un valor, selector o elemento, con desfases, autoKill y relativos. Incluye su relación con scroll-behavior y anclas. |
+| [ScrollTrigger, enlazar cualquier cosa con la posición de scroll](scr-scrolltrigger.md) | plugin | ScrollTrigger | Mapa del plugin. Cómo funciona por dentro, formas de crearlo, tabla completa de ScrollTrigger.Vars y a qué ficha ir para cada problema. |
+| [scrub, atar el cabezal de la animación al scroll](scr-scrub.md) | concepto | ScrollTrigger | Diferencia entre scrub true y numérico, cómo se reparten las duraciones de un timeline, valores iniciales cacheados y por qué ease none es casi obligatorio. |
+| [Métodos y propiedades de ScrollSmoother](scr-smoother-api.md) | referencia | ScrollSmoother | Referencia de la instancia, scrollTo, offset, scrollTop, paused, smooth, progress, content, wrapper, getVelocity, kill, y las diferencias entre scroll nativo y suavizado. |
+| [Efectos de ScrollSmoother, data-speed y data-lag](scr-smoother-efectos.md) | concepto | ScrollSmoother | Parallax con data-speed, retardo con data-lag, valores auto y clamp, método effects(), prefijo y padding, y cómo se reparte el desplazamiento respecto al centro. |
+| [ScrollSmoother, scroll suavizado sobre scroll nativo](scr-smoother.md) | plugin | ScrollSmoother | Qué hace, estructura wrapper y content, cuándo compensa frente al scroll nativo, su límite en móvil y las interacciones con pin y position fixed. |
+| [snap, ajustar el scroll a posiciones concretas](scr-snap.md) | concepto | ScrollTrigger | Formas de snap (incremento, array, función, etiquetas, objeto), opciones de SnapVars, snapDirectional y cuándo un ajuste se cancela o no arranca. |
+| [start y end, cómo se calcula el tramo activo](scr-start-end.md) | concepto | ScrollTrigger | Sintaxis de start y end (palabras, porcentajes, relativos, max, clamp, funciones), valores por defecto y fórmula con la que salen los píxeles. |
+| [toggleActions, toggleClass y callbacks de ScrollTrigger](scr-toggle.md) | concepto | ScrollTrigger | Las cuatro transiciones del tramo, acciones sobre la animación, clases, callbacks, once, y cómo evitar solapes con fastScrollEnd y preventOverlaps. |

@@ -1,0 +1,6 @@
+<!doctype html><title>x</title><aside id="caj" style="height:200px;overflow:auto"><div style="height:1500px"></div></aside><div class="b"></div>
+<script src="../../g/gsap.min.js"></script><script src="../../g/ScrollTrigger.min.js"></script><script src="../../l/lenis.min.js"></script>
+<script>gsap.registerPlugin(ScrollTrigger);
+const c = document.querySelector("#caj");
+const lenis = new Lenis({ wrapper: c, content: c.firstElementChild }); const paso = (t) => lenis.raf(t * 1000); gsap.ticker.add(paso); lenis.on("scroll", ScrollTrigger.update);
+gsap.to(".b", { x: 100, scrollTrigger: { trigger: ".b", start: "top center", end: "+=300", scrub: true } });</script>

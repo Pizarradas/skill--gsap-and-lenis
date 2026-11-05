@@ -1,0 +1,727 @@
+{
+ "version": "1.3.27",
+ "generado_de": "lenis/dist/*.d.ts",
+ "total": 153,
+ "tipos": {
+  "Dimensions": {
+   "tipo": "class",
+   "archivo": "lenis.d.ts",
+   "miembros": {
+    "width": {
+     "k": "prop",
+     "st": false
+    },
+    "height": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollHeight": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "destroy": {
+     "k": "metodo",
+     "st": false
+    },
+    "resize": {
+     "k": "prop",
+     "st": false
+    },
+    "onWrapperResize": {
+     "k": "prop",
+     "st": false
+    },
+    "onContentResize": {
+     "k": "prop",
+     "st": false
+    },
+    "limit": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "FromToOptions": {
+   "tipo": "type",
+   "archivo": "lenis.d.ts",
+   "miembros": {
+    "lerp": {
+     "k": "prop",
+     "st": false
+    },
+    "duration": {
+     "k": "prop",
+     "st": false
+    },
+    "easing": {
+     "k": "prop",
+     "st": false
+    },
+    "onStart": {
+     "k": "prop",
+     "st": false
+    },
+    "onUpdate": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "VirtualScrollData": {
+   "tipo": "type",
+   "archivo": "lenis.d.ts",
+   "miembros": {
+    "deltaX": {
+     "k": "prop",
+     "st": false
+    },
+    "deltaY": {
+     "k": "prop",
+     "st": false
+    },
+    "event": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollToOptions": {
+   "tipo": "type",
+   "archivo": "lenis.d.ts",
+   "miembros": {
+    "offset": {
+     "k": "prop",
+     "st": false
+    },
+    "immediate": {
+     "k": "prop",
+     "st": false
+    },
+    "lock": {
+     "k": "prop",
+     "st": false
+    },
+    "duration": {
+     "k": "prop",
+     "st": false
+    },
+    "easing": {
+     "k": "prop",
+     "st": false
+    },
+    "lerp": {
+     "k": "prop",
+     "st": false
+    },
+    "onStart": {
+     "k": "prop",
+     "st": false
+    },
+    "onComplete": {
+     "k": "prop",
+     "st": false
+    },
+    "force": {
+     "k": "prop",
+     "st": false
+    },
+    "programmatic": {
+     "k": "prop",
+     "st": false
+    },
+    "userData": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "LenisOptions": {
+   "tipo": "type",
+   "archivo": "lenis.d.ts",
+   "miembros": {
+    "wrapper": {
+     "k": "prop",
+     "st": false
+    },
+    "content": {
+     "k": "prop",
+     "st": false
+    },
+    "eventsTarget": {
+     "k": "prop",
+     "st": false
+    },
+    "smoothWheel": {
+     "k": "prop",
+     "st": false
+    },
+    "syncTouch": {
+     "k": "prop",
+     "st": false
+    },
+    "syncTouchLerp": {
+     "k": "prop",
+     "st": false
+    },
+    "touchInertiaExponent": {
+     "k": "prop",
+     "st": false
+    },
+    "duration": {
+     "k": "prop",
+     "st": false
+    },
+    "easing": {
+     "k": "prop",
+     "st": false
+    },
+    "lerp": {
+     "k": "prop",
+     "st": false
+    },
+    "infinite": {
+     "k": "prop",
+     "st": false
+    },
+    "orientation": {
+     "k": "prop",
+     "st": false
+    },
+    "gestureOrientation": {
+     "k": "prop",
+     "st": false
+    },
+    "touchMultiplier": {
+     "k": "prop",
+     "st": false
+    },
+    "wheelMultiplier": {
+     "k": "prop",
+     "st": false
+    },
+    "autoResize": {
+     "k": "prop",
+     "st": false
+    },
+    "prevent": {
+     "k": "prop",
+     "st": false
+    },
+    "virtualScroll": {
+     "k": "prop",
+     "st": false
+    },
+    "overscroll": {
+     "k": "prop",
+     "st": false
+    },
+    "autoRaf": {
+     "k": "prop",
+     "st": false
+    },
+    "anchors": {
+     "k": "prop",
+     "st": false
+    },
+    "autoToggle": {
+     "k": "prop",
+     "st": false
+    },
+    "allowNestedScroll": {
+     "k": "prop",
+     "st": false
+    },
+    "__experimental__naiveDimensions": {
+     "k": "prop",
+     "st": false
+    },
+    "naiveDimensions": {
+     "k": "prop",
+     "st": false
+    },
+    "stopInertiaOnNavigate": {
+     "k": "prop",
+     "st": false
+    },
+    "respectReducedMotion": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Lenis": {
+   "tipo": "class",
+   "archivo": "lenis.d.ts",
+   "miembros": {
+    "isTouching": {
+     "k": "prop",
+     "st": false
+    },
+    "isIos": {
+     "k": "prop",
+     "st": false
+    },
+    "time": {
+     "k": "prop",
+     "st": false
+    },
+    "userData": {
+     "k": "prop",
+     "st": false
+    },
+    "lastVelocity": {
+     "k": "prop",
+     "st": false
+    },
+    "velocity": {
+     "k": "prop",
+     "st": false
+    },
+    "direction": {
+     "k": "prop",
+     "st": false
+    },
+    "options": {
+     "k": "prop",
+     "st": false
+    },
+    "targetScroll": {
+     "k": "prop",
+     "st": false
+    },
+    "animatedScroll": {
+     "k": "prop",
+     "st": false
+    },
+    "dimensions": {
+     "k": "prop",
+     "st": false
+    },
+    "destroy": {
+     "k": "metodo",
+     "st": false
+    },
+    "on": {
+     "k": "metodo",
+     "st": false
+    },
+    "off": {
+     "k": "metodo",
+     "st": false
+    },
+    "overflow": {
+     "k": "metodo",
+     "st": false
+    },
+    "resize": {
+     "k": "metodo",
+     "st": false
+    },
+    "start": {
+     "k": "metodo",
+     "st": false
+    },
+    "stop": {
+     "k": "metodo",
+     "st": false
+    },
+    "raf": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollTo": {
+     "k": "metodo",
+     "st": false
+    },
+    "rootElement": {
+     "k": "metodo",
+     "st": false
+    },
+    "limit": {
+     "k": "metodo",
+     "st": false
+    },
+    "isHorizontal": {
+     "k": "metodo",
+     "st": false
+    },
+    "actualScroll": {
+     "k": "metodo",
+     "st": false
+    },
+    "scroll": {
+     "k": "metodo",
+     "st": false
+    },
+    "progress": {
+     "k": "metodo",
+     "st": false
+    },
+    "isScrolling": {
+     "k": "metodo",
+     "st": false
+    },
+    "isStopped": {
+     "k": "metodo",
+     "st": false
+    },
+    "isLocked": {
+     "k": "metodo",
+     "st": false
+    },
+    "isSmooth": {
+     "k": "metodo",
+     "st": false
+    },
+    "prefersReducedMotion": {
+     "k": "metodo",
+     "st": false
+    },
+    "className": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "SnapElementOptions": {
+   "tipo": "type",
+   "archivo": "lenis-snap.d.ts",
+   "miembros": {
+    "align": {
+     "k": "prop",
+     "st": false
+    },
+    "ignoreSticky": {
+     "k": "prop",
+     "st": false
+    },
+    "ignoreTransform": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Rect": {
+   "tipo": "type",
+   "archivo": "lenis-snap.d.ts",
+   "miembros": {
+    "top": {
+     "k": "prop",
+     "st": false
+    },
+    "left": {
+     "k": "prop",
+     "st": false
+    },
+    "width": {
+     "k": "prop",
+     "st": false
+    },
+    "height": {
+     "k": "prop",
+     "st": false
+    },
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    },
+    "bottom": {
+     "k": "prop",
+     "st": false
+    },
+    "right": {
+     "k": "prop",
+     "st": false
+    },
+    "element": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "SnapElement": {
+   "tipo": "class",
+   "archivo": "lenis-snap.d.ts",
+   "miembros": {
+    "element": {
+     "k": "prop",
+     "st": false
+    },
+    "options": {
+     "k": "prop",
+     "st": false
+    },
+    "align": {
+     "k": "prop",
+     "st": false
+    },
+    "rect": {
+     "k": "prop",
+     "st": false
+    },
+    "wrapperResizeObserver": {
+     "k": "prop",
+     "st": false
+    },
+    "resizeObserver": {
+     "k": "prop",
+     "st": false
+    },
+    "debouncedWrapperResize": {
+     "k": "prop",
+     "st": false
+    },
+    "destroy": {
+     "k": "metodo",
+     "st": false
+    },
+    "setRect": {
+     "k": "metodo",
+     "st": false
+    },
+    "onWrapperResize": {
+     "k": "prop",
+     "st": false
+    },
+    "onResize": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "SnapItem": {
+   "tipo": "type",
+   "archivo": "lenis-snap.d.ts",
+   "miembros": {
+    "value": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "OnSnapCallback": {
+   "tipo": "type",
+   "archivo": "lenis-snap.d.ts",
+   "miembros": {
+    "index": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "SnapOptions": {
+   "tipo": "type",
+   "archivo": "lenis-snap.d.ts",
+   "miembros": {
+    "type": {
+     "k": "prop",
+     "st": false
+    },
+    "lerp": {
+     "k": "prop",
+     "st": false
+    },
+    "easing": {
+     "k": "prop",
+     "st": false
+    },
+    "duration": {
+     "k": "prop",
+     "st": false
+    },
+    "distanceThreshold": {
+     "k": "prop",
+     "st": false
+    },
+    "debounce": {
+     "k": "prop",
+     "st": false
+    },
+    "onSnapStart": {
+     "k": "prop",
+     "st": false
+    },
+    "onSnapComplete": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Snap": {
+   "tipo": "class",
+   "archivo": "lenis-snap.d.ts",
+   "miembros": {
+    "options": {
+     "k": "prop",
+     "st": false
+    },
+    "elements": {
+     "k": "prop",
+     "st": false
+    },
+    "snaps": {
+     "k": "prop",
+     "st": false
+    },
+    "viewport": {
+     "k": "prop",
+     "st": false
+    },
+    "isStopped": {
+     "k": "prop",
+     "st": false
+    },
+    "onSnapDebounced": {
+     "k": "prop",
+     "st": false
+    },
+    "currentSnapIndex": {
+     "k": "prop",
+     "st": false
+    },
+    "destroy": {
+     "k": "metodo",
+     "st": false
+    },
+    "start": {
+     "k": "metodo",
+     "st": false
+    },
+    "stop": {
+     "k": "metodo",
+     "st": false
+    },
+    "add": {
+     "k": "metodo",
+     "st": false
+    },
+    "addElement": {
+     "k": "metodo",
+     "st": false
+    },
+    "addElements": {
+     "k": "metodo",
+     "st": false
+    },
+    "previous": {
+     "k": "metodo",
+     "st": false
+    },
+    "next": {
+     "k": "metodo",
+     "st": false
+    },
+    "goTo": {
+     "k": "metodo",
+     "st": false
+    },
+    "distanceThreshold": {
+     "k": "metodo",
+     "st": false
+    },
+    "resize": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "LenisContextValue": {
+   "tipo": "type",
+   "archivo": "lenis-react.d.ts",
+   "miembros": {
+    "lenis": {
+     "k": "prop",
+     "st": false
+    },
+    "addCallback": {
+     "k": "prop",
+     "st": false
+    },
+    "removeCallback": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "LenisProps": {
+   "tipo": "type",
+   "archivo": "lenis-react.d.ts",
+   "miembros": {
+    "root": {
+     "k": "prop",
+     "st": false
+    },
+    "options": {
+     "k": "prop",
+     "st": false
+    },
+    "autoRaf": {
+     "k": "prop",
+     "st": false
+    },
+    "children": {
+     "k": "prop",
+     "st": false
+    },
+    "className": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "LenisRef": {
+   "tipo": "type",
+   "archivo": "lenis-react.d.ts",
+   "miembros": {
+    "wrapper": {
+     "k": "prop",
+     "st": false
+    },
+    "content": {
+     "k": "prop",
+     "st": false
+    },
+    "lenis": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "funciones": {
+   "tipo": "namespace",
+   "archivo": "lenis-react.d.ts",
+   "miembros": {
+    "useLenis": {
+     "k": "funcion",
+     "st": true
+    }
+   }
+  },
+  "LenisExposed": {
+   "tipo": "type",
+   "archivo": "lenis-vue.d.ts",
+   "miembros": {
+    "wrapper": {
+     "k": "prop",
+     "st": false
+    },
+    "content": {
+     "k": "prop",
+     "st": false
+    },
+    "lenis": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  }
+ }
+}

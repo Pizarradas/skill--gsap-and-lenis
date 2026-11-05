@@ -1,0 +1,6 @@
+<!doctype html><title>x</title><div class="b"></div><script type="module">
+import gsap from "../../gp/index.js"; import { ScrollTrigger } from "../../gp/ScrollTrigger.js"; import Lenis from "../../l/lenis.mjs";
+import { iniciarMovimiento } from "./orquestador.js";
+const mov = iniciarMovimiento({ perfil: "gsap+lenis", gsap, ScrollTrigger, Lenis });
+mov.añadir(() => { gsap.to(".b", { x: 10, scrollTrigger: { scrub: true } }); });
+</script>

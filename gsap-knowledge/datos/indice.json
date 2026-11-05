@@ -1,0 +1,4876 @@
+{
+ "version": "3.15.1",
+ "fichas": [
+  {
+   "id": "fun-instalacion",
+   "titulo": "Instalar y cargar GSAP",
+   "capa": "01-fundamentos",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Las tres vías de carga (empaquetador, script clásico y módulos con import map), qué archivo usar en cada una, SSR y cómo evitar dos copias de GSAP.",
+   "api": [
+    "gsap.registerPlugin",
+    "gsap.install",
+    "gsap.version"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-plugins",
+    "fun-licencia",
+    "fra-agnostico",
+    "fra-vanilla",
+    "ver-repo-privado"
+   ],
+   "etiquetas": [
+    "instalacion",
+    "npm",
+    "cdn",
+    "bundler",
+    "import-map"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-instalacion.md"
+  },
+  {
+   "id": "fun-licencia",
+   "titulo": "Licencia estándar de GSAP",
+   "capa": "01-fundamentos",
+   "tipo": "referencia",
+   "ambito": "transversal",
+   "resumen": "Resumen de la licencia estándar sin coste - qué permite, la restricción sobre constructores visuales sin código, revocación y cambios. No es asesoramiento legal.",
+   "api": null,
+   "requiere": null,
+   "relacionadas": [
+    "fun-que-es",
+    "fun-instalacion",
+    "ver-repo-privado"
+   ],
+   "etiquetas": [
+    "licencia",
+    "legal",
+    "webflow"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-licencia.md"
+  },
+  {
+   "id": "fun-modelo",
+   "titulo": "Modelo de animación - cabezal, árbol de tiempo y ciclo de vida",
+   "capa": "01-fundamentos",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Cómo piensa GSAP - un árbol de animaciones con cabezales, valores iniciales leídos en el primer render, escritura diferida y liberación automática al terminar.",
+   "api": [
+    "Animation.parent",
+    "Animation.render",
+    "Animation.rawTime",
+    "Tween.targets",
+    "gsap.globalTimeline"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-que-es",
+    "fun-objetivos",
+    "fun-valores",
+    "nuc-tiempo",
+    "nuc-immediate-render",
+    "nuc-ticker",
+    "nuc-global",
+    "tim-anidado"
+   ],
+   "etiquetas": [
+    "modelo",
+    "tiempo",
+    "ciclo-de-vida"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-modelo.md"
+  },
+  {
+   "id": "fun-objetivos",
+   "titulo": "Objetivos - qué se puede animar",
+   "capa": "01-fundamentos",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Formas válidas de indicar targets - selector, elemento, lista, objeto propio, métodos y setters - y los errores típicos al mezclarlos.",
+   "api": [
+    "Tween.targets",
+    "gsap.GSAPConfig.nullTargetWarn",
+    "gsap.TweenVars.endArray"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-valores",
+    "fun-modelo",
+    "nuc-context",
+    "css-plugin",
+    "utl-colecciones",
+    "fra-agnostico"
+   ],
+   "etiquetas": [
+    "targets",
+    "selectores",
+    "objetos"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-objetivos.md"
+  },
+  {
+   "id": "fun-plugins",
+   "titulo": "Plugins - registrar los oficiales y escribir el tuyo",
+   "capa": "01-fundamentos",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Mapa de plugins y claves de vars, gsap.registerPlugin y guía para crear un plugin propio con init, render, this.add, kill y soporte de revert.",
+   "api": [
+    "gsap.registerPlugin",
+    "gsap.PluginScope._props",
+    "gsap.PluginScope._pt",
+    "gsap.PluginScope.add",
+    "gsap.PluginScope.name",
+    "gsap.PluginScope.init",
+    "gsap.PluginScope.kill",
+    "gsap.PluginScope.render",
+    "gsap.PluginStatic.targetTest",
+    "gsap.PluginStatic.get",
+    "gsap.PluginStatic.getSetter",
+    "gsap.PluginStatic.aliases",
+    "gsap.PluginStatic.register",
+    "gsap.TweenVars.css",
+    "gsap.TweenVars.cssRule",
+    "gsap.TweenVars.drawSVG",
+    "gsap.TweenVars.easel",
+    "gsap.TweenVars.endArray",
+    "gsap.TweenVars.attr",
+    "gsap.TweenVars.modifiers",
+    "gsap.TweenVars.snap",
+    "gsap.TweenVars.inertia",
+    "gsap.TweenVars.morphSVG",
+    "gsap.TweenVars.motionPath",
+    "gsap.TweenVars.physics2D",
+    "gsap.TweenVars.physicsProps",
+    "gsap.TweenVars.pixi",
+    "gsap.TweenVars.scrambleText",
+    "gsap.TweenVars.scrollTo",
+    "gsap.TweenVars.text"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-instalacion",
+    "fun-que-es",
+    "fun-licencia",
+    "nuc-efectos",
+    "css-plugin",
+    "css-attr",
+    "css-modifiers",
+    "css-snap",
+    "eas-registro"
+   ],
+   "etiquetas": [
+    "plugins",
+    "registro",
+    "extensibilidad"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-plugins.md"
+  },
+  {
+   "id": "fun-que-es",
+   "titulo": "Qué es GSAP y qué incluye",
+   "capa": "01-fundamentos",
+   "tipo": "concepto",
+   "ambito": "transversal",
+   "resumen": "Mapa de GSAP - núcleo, plugins, Tween y Timeline, qué sabe animar y cuándo compensa frente a CSS. Punto de entrada del sistema.",
+   "api": [
+    "gsap.to",
+    "gsap.timeline",
+    "gsap.version"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-instalacion",
+    "fun-modelo",
+    "fun-plugins",
+    "fun-licencia",
+    "nuc-tween-metodos",
+    "nuc-context",
+    "tim-basico",
+    "utl-funciones",
+    "fra-agnostico"
+   ],
+   "etiquetas": [
+    "introduccion",
+    "mapa"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-que-es.md"
+  },
+  {
+   "id": "fun-valores",
+   "titulo": "Valores - relativos, dinámicos, aleatorios y unidades",
+   "capa": "01-fundamentos",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Formas de escribir un valor destino - número, unidades, relativo, función por objetivo, random(), colores y cadenas complejas.",
+   "api": [
+    "gsap.TweenVars.startAt",
+    "gsap.AnimationVars.repeatRefresh",
+    "gsap.GSAPConfig.units",
+    "Animation.invalidate"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-objetivos",
+    "fun-modelo",
+    "nuc-repeat-yoyo",
+    "nuc-defaults-config",
+    "utl-numeros",
+    "css-transforms"
+   ],
+   "etiquetas": [
+    "valores",
+    "relativos",
+    "random",
+    "unidades"
+   ],
+   "estado": "verificado",
+   "ruta": "01-fundamentos/fun-valores.md"
+  },
+  {
+   "id": "nuc-callbacks",
+   "titulo": "Callbacks y eventCallback",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "onStart, onUpdate, onComplete, onRepeat, onReverseComplete y onInterrupt, sus parámetros, this, callbackScope y cuándo se disparan de verdad.",
+   "api": [
+    "gsap.CallbackVars.callbackScope",
+    "gsap.CallbackVars.onComplete",
+    "gsap.CallbackVars.onCompleteParams",
+    "gsap.CallbackVars.onRepeat",
+    "gsap.CallbackVars.onRepeatParams",
+    "gsap.CallbackVars.onReverseComplete",
+    "gsap.CallbackVars.onReverseCompleteParams",
+    "gsap.CallbackVars.onStart",
+    "gsap.CallbackVars.onStartParams",
+    "gsap.CallbackVars.onUpdate",
+    "gsap.CallbackVars.onUpdateParams",
+    "gsap.TweenVars.onInterrupt",
+    "gsap.TweenVars.onInterruptParams",
+    "Animation.eventCallback"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-control",
+    "nuc-promesas",
+    "nuc-context",
+    "nuc-limpieza",
+    "nuc-overwrite",
+    "nuc-delayedcall"
+   ],
+   "etiquetas": [
+    "callbacks",
+    "eventos"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-callbacks.md"
+  },
+  {
+   "id": "nuc-consulta",
+   "titulo": "Buscar y matar animaciones",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "gsap.getById, getTweensOf, isTweening y killTweensOf para localizar animaciones sin guardar variables, y sus límites tras completarse.",
+   "api": [
+    "gsap.getById",
+    "gsap.getTweensOf",
+    "gsap.isTweening",
+    "gsap.killTweensOf"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-limpieza",
+    "nuc-overwrite",
+    "nuc-delayedcall",
+    "nuc-global",
+    "cal-depuracion"
+   ],
+   "etiquetas": [
+    "consulta",
+    "kill",
+    "depuracion"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-consulta.md"
+  },
+  {
+   "id": "nuc-context",
+   "titulo": "gsap.context() - agrupar, limitar y limpiar",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Recoge animaciones y ScrollTriggers para revertirlos juntos y limita selectores a un ámbito. Qué registra de verdad, limpiezas, contextSafe y fugas.",
+   "api": [
+    "gsap.context",
+    "gsap.Context.selector",
+    "gsap.Context.isReverted",
+    "gsap.Context.conditions",
+    "gsap.Context.queries",
+    "gsap.Context.add",
+    "gsap.Context.ignore",
+    "gsap.Context.kill",
+    "gsap.Context.revert",
+    "gsap.Context.clear"
+   ],
+   "requiere": [
+    "nuc-limpieza"
+   ],
+   "relacionadas": [
+    "nuc-matchmedia",
+    "nuc-limpieza",
+    "nuc-ticker",
+    "fra-agnostico",
+    "fra-vanilla",
+    "utl-colecciones"
+   ],
+   "etiquetas": [
+    "context",
+    "limpieza",
+    "vistas",
+    "scope"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-context.md"
+  },
+  {
+   "id": "nuc-control",
+   "titulo": "Controlar una animación",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "play, pause, resume, reverse, restart, seek, paused, reversed e isActive; sus argumentos, diferencias y patrón de hover con timeScale.",
+   "api": [
+    "Animation.play",
+    "Animation.pause",
+    "Animation.paused",
+    "Animation.resume",
+    "Animation.reverse",
+    "Animation.reversed",
+    "Animation.restart",
+    "Animation.seek",
+    "Animation.isActive",
+    "Animation.invalidate"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-tiempo",
+    "nuc-callbacks",
+    "nuc-limpieza",
+    "nuc-promesas",
+    "tim-control"
+   ],
+   "etiquetas": [
+    "control",
+    "reproduccion",
+    "interaccion"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-control.md"
+  },
+  {
+   "id": "nuc-defaults-config",
+   "titulo": "gsap.defaults() y gsap.config()",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Valores heredados por los tweens frente a ajustes globales del motor; autoSleep, force3D, units, nullTargetWarn, stringFilter y claves que añaden plugins.",
+   "api": [
+    "gsap.defaults",
+    "gsap.config",
+    "gsap.GSAPConfig.autoKillThreshold",
+    "gsap.GSAPConfig.autoSleep",
+    "gsap.GSAPConfig.force3D",
+    "gsap.GSAPConfig.nullTargetWarn",
+    "gsap.GSAPConfig.resistance",
+    "gsap.GSAPConfig.stringFilter",
+    "gsap.GSAPConfig.unitFactors",
+    "gsap.GSAPConfig.units",
+    "gsap.AnimationVars.inherit"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-vars-especiales",
+    "nuc-overwrite",
+    "nuc-ticker",
+    "fun-valores",
+    "tim-herencia",
+    "css-transforms"
+   ],
+   "etiquetas": [
+    "configuracion",
+    "defaults",
+    "global"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-defaults-config.md"
+  },
+  {
+   "id": "nuc-delayedcall",
+   "titulo": "gsap.delayedCall() - temporizador sincronizado",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Llama a una función tras un retardo, dentro del reloj de GSAP. Alternativa a setTimeout que se pausa, se escala y se limpia con el resto.",
+   "api": [
+    "gsap.delayedCall",
+    "gsap.killTweensOf",
+    "gsap.getTweensOf"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-control",
+    "nuc-consulta",
+    "nuc-context",
+    "nuc-ticker",
+    "nuc-global"
+   ],
+   "etiquetas": [
+    "temporizador",
+    "delay"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-delayedcall.md"
+  },
+  {
+   "id": "nuc-efectos",
+   "titulo": "Efectos registrados",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "gsap.registerEffect y gsap.effects para empaquetar animaciones con nombre, defaults y métodos directos en Timeline.",
+   "api": [
+    "gsap.registerEffect",
+    "gsap.effects"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-plugins",
+    "nuc-context",
+    "tim-basico",
+    "nuc-defaults-config",
+    "eas-registro"
+   ],
+   "etiquetas": [
+    "efectos",
+    "reutilizacion"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-efectos.md"
+  },
+  {
+   "id": "nuc-getproperty",
+   "titulo": "gsap.getProperty() - leer valores",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Lee el valor actual de una propiedad como número, con unidad convertida o mediante una función reutilizable. Conoce transformaciones que getComputedStyle no separa.",
+   "api": [
+    "gsap.getProperty"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-quicksetter",
+    "nuc-consulta",
+    "css-transforms",
+    "fun-objetivos"
+   ],
+   "etiquetas": [
+    "lectura",
+    "medicion",
+    "transformaciones"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-getproperty.md"
+  },
+  {
+   "id": "nuc-global",
+   "titulo": "Control global - globalTimeline, exportRoot y updateRoot",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Pausar o ralentizar todo, separar lo que ya existe de lo nuevo con exportRoot, manejar el reloj a mano y otros miembros de gsap.",
+   "api": [
+    "gsap.globalTimeline",
+    "gsap.exportRoot",
+    "gsap.updateRoot",
+    "gsap.install",
+    "gsap.version",
+    "gsap.parseEase",
+    "gsap.registerEase"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-modelo",
+    "nuc-ticker",
+    "nuc-delayedcall",
+    "nuc-consulta",
+    "eas-registro",
+    "fun-instalacion"
+   ],
+   "etiquetas": [
+    "global",
+    "timeline",
+    "juegos"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-global.md"
+  },
+  {
+   "id": "nuc-immediate-render",
+   "titulo": "immediateRender - cuándo se escribe el primer valor",
+   "capa": "02-nucleo",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Por qué from() y fromTo() pintan al crearse, cómo rompe eso varios from() sobre la misma propiedad y cuándo poner immediateRender en false.",
+   "api": [
+    "gsap.TweenVars.immediateRender",
+    "gsap.TweenVars.lazy"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "nuc-tween-metodos",
+    "nuc-limpieza",
+    "tim-basico",
+    "cal-fouc",
+    "cal-errores-comunes",
+    "scr-scrolltrigger"
+   ],
+   "etiquetas": [
+    "from",
+    "fromto",
+    "render",
+    "fouc"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-immediate-render.md"
+  },
+  {
+   "id": "nuc-keyframes",
+   "titulo": "keyframes - varios estados en un tween",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Las tres sintaxis (array de objetos, porcentajes, arrays por propiedad), cómo se combinan ease y easeEach, y sus diferencias de herencia.",
+   "api": [
+    "gsap.TweenVars.keyframes"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-tween-metodos",
+    "nuc-stagger",
+    "nuc-callbacks",
+    "tim-basico",
+    "eas-guia"
+   ],
+   "etiquetas": [
+    "keyframes",
+    "secuencia",
+    "css"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-keyframes.md"
+  },
+  {
+   "id": "nuc-limpieza",
+   "titulo": "kill frente a revert - limpiar animaciones",
+   "capa": "02-nucleo",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Qué deja kill y qué deshace revert, inline styles, reutilización, muerte parcial, callbacks y cuál usar en cada situación.",
+   "api": [
+    "Animation.kill",
+    "Tween.kill",
+    "Animation.revert",
+    "gsap.killTweensOf",
+    "Animation.pause"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-context",
+    "nuc-matchmedia",
+    "nuc-consulta",
+    "nuc-control",
+    "nuc-promesas",
+    "css-clearprops",
+    "fra-agnostico"
+   ],
+   "etiquetas": [
+    "limpieza",
+    "kill",
+    "revert",
+    "memoria"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-limpieza.md"
+  },
+  {
+   "id": "nuc-matchmedia",
+   "titulo": "gsap.matchMedia() - animaciones por media query",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Ejecuta código según media queries y lo revierte al dejar de coincidir. Condiciones, prefers-reduced-motion, scope, refresh y diferencias entre revert y kill.",
+   "api": [
+    "gsap.matchMedia",
+    "gsap.matchMediaRefresh",
+    "gsap.MatchMedia.contexts",
+    "gsap.MatchMedia.add",
+    "gsap.MatchMedia.revert",
+    "gsap.MatchMedia.kill",
+    "gsap.Context.conditions",
+    "gsap.Context.queries"
+   ],
+   "requiere": [
+    "nuc-context"
+   ],
+   "relacionadas": [
+    "nuc-context",
+    "nuc-limpieza",
+    "scr-refresh",
+    "cal-accesibilidad",
+    "fra-agnostico",
+    "rec-pin-horizontal"
+   ],
+   "etiquetas": [
+    "responsive",
+    "media-query",
+    "accesibilidad",
+    "reduced-motion"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-matchmedia.md"
+  },
+  {
+   "id": "nuc-overwrite",
+   "titulo": "overwrite - resolver animaciones en conflicto",
+   "capa": "02-nucleo",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Qué pasa cuando dos tweens tocan lo mismo y cómo se comportan overwrite true, auto y false, incluidos tweens pausados, retrasados y en timelines.",
+   "api": [
+    "gsap.TweenVars.overwrite",
+    "gsap.TweenVars.onInterrupt"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-control",
+    "nuc-limpieza",
+    "nuc-consulta",
+    "nuc-quickto",
+    "nuc-defaults-config",
+    "cal-conflictos"
+   ],
+   "etiquetas": [
+    "overwrite",
+    "conflictos"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-overwrite.md"
+  },
+  {
+   "id": "nuc-promesas",
+   "titulo": "Promesas y await con animaciones",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Esperar animaciones con then y await, y los casos en que la promesa no se resuelve nunca - kill, revert y repeat infinito.",
+   "api": [
+    "Animation.then"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-callbacks",
+    "nuc-limpieza",
+    "nuc-context",
+    "tim-basico"
+   ],
+   "etiquetas": [
+    "promesas",
+    "async"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-promesas.md"
+  },
+  {
+   "id": "nuc-quicksetter",
+   "titulo": "gsap.quickSetter() - aplicar valores a alta frecuencia",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Función optimizada que escribe un valor al instante, sin crear tweens. Para pointermove o bucles donde gsap.set sería costoso.",
+   "api": [
+    "gsap.quickSetter",
+    "gsap.set"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-quickto",
+    "nuc-ticker",
+    "nuc-tween-metodos",
+    "utl-funciones",
+    "cal-rendimiento",
+    "rec-seguidor-cursor"
+   ],
+   "etiquetas": [
+    "rendimiento",
+    "puntero",
+    "setter"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-quicksetter.md"
+  },
+  {
+   "id": "nuc-quickto",
+   "titulo": "gsap.quickTo(), redirigir una animación a alta frecuencia",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Crea una función reutilizable que reorienta un mismo tween hacia un valor nuevo. Ideal para seguir el ratón sin crear un tween por evento.",
+   "api": [
+    "gsap.quickTo",
+    "Tween.resetTo"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-quicksetter",
+    "nuc-overwrite",
+    "utl-funciones"
+   ],
+   "etiquetas": [
+    "rendimiento",
+    "puntero",
+    "interaccion"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-quickto.md"
+  },
+  {
+   "id": "nuc-repeat-yoyo",
+   "titulo": "repeat, yoyo y easeReverse",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Repetir, alternar sentido, pausas entre vueltas, repeatRefresh y easeReverse, que reemplaza a yoyoEase desde 3.15.0.",
+   "api": [
+    "Animation.repeat",
+    "Animation.repeatDelay",
+    "Animation.yoyo",
+    "Animation.iteration",
+    "gsap.AnimationVars.repeatRefresh",
+    "gsap.TweenVars.easeReverse",
+    "gsap.TweenVars.yoyoEase"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-tiempo",
+    "nuc-vars-especiales",
+    "nuc-stagger",
+    "fun-valores",
+    "eas-guia"
+   ],
+   "etiquetas": [
+    "repeat",
+    "yoyo",
+    "ease",
+    "bucle"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-repeat-yoyo.md"
+  },
+  {
+   "id": "nuc-stagger",
+   "titulo": "stagger - escalonar varios objetivos",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Número, objeto o función; each frente a amount, from, grid, axis y ease; repeat y callbacks a nivel de tween o de cada elemento.",
+   "api": [
+    "gsap.TweenVars.stagger",
+    "gsap.StaggerVars.repeat",
+    "gsap.StaggerVars.repeatDelay",
+    "gsap.StaggerVars.repeatRefresh",
+    "gsap.StaggerVars.yoyo",
+    "gsap.StaggerVars.yoyoEase",
+    "gsap.StaggerVars.easeReverse"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-tween-metodos",
+    "nuc-keyframes",
+    "nuc-repeat-yoyo",
+    "utl-funciones",
+    "tim-basico"
+   ],
+   "etiquetas": [
+    "stagger",
+    "secuencia",
+    "grid"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-stagger.md"
+  },
+  {
+   "id": "nuc-ticker",
+   "titulo": "gsap.ticker - el bucle de GSAP",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Añadir lógica por frame, parámetros del listener, prioridad, fps, deltaRatio, lagSmoothing, sleep y wake.",
+   "api": [
+    "gsap.ticker.add",
+    "gsap.ticker.remove",
+    "gsap.ticker.fps",
+    "gsap.ticker.frame",
+    "gsap.ticker.time",
+    "gsap.ticker.lagSmoothing",
+    "gsap.ticker.sleep",
+    "gsap.ticker.tick",
+    "gsap.ticker.deltaRatio",
+    "gsap.ticker.wake"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-modelo",
+    "nuc-global",
+    "nuc-quicksetter",
+    "nuc-context",
+    "nuc-defaults-config",
+    "cal-rendimiento",
+    "scr-smoother"
+   ],
+   "etiquetas": [
+    "ticker",
+    "frame",
+    "rendimiento",
+    "lag"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-ticker.md"
+  },
+  {
+   "id": "nuc-tiempo",
+   "titulo": "Propiedades de tiempo - time, progress, duration, timeScale",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Diferencia entre time y totalTime, progress y totalProgress, duration y totalDuration; timeScale, delay, startTime, endTime y globalTime.",
+   "api": [
+    "Animation.time",
+    "Animation.totalTime",
+    "Animation.progress",
+    "Animation.totalProgress",
+    "Animation.duration",
+    "Animation.totalDuration",
+    "Animation.timeScale",
+    "Animation.delay",
+    "Animation.startTime",
+    "Animation.endTime",
+    "Animation.rawTime",
+    "Tween.ratio"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-modelo",
+    "nuc-control",
+    "nuc-repeat-yoyo",
+    "nuc-global",
+    "tim-posicion"
+   ],
+   "etiquetas": [
+    "tiempo",
+    "progreso",
+    "timescale"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-tiempo.md"
+  },
+  {
+   "id": "nuc-tween-metodos",
+   "titulo": "Crear tweens - to, from, fromTo, set y la clase Tween",
+   "capa": "02-nucleo",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Firmas de gsap.to, from, fromTo y set, miembros propios de Tween y qué método elegir en cada caso.",
+   "api": [
+    "gsap.to",
+    "gsap.from",
+    "gsap.fromTo",
+    "gsap.set",
+    "gsap.timeline",
+    "Tween.to",
+    "Tween.from",
+    "Tween.fromTo",
+    "Tween.set",
+    "Tween.staggerTo",
+    "Tween.staggerFrom",
+    "Tween.staggerFromTo",
+    "Tween.targets",
+    "Tween.vars",
+    "Tween.data",
+    "Tween.ratio",
+    "Tween.kill",
+    "Tween.resetTo",
+    "Animation.data",
+    "Animation.scrollTrigger",
+    "Animation.version"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-modelo",
+    "fun-objetivos",
+    "fun-valores",
+    "nuc-vars-especiales",
+    "nuc-immediate-render",
+    "nuc-quickto",
+    "nuc-quicksetter",
+    "nuc-control",
+    "nuc-limpieza",
+    "tim-basico"
+   ],
+   "etiquetas": [
+    "tween",
+    "to",
+    "from",
+    "fromto",
+    "set"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-tween-metodos.md"
+  },
+  {
+   "id": "nuc-vars-especiales",
+   "titulo": "Propiedades especiales de vars",
+   "capa": "02-nucleo",
+   "tipo": "referencia",
+   "ambito": "core",
+   "resumen": "Catálogo de claves reservadas de vars - tiempo, ease, repetición, render, control y callbacks - con valor por defecto y ficha donde se detallan.",
+   "api": [
+    "gsap.AnimationVars.data",
+    "gsap.AnimationVars.id",
+    "gsap.AnimationVars.inherit",
+    "gsap.AnimationVars.paused",
+    "gsap.AnimationVars.repeat",
+    "gsap.AnimationVars.repeatDelay",
+    "gsap.AnimationVars.repeatRefresh",
+    "gsap.AnimationVars.reversed",
+    "gsap.AnimationVars.yoyo",
+    "gsap.AnimationVars.scrollTrigger",
+    "gsap.TweenVars.delay",
+    "gsap.TweenVars.duration",
+    "gsap.TweenVars.ease",
+    "gsap.TweenVars.endArray",
+    "gsap.TweenVars.immediateRender",
+    "gsap.TweenVars.lazy",
+    "gsap.TweenVars.keyframes",
+    "gsap.TweenVars.overwrite",
+    "gsap.TweenVars.runBackwards",
+    "gsap.TweenVars.stagger",
+    "gsap.TweenVars.startAt",
+    "gsap.TweenVars.yoyoEase",
+    "gsap.TweenVars.easeReverse"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-tween-metodos",
+    "nuc-callbacks",
+    "nuc-repeat-yoyo",
+    "nuc-immediate-render",
+    "nuc-overwrite",
+    "nuc-defaults-config"
+   ],
+   "etiquetas": [
+    "vars",
+    "referencia",
+    "opciones"
+   ],
+   "estado": "verificado",
+   "ruta": "02-nucleo/nuc-vars-especiales.md"
+  },
+  {
+   "id": "tim-anidado",
+   "titulo": "Timelines anidadas",
+   "capa": "03-timeline",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Componer una secuencia larga con funciones que devuelven timelines. Cómo interactúan posición, pausa, repeat y defaults entre madre e hija.",
+   "api": [
+    "Timeline.add",
+    "Animation.parent",
+    "Timeline.getChildren"
+   ],
+   "requiere": [
+    "tim-posicion"
+   ],
+   "relacionadas": [
+    "tim-herencia",
+    "tim-gestion",
+    "tim-control"
+   ],
+   "etiquetas": [
+    "timeline",
+    "arquitectura",
+    "composicion"
+   ],
+   "estado": "verificado",
+   "ruta": "03-timeline/tim-anidado.md"
+  },
+  {
+   "id": "tim-basico",
+   "titulo": "Timeline, secuenciar animaciones sin encadenar delays",
+   "capa": "03-timeline",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Qué es una timeline, cómo se crea y se llena, y por qué sustituye a los delays. Incluye las opciones de gsap.timeline() y las trampas de from() y set() dentro de ella.",
+   "api": [
+    "gsap.timeline",
+    "Timeline.to",
+    "Timeline.from",
+    "Timeline.fromTo",
+    "Timeline.set",
+    "Timeline.call",
+    "Timeline.vars",
+    "Timeline.staggerTo",
+    "Timeline.staggerFrom",
+    "Timeline.staggerFromTo",
+    "gsap.TimelineVars.defaults",
+    "gsap.TimelineVars.delay",
+    "gsap.TimelineVars.autoRemoveChildren",
+    "gsap.TimelineVars.smoothChildTiming"
+   ],
+   "requiere": [
+    "fun-modelo"
+   ],
+   "relacionadas": [
+    "tim-posicion",
+    "tim-etiquetas",
+    "tim-anidado",
+    "tim-control",
+    "tim-herencia",
+    "nuc-immediate-render",
+    "nuc-repeat-yoyo"
+   ],
+   "etiquetas": [
+    "secuencia",
+    "timeline",
+    "delay"
+   ],
+   "estado": "verificado",
+   "ruta": "03-timeline/tim-basico.md"
+  },
+  {
+   "id": "tim-control",
+   "titulo": "Controlar una timeline",
+   "capa": "03-timeline",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Reproducir, saltar, repetir, cambiar duración y pausar en puntos concretos. addPause, removePause, tweenTo, tweenFromTo y las diferencias con un tween.",
+   "api": [
+    "Timeline.addPause",
+    "Timeline.removePause",
+    "Timeline.tweenTo",
+    "Timeline.tweenFromTo",
+    "Animation.play",
+    "Animation.pause",
+    "Animation.seek",
+    "Animation.reverse",
+    "Animation.restart",
+    "Animation.resume",
+    "Animation.progress",
+    "Animation.totalProgress",
+    "Animation.time",
+    "Animation.totalTime",
+    "Animation.timeScale",
+    "Animation.duration",
+    "Animation.totalDuration",
+    "Animation.iteration",
+    "Animation.isActive",
+    "Animation.then"
+   ],
+   "requiere": [
+    "tim-basico",
+    "tim-etiquetas"
+   ],
+   "relacionadas": [
+    "nuc-control",
+    "nuc-tiempo",
+    "nuc-promesas",
+    "tim-gestion",
+    "scr-scrub"
+   ],
+   "etiquetas": [
+    "timeline",
+    "control",
+    "pausa"
+   ],
+   "estado": "verificado",
+   "ruta": "03-timeline/tim-control.md"
+  },
+  {
+   "id": "tim-etiquetas",
+   "titulo": "Etiquetas en una timeline",
+   "capa": "03-timeline",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "addLabel, removeLabel, labels, currentLabel, nextLabel y previousLabel. Dar nombre a instantes para colocar hijos y navegar sin números mágicos.",
+   "api": [
+    "Timeline.addLabel",
+    "Timeline.removeLabel",
+    "Timeline.labels",
+    "Timeline.currentLabel",
+    "Timeline.nextLabel",
+    "Timeline.previousLabel"
+   ],
+   "requiere": [
+    "tim-posicion"
+   ],
+   "relacionadas": [
+    "tim-control",
+    "tim-gestion"
+   ],
+   "etiquetas": [
+    "timeline",
+    "navegacion",
+    "etiquetas"
+   ],
+   "estado": "verificado",
+   "ruta": "03-timeline/tim-etiquetas.md"
+  },
+  {
+   "id": "tim-gestion",
+   "titulo": "Gestionar los hijos de una timeline",
+   "capa": "03-timeline",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "Añadir, quitar, buscar y desplazar hijos. add, remove, clear, getChildren, getById, getTweensOf, killTweensOf, recent y shiftChildren, con sus desajustes frente a la documentación.",
+   "api": [
+    "Timeline.add",
+    "Timeline.remove",
+    "Timeline.clear",
+    "Timeline.getChildren",
+    "Timeline.getById",
+    "Timeline.getTweensOf",
+    "Timeline.recent",
+    "Timeline.shiftChildren",
+    "Timeline.updateRoot",
+    "Animation.kill",
+    "Animation.revert",
+    "Animation.invalidate"
+   ],
+   "requiere": [
+    "tim-posicion"
+   ],
+   "relacionadas": [
+    "tim-anidado",
+    "tim-control",
+    "nuc-limpieza",
+    "nuc-consulta"
+   ],
+   "etiquetas": [
+    "timeline",
+    "hijos",
+    "gestion"
+   ],
+   "estado": "verificado",
+   "ruta": "03-timeline/tim-gestion.md"
+  },
+  {
+   "id": "tim-herencia",
+   "titulo": "Herencia y política de hijos en una timeline",
+   "capa": "03-timeline",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "defaults e inherit, cómo se sincronizan los cabezales, y qué cambian smoothChildTiming y autoRemoveChildren.",
+   "api": [
+    "gsap.TimelineVars.defaults",
+    "gsap.TimelineVars.autoRemoveChildren",
+    "gsap.TimelineVars.smoothChildTiming",
+    "Timeline.autoRemoveChildren",
+    "Timeline.smoothChildTiming",
+    "gsap.TweenVars.delay"
+   ],
+   "requiere": [
+    "tim-basico"
+   ],
+   "relacionadas": [
+    "tim-anidado",
+    "tim-control",
+    "nuc-defaults-config",
+    "nuc-global"
+   ],
+   "etiquetas": [
+    "timeline",
+    "defaults",
+    "herencia"
+   ],
+   "estado": "verificado",
+   "ruta": "03-timeline/tim-herencia.md"
+  },
+  {
+   "id": "tim-posicion",
+   "titulo": "El parámetro de posición",
+   "capa": "03-timeline",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Gramática completa de la posición en una timeline (número, +=, -=, <, >, etiquetas, porcentajes), qué referencia usa cada forma y qué métodos no la admiten entera.",
+   "api": [
+    "Timeline.to",
+    "Timeline.add",
+    "Timeline.addLabel",
+    "Timeline.addPause",
+    "Timeline.call",
+    "Timeline.set",
+    "Timeline.recent"
+   ],
+   "requiere": [
+    "tim-basico"
+   ],
+   "relacionadas": [
+    "tim-etiquetas",
+    "tim-gestion",
+    "tim-control",
+    "nuc-stagger"
+   ],
+   "etiquetas": [
+    "secuencia",
+    "timeline",
+    "posicion",
+    "overlap"
+   ],
+   "estado": "verificado",
+   "ruta": "03-timeline/tim-posicion.md"
+  },
+  {
+   "id": "css-attr",
+   "titulo": "AttrPlugin, animar atributos",
+   "capa": "04-propiedades",
+   "tipo": "plugin",
+   "ambito": "AttrPlugin",
+   "resumen": "Anima atributos numéricos de HTML y SVG con attr. Cuándo usarlo en lugar de CSS y qué ocurre con unidades, colores y rutas.",
+   "api": [
+    "gsap.TweenVars.attr",
+    "gsap.plugins.attr"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "css-plugin",
+    "svg-guia",
+    "svg-drawsvg",
+    "css-complejas"
+   ],
+   "etiquetas": [
+    "svg",
+    "atributos",
+    "plugin"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-attr.md"
+  },
+  {
+   "id": "css-autoalpha",
+   "titulo": "autoAlpha, opacidad con visibilidad",
+   "capa": "04-propiedades",
+   "tipo": "api",
+   "ambito": "CSSPlugin",
+   "resumen": "autoAlpha combina opacity y visibility para que un elemento a 0 no reciba eventos. Es la base para evitar parpadeos al cargar.",
+   "api": [
+    "gsap.CSSProperties.autoAlpha",
+    "gsap.CSSProperties.alpha"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "css-plugin",
+    "cal-fouc",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "css",
+    "opacidad",
+    "visibilidad",
+    "fouc"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-autoalpha.md"
+  },
+  {
+   "id": "css-clearprops",
+   "titulo": "clearProps, limpiar estilos en línea",
+   "capa": "04-propiedades",
+   "tipo": "api",
+   "ambito": "CSSPlugin",
+   "resumen": "Quita estilos en línea al terminar un tween para que vuelvan a mandar las clases. Por qué un componente de transform los borra todos y qué pasa en timelines y yoyo.",
+   "api": null,
+   "requiere": [
+    "css-transforms"
+   ],
+   "relacionadas": [
+    "css-plugin",
+    "nuc-limpieza",
+    "nuc-context"
+   ],
+   "etiquetas": [
+    "css",
+    "limpieza",
+    "inline"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-clearprops.md"
+  },
+  {
+   "id": "css-complejas",
+   "titulo": "Valores complejos, sombras, filtros, degradados y clip-path",
+   "capa": "04-propiedades",
+   "tipo": "concepto",
+   "ambito": "CSSPlugin",
+   "resumen": "Cómo interpola GSAP cadenas con varios números y colores. Por qué ambos extremos deben tener la misma estructura y cómo preparar el valor inicial.",
+   "api": null,
+   "requiere": [
+    "css-plugin"
+   ],
+   "relacionadas": [
+    "css-variables",
+    "css-attr",
+    "utl-numeros"
+   ],
+   "etiquetas": [
+    "css",
+    "sombras",
+    "filtros",
+    "colores"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-complejas.md"
+  },
+  {
+   "id": "css-endarray",
+   "titulo": "EndArrayPlugin, animar arrays de números",
+   "capa": "04-propiedades",
+   "tipo": "api",
+   "ambito": "EndArrayPlugin",
+   "resumen": "Interpola un array de números hacia otro con easing. Útil para datos de gráficas o buffers. Qué ocurre con longitudes distintas.",
+   "api": [
+    "gsap.TweenVars.endArray"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "css-attr",
+    "fun-objetivos",
+    "utl-numeros"
+   ],
+   "etiquetas": [
+    "arrays",
+    "datos",
+    "plugin"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-endarray.md"
+  },
+  {
+   "id": "css-modifiers",
+   "titulo": "ModifiersPlugin, interceptar cada valor",
+   "capa": "04-propiedades",
+   "tipo": "api",
+   "ambito": "ModifiersPlugin",
+   "resumen": "Función por propiedad que recibe el valor de cada tick y devuelve el que se aplica. Sirve para envolver, limitar y derivar. Reglas de tipos y de unidades.",
+   "api": [
+    "gsap.TweenVars.modifiers",
+    "gsap.plugins.modifiers"
+   ],
+   "requiere": [
+    "fun-valores"
+   ],
+   "relacionadas": [
+    "css-snap",
+    "utl-funciones",
+    "utl-numeros",
+    "rec-marquee"
+   ],
+   "etiquetas": [
+    "plugin",
+    "modificadores",
+    "bucle"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-modifiers.md"
+  },
+  {
+   "id": "css-origin",
+   "titulo": "transformOrigin, svgOrigin y smoothOrigin",
+   "capa": "04-propiedades",
+   "tipo": "api",
+   "ambito": "CSSPlugin",
+   "resumen": "Elegir el punto alrededor del que giran y escalan los elementos, en HTML y SVG. No se interpola, admite profundidad y en SVG evita saltos al cambiar.",
+   "api": [
+    "gsap.CSSProperties.svgOrigin",
+    "gsap.CSSProperties.smoothOrigin"
+   ],
+   "requiere": [
+    "css-transforms"
+   ],
+   "relacionadas": [
+    "css-rotacion",
+    "svg-guia"
+   ],
+   "etiquetas": [
+    "css",
+    "transform",
+    "svg",
+    "origen"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-origin.md"
+  },
+  {
+   "id": "css-plugin",
+   "titulo": "CSSPlugin, animar propiedades CSS",
+   "capa": "04-propiedades",
+   "tipo": "plugin",
+   "ambito": "CSSPlugin",
+   "resumen": "Qué propiedades CSS anima GSAP, cómo trata nombres, unidades y valores no animables, y las trampas de autoRound, display y height auto.",
+   "api": [
+    "gsap.TweenVars.css",
+    "gsap.plugins.css",
+    "gsap.config"
+   ],
+   "requiere": [
+    "fun-valores"
+   ],
+   "relacionadas": [
+    "css-transforms",
+    "css-autoalpha",
+    "css-clearprops",
+    "css-complejas",
+    "css-variables",
+    "css-attr",
+    "fun-plugins",
+    "int-flip"
+   ],
+   "etiquetas": [
+    "css",
+    "unidades",
+    "dom"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-plugin.md"
+  },
+  {
+   "id": "css-rotacion",
+   "titulo": "Rotación direccional",
+   "capa": "04-propiedades",
+   "tipo": "api",
+   "ambito": "CSSPlugin",
+   "resumen": "Sufijos _short, _cw y _ccw para elegir el sentido de giro, y qué unidades acepta realmente rotation.",
+   "api": [
+    "gsap.CSSProperties.rotation",
+    "gsap.CSSProperties.rotationX",
+    "gsap.CSSProperties.rotationY",
+    "gsap.CSSProperties.rotationZ",
+    "gsap.CSSProperties.rotate",
+    "gsap.CSSProperties.rotateX",
+    "gsap.CSSProperties.rotateY",
+    "gsap.CSSProperties.rotateZ"
+   ],
+   "requiere": [
+    "css-transforms"
+   ],
+   "relacionadas": [
+    "css-origin",
+    "css-modifiers"
+   ],
+   "etiquetas": [
+    "css",
+    "rotacion",
+    "transform"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-rotacion.md"
+  },
+  {
+   "id": "css-snap",
+   "titulo": "SnapPlugin, ajustar valores durante el tween",
+   "capa": "04-propiedades",
+   "tipo": "api",
+   "ambito": "SnapPlugin",
+   "resumen": "snap en vars redondea en cada render a incrementos, listas o radios. Diferencia con gsap.utils.snap y por qué el tween puede no terminar en su destino.",
+   "api": [
+    "gsap.TweenVars.snap",
+    "gsap.plugins.snap"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "css-modifiers",
+    "utl-numeros",
+    "css-attr",
+    "scr-snap"
+   ],
+   "etiquetas": [
+    "plugin",
+    "snap",
+    "redondeo"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-snap.md"
+  },
+  {
+   "id": "css-transforms",
+   "titulo": "Transformaciones, orden, x/y frente a xPercent/yPercent",
+   "capa": "04-propiedades",
+   "tipo": "concepto",
+   "ambito": "CSSPlugin",
+   "resumen": "Cómo guarda y recompone GSAP las transformaciones, en qué orden fijo, por qué usar x/y/rotation en lugar de transform, y cuándo xPercent. Incluye 3D, force3D y la lectura de CSS.",
+   "api": [
+    "gsap.CSSProperties.x",
+    "gsap.CSSProperties.y",
+    "gsap.CSSProperties.z",
+    "gsap.CSSProperties.xPercent",
+    "gsap.CSSProperties.yPercent",
+    "gsap.CSSProperties.scale",
+    "gsap.CSSProperties.scaleX",
+    "gsap.CSSProperties.scaleY",
+    "gsap.CSSProperties.rotation",
+    "gsap.CSSProperties.rotationX",
+    "gsap.CSSProperties.rotationY",
+    "gsap.CSSProperties.skewX",
+    "gsap.CSSProperties.skewY"
+   ],
+   "requiere": [
+    "css-plugin"
+   ],
+   "relacionadas": [
+    "css-origin",
+    "css-rotacion",
+    "css-clearprops",
+    "nuc-getproperty",
+    "cal-rendimiento"
+   ],
+   "etiquetas": [
+    "css",
+    "transform",
+    "3d",
+    "rendimiento"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-transforms.md"
+  },
+  {
+   "id": "css-variables",
+   "titulo": "Variables CSS",
+   "capa": "04-propiedades",
+   "tipo": "concepto",
+   "ambito": "CSSPlugin",
+   "resumen": "Animar variables CSS con GSAP y usar var() como destino. Permite actualizar muchos elementos con un solo valor, y tiene reglas propias para colores y unidades.",
+   "api": null,
+   "requiere": [
+    "css-plugin"
+   ],
+   "relacionadas": [
+    "css-complejas",
+    "cal-rendimiento",
+    "fra-vanilla"
+   ],
+   "etiquetas": [
+    "css",
+    "variables",
+    "custom-properties"
+   ],
+   "estado": "verificado",
+   "ruta": "04-propiedades/css-variables.md"
+  },
+  {
+   "id": "eas-catalogo",
+   "titulo": "Catálogo de eases",
+   "capa": "05-easing",
+   "tipo": "referencia",
+   "ambito": "core",
+   "resumen": "Todos los eases del núcleo con su cadena, equivalencias, parámetros y valores de referencia, más los objetos antiguos Back, Elastic, Power o Linear.",
+   "api": [
+    "gsap.Ease.easeIn",
+    "gsap.Ease.easeOut",
+    "gsap.Ease.easeInOut",
+    "gsap.Back.easeIn",
+    "gsap.Back.easeOut",
+    "gsap.Back.easeInOut",
+    "gsap.BackConfig.config",
+    "gsap.Elastic.easeIn",
+    "gsap.Elastic.easeOut",
+    "gsap.Elastic.easeInOut",
+    "gsap.ElasticConfig.config",
+    "gsap.Linear.easeNone"
+   ],
+   "requiere": [
+    "eas-guia"
+   ],
+   "relacionadas": [
+    "eas-easepack",
+    "eas-stepped",
+    "eas-customease"
+   ],
+   "etiquetas": [
+    "easing",
+    "referencia"
+   ],
+   "estado": "verificado",
+   "ruta": "05-easing/eas-catalogo.md"
+  },
+  {
+   "id": "eas-custombounce",
+   "titulo": "CustomBounce, rebotes con aplastamiento",
+   "capa": "05-easing",
+   "tipo": "plugin",
+   "ambito": "CustomBounce",
+   "resumen": "Crea un ease de rebote configurable y, opcionalmente, un segundo ease sincronizado para aplastar y estirar el objeto.",
+   "api": [
+    "CustomBounce.create",
+    "CustomBounce.ease",
+    "CustomBounce.register",
+    "CustomBounceVars.strength",
+    "CustomBounceVars.endAtStart",
+    "CustomBounceVars.squash",
+    "CustomBounceVars.squashID"
+   ],
+   "requiere": [
+    "eas-customease"
+   ],
+   "relacionadas": [
+    "eas-customwiggle",
+    "eas-catalogo"
+   ],
+   "etiquetas": [
+    "easing",
+    "rebote",
+    "plugin"
+   ],
+   "estado": "verificado",
+   "ruta": "05-easing/eas-custombounce.md"
+  },
+  {
+   "id": "eas-customease",
+   "titulo": "CustomEase, dibujar cualquier curva",
+   "capa": "05-easing",
+   "tipo": "plugin",
+   "ambito": "CustomEase",
+   "resumen": "Crea un ease a partir de un path SVG o de valores cubic-bezier. create, get, setData y getSVGData, con el formato de datos admitido.",
+   "api": [
+    "CustomEase.create",
+    "CustomEase.get",
+    "CustomEase.getSVGData",
+    "CustomEase.setData",
+    "CustomEase.ease",
+    "CustomEase.data",
+    "CustomEase.id",
+    "CustomEase.segment",
+    "CustomEase.register",
+    "CustomEaseConfig.precision",
+    "CustomEaseConfig.height",
+    "CustomEaseConfig.originY",
+    "CustomEaseConfig.width",
+    "CustomEaseConfig.x",
+    "CustomEaseConfig.y",
+    "CustomEaseConfig.invert",
+    "CustomEaseConfig.path"
+   ],
+   "requiere": [
+    "eas-guia"
+   ],
+   "relacionadas": [
+    "eas-custombounce",
+    "eas-customwiggle",
+    "eas-registro",
+    "fun-plugins"
+   ],
+   "etiquetas": [
+    "easing",
+    "curvas",
+    "plugin",
+    "svg"
+   ],
+   "estado": "verificado",
+   "ruta": "05-easing/eas-customease.md"
+  },
+  {
+   "id": "eas-customwiggle",
+   "titulo": "CustomWiggle, oscilaciones",
+   "capa": "05-easing",
+   "tipo": "plugin",
+   "ambito": "CustomWiggle",
+   "resumen": "Ease que oscila y regresa al punto de partida, para sacudidas, avisos y enjambres. Tipos, amplitudeEase y timingEase, y su sintaxis en cadena.",
+   "api": [
+    "CustomWiggle.create",
+    "CustomWiggle.ease",
+    "CustomWiggle.register",
+    "CustomWiggleVars.type",
+    "CustomWiggleVars.wiggles",
+    "CustomWiggleVars.amplitudeEase",
+    "CustomWiggleVars.timingEase"
+   ],
+   "requiere": [
+    "eas-customease"
+   ],
+   "relacionadas": [
+    "eas-custombounce",
+    "eas-catalogo"
+   ],
+   "etiquetas": [
+    "easing",
+    "oscilacion",
+    "plugin"
+   ],
+   "estado": "verificado",
+   "ruta": "05-easing/eas-customwiggle.md"
+  },
+  {
+   "id": "eas-easepack",
+   "titulo": "EasePack, SlowMo, RoughEase y ExpoScaleEase",
+   "capa": "05-easing",
+   "tipo": "plugin",
+   "ambito": "EasePack",
+   "resumen": "Tres eases extra del archivo EasePack, slow para cámara lenta, rough para irregularidades y expoScale para corregir el zoom.",
+   "api": [
+    "gsap.EasePack.SlowMo",
+    "gsap.EasePack.RoughEase",
+    "gsap.EasePack.ExpoScaleEase",
+    "gsap.SlowMo.config",
+    "gsap.SlowMo.ease",
+    "gsap.SlowMoEase.config",
+    "gsap.RoughEase.config",
+    "gsap.RoughEase.ease",
+    "gsap.RoughEaseEase.config",
+    "gsap.RoughEaseVars.clamp",
+    "gsap.RoughEaseVars.points",
+    "gsap.RoughEaseVars.randomize",
+    "gsap.RoughEaseVars.strength",
+    "gsap.RoughEaseVars.taper",
+    "gsap.RoughEaseVars.template",
+    "gsap.ExpoScaleEase.config"
+   ],
+   "requiere": [
+    "eas-guia"
+   ],
+   "relacionadas": [
+    "eas-catalogo",
+    "eas-registro"
+   ],
+   "etiquetas": [
+    "easing",
+    "plugin",
+    "zoom"
+   ],
+   "estado": "verificado",
+   "ruta": "05-easing/eas-easepack.md"
+  },
+  {
+   "id": "eas-guia",
+   "titulo": "Guía de easing",
+   "capa": "05-easing",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Qué es un ease, cómo se escribe en GSAP, cuál elegir para cada caso, y cómo funcionan easeReverse y yoyoEase al invertir.",
+   "api": [
+    "gsap.TweenVars.ease",
+    "gsap.TweenVars.easeReverse",
+    "gsap.TweenVars.yoyoEase",
+    "gsap.parseEase"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "eas-catalogo",
+    "eas-customease",
+    "eas-registro",
+    "nuc-defaults-config",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "easing",
+    "curvas",
+    "movimiento"
+   ],
+   "estado": "verificado",
+   "ruta": "05-easing/eas-guia.md"
+  },
+  {
+   "id": "eas-registro",
+   "titulo": "Registrar y resolver eases",
+   "capa": "05-easing",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "gsap.registerEase y gsap.parseEase. Dar nombre a una función de ease, obtener la función de una cadena y evitar los fallos silenciosos.",
+   "api": [
+    "gsap.registerEase",
+    "gsap.parseEase"
+   ],
+   "requiere": [
+    "eas-guia"
+   ],
+   "relacionadas": [
+    "eas-customease",
+    "eas-easepack",
+    "fun-plugins"
+   ],
+   "etiquetas": [
+    "easing",
+    "registro"
+   ],
+   "estado": "verificado",
+   "ruta": "05-easing/eas-registro.md"
+  },
+  {
+   "id": "eas-stepped",
+   "titulo": "SteppedEase, movimiento por pasos",
+   "capa": "05-easing",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "steps(n) cuantifica el progreso en saltos. Cuántos tramos resultan realmente y cómo aplicarlo a sprites o a un cronómetro.",
+   "api": [
+    "gsap.SteppedEase.config"
+   ],
+   "requiere": [
+    "eas-guia"
+   ],
+   "relacionadas": [
+    "eas-catalogo",
+    "css-snap",
+    "rec-secuencia-imagenes"
+   ],
+   "etiquetas": [
+    "easing",
+    "pasos",
+    "sprites"
+   ],
+   "estado": "verificado",
+   "ruta": "05-easing/eas-stepped.md"
+  },
+  {
+   "id": "utl-cadenas",
+   "titulo": "Utilidades de cadenas, unidades y color",
+   "capa": "06-utilidades",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "getUnit, splitColor y checkPrefix. Extraer la unidad de un valor, descomponer colores y resolver prefijos, con los límites de cada una.",
+   "api": [
+    "gsap.utils.getUnit",
+    "gsap.utils.splitColor",
+    "gsap.utils.checkPrefix"
+   ],
+   "requiere": [
+    "utl-funciones"
+   ],
+   "relacionadas": [
+    "utl-numeros",
+    "css-plugin",
+    "css-complejas"
+   ],
+   "etiquetas": [
+    "utilidades",
+    "unidades",
+    "color"
+   ],
+   "estado": "verificado",
+   "ruta": "06-utilidades/utl-cadenas.md"
+  },
+  {
+   "id": "utl-colecciones",
+   "titulo": "Utilidades de colecciones",
+   "capa": "06-utilidades",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "toArray, selector, shuffle y distribute. Convertir objetivos en arrays, acotar selectores a un contenedor, barajar y repartir valores como un stagger.",
+   "api": [
+    "gsap.utils.toArray",
+    "gsap.utils.selector",
+    "gsap.utils.shuffle",
+    "gsap.utils.distribute",
+    "gsap.utils.DistributeConfig.amount",
+    "gsap.utils.DistributeConfig.axis",
+    "gsap.utils.DistributeConfig.base",
+    "gsap.utils.DistributeConfig.each",
+    "gsap.utils.DistributeConfig.ease",
+    "gsap.utils.DistributeConfig.from",
+    "gsap.utils.DistributeConfig.grid"
+   ],
+   "requiere": [
+    "utl-funciones"
+   ],
+   "relacionadas": [
+    "nuc-stagger",
+    "nuc-context",
+    "fun-objetivos",
+    "fra-agnostico"
+   ],
+   "etiquetas": [
+    "utilidades",
+    "arrays",
+    "selectores",
+    "stagger"
+   ],
+   "estado": "verificado",
+   "ruta": "06-utilidades/utl-colecciones.md"
+  },
+  {
+   "id": "utl-funciones",
+   "titulo": "Utilidades, forma curried, pipe y unitize",
+   "capa": "06-utilidades",
+   "tipo": "concepto",
+   "ambito": "core",
+   "resumen": "Mapa de gsap.utils con qué devuelve cada función al omitir el último argumento, cómo encadenarlas con pipe y unitize, y el fallo silencioso de pasar un valor vacío.",
+   "api": [
+    "gsap.utils.pipe",
+    "gsap.utils.unitize",
+    "gsap.utils.clamp",
+    "gsap.utils.mapRange",
+    "gsap.utils.normalize",
+    "gsap.utils.interpolate",
+    "gsap.utils.snap",
+    "gsap.utils.wrap",
+    "gsap.utils.wrapYoyo",
+    "gsap.utils.random",
+    "gsap.utils.distribute"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "utl-numeros",
+    "utl-colecciones",
+    "utl-cadenas",
+    "nuc-quickto",
+    "css-modifiers",
+    "fun-valores"
+   ],
+   "etiquetas": [
+    "utilidades",
+    "curried",
+    "funciones"
+   ],
+   "estado": "verificado",
+   "ruta": "06-utilidades/utl-funciones.md"
+  },
+  {
+   "id": "utl-numeros",
+   "titulo": "Utilidades numéricas",
+   "capa": "06-utilidades",
+   "tipo": "api",
+   "ambito": "core",
+   "resumen": "clamp, mapRange, normalize, interpolate, snap, wrap, wrapYoyo y random, con su forma curried, sus configuraciones y sus casos límite.",
+   "api": [
+    "gsap.utils.clamp",
+    "gsap.utils.mapRange",
+    "gsap.utils.normalize",
+    "gsap.utils.interpolate",
+    "gsap.utils.snap",
+    "gsap.utils.wrap",
+    "gsap.utils.wrapYoyo",
+    "gsap.utils.random",
+    "gsap.utils.SnapNumberConfig.increment",
+    "gsap.utils.SnapNumberConfig.values",
+    "gsap.utils.SnapNumberConfig.radius",
+    "gsap.utils.SnapPoint2DConfig.values",
+    "gsap.utils.SnapPoint2DConfig.radius"
+   ],
+   "requiere": [
+    "utl-funciones"
+   ],
+   "relacionadas": [
+    "utl-colecciones",
+    "utl-cadenas",
+    "css-snap",
+    "css-modifiers"
+   ],
+   "etiquetas": [
+    "utilidades",
+    "matematicas",
+    "rango"
+   ],
+   "estado": "verificado",
+   "ruta": "06-utilidades/utl-numeros.md"
+  },
+  {
+   "id": "scr-batch",
+   "titulo": "ScrollTrigger.batch(), coordinar muchos elementos",
+   "capa": "07-scroll",
+   "tipo": "api",
+   "ambito": "ScrollTrigger",
+   "resumen": "Crea una instancia por elemento y agrupa en arrays los callbacks ocurridos casi a la vez. Ideal para revelar rejillas con escalonado sin un bucle de animaciones.",
+   "api": [
+    "ScrollTrigger.batch",
+    "ScrollTrigger.BatchVars.interval",
+    "ScrollTrigger.BatchVars.batchMax",
+    "ScrollTrigger.BatchVars.onEnter",
+    "ScrollTrigger.BatchVars.onLeave",
+    "ScrollTrigger.BatchVars.onEnterBack",
+    "ScrollTrigger.BatchVars.onLeaveBack",
+    "ScrollTrigger.BatchVars.onToggle",
+    "ScrollTrigger.BatchVars.onUpdate",
+    "ScrollTrigger.BatchVars.onRefresh",
+    "ScrollTrigger.BatchVars.onRefreshInit",
+    "ScrollTrigger.BatchVars.start",
+    "ScrollTrigger.BatchVars.end",
+    "ScrollTrigger.BatchVars.once",
+    "ScrollTrigger.BatchVars.scroller",
+    "ScrollTrigger.BatchVars.horizontal",
+    "ScrollTrigger.BatchVars.toggleClass",
+    "ScrollTrigger.BatchVars.fastScrollEnd",
+    "ScrollTrigger.BatchVars.preventOverlaps",
+    "ScrollTrigger.BatchVars.anticipatePin",
+    "ScrollTrigger.BatchVars.pin",
+    "ScrollTrigger.BatchVars.pinReparent",
+    "ScrollTrigger.BatchVars.pinSpacing",
+    "ScrollTrigger.BatchVars.pinSpacer",
+    "ScrollTrigger.BatchVars.pinType"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "scr-toggle",
+    "scr-refresh",
+    "nuc-stagger",
+    "rec-revelar-scroll"
+   ],
+   "etiquetas": [
+    "scroll",
+    "stagger",
+    "rejilla"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-batch.md"
+  },
+  {
+   "id": "scr-estaticos",
+   "titulo": "Métodos estáticos de ScrollTrigger",
+   "capa": "07-scroll",
+   "tipo": "referencia",
+   "ambito": "ScrollTrigger",
+   "resumen": "Tabla de los métodos globales de ScrollTrigger con config, defaults, búsqueda de instancias, medición del viewport, activación y métodos obsoletos.",
+   "api": [
+    "ScrollTrigger.config",
+    "ScrollTrigger.ConfigVars.limitCallbacks",
+    "ScrollTrigger.ConfigVars.syncInterval",
+    "ScrollTrigger.ConfigVars.autoRefreshEvents",
+    "ScrollTrigger.defaults",
+    "ScrollTrigger.getAll",
+    "ScrollTrigger.getById",
+    "ScrollTrigger.isInViewport",
+    "ScrollTrigger.positionInViewport",
+    "ScrollTrigger.maxScroll",
+    "ScrollTrigger.getScrollFunc",
+    "ScrollTrigger.isScrolling",
+    "ScrollTrigger.killAll",
+    "ScrollTrigger.enable",
+    "ScrollTrigger.disable",
+    "ScrollTrigger.matchMedia",
+    "ScrollTrigger.clearMatchMedia",
+    "ScrollTrigger.observe",
+    "ScrollTrigger.register",
+    "ScrollTrigger.version"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "scr-instancia",
+    "scr-refresh",
+    "scr-snap",
+    "nuc-matchmedia"
+   ],
+   "etiquetas": [
+    "scroll",
+    "referencia"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-estaticos.md"
+  },
+  {
+   "id": "scr-horizontal",
+   "titulo": "Scroll horizontal, nativo y simulado con containerAnimation",
+   "capa": "07-scroll",
+   "tipo": "concepto",
+   "ambito": "ScrollTrigger",
+   "resumen": "Dos horizontales distintos, horizontal true para scroll real y pin más tween para el simulado, con containerAnimation para disparar animaciones dentro de la pista.",
+   "api": [
+    "ScrollTrigger.Vars.horizontal",
+    "ScrollTrigger.Vars.containerAnimation"
+   ],
+   "requiere": [
+    "scr-pin",
+    "scr-scrub"
+   ],
+   "relacionadas": [
+    "scr-start-end",
+    "scr-snap",
+    "scr-refresh",
+    "rec-pin-horizontal"
+   ],
+   "etiquetas": [
+    "scroll",
+    "horizontal",
+    "pin"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-horizontal.md"
+  },
+  {
+   "id": "scr-instancia",
+   "titulo": "Propiedades y métodos de una instancia de ScrollTrigger",
+   "capa": "07-scroll",
+   "tipo": "referencia",
+   "ambito": "ScrollTrigger",
+   "resumen": "Tabla de lectura de una instancia (progress, direction, isActive, start, end) y sus métodos (kill, disable, enable, scroll, getVelocity, next, previous, tweenTo).",
+   "api": [
+    "ScrollTrigger.progress",
+    "ScrollTrigger.direction",
+    "ScrollTrigger.isActive",
+    "ScrollTrigger.start",
+    "ScrollTrigger.end",
+    "ScrollTrigger.animation",
+    "ScrollTrigger.trigger",
+    "ScrollTrigger.scroller",
+    "ScrollTrigger.vars",
+    "ScrollTrigger.getVelocity",
+    "ScrollTrigger.kill",
+    "ScrollTrigger.labelToScroll",
+    "ScrollTrigger.next",
+    "ScrollTrigger.previous",
+    "ScrollTrigger.scroll",
+    "ScrollTrigger.tweenTo",
+    "ScrollTrigger.Vars.onKill"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "scr-estaticos",
+    "scr-toggle",
+    "scr-snap",
+    "scr-scrollto",
+    "nuc-limpieza",
+    "fra-agnostico"
+   ],
+   "etiquetas": [
+    "scroll",
+    "referencia"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-instancia.md"
+  },
+  {
+   "id": "scr-normalize",
+   "titulo": "ScrollTrigger.normalizeScroll(), scroll en el hilo de JavaScript",
+   "capa": "07-scroll",
+   "tipo": "api",
+   "ambito": "ScrollTrigger",
+   "resumen": "Intercepta rueda y toque para desplazar desde JavaScript. Evita saltos de pin, oculta menos la barra de direcciones móvil y corrige jitter de iOS, a cambio de ser scroll-jacking.",
+   "api": [
+    "ScrollTrigger.normalizeScroll",
+    "ScrollTrigger.NormalizeVars.momentum",
+    "ScrollTrigger.NormalizeVars.content",
+    "ScrollTrigger.NormalizeVars.allowNestedScroll",
+    "ScrollTrigger.ConfigVars.ignoreMobileResize",
+    "ScrollTrigger.isTouch"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "scr-pin",
+    "scr-refresh",
+    "scr-smoother",
+    "scr-observer",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "scroll",
+    "movil",
+    "ios"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-normalize.md"
+  },
+  {
+   "id": "scr-observer-api",
+   "titulo": "Observer, referencia completa de opciones y propiedades",
+   "capa": "07-scroll",
+   "tipo": "referencia",
+   "ambito": "Observer",
+   "resumen": "Todas las opciones de ObserverVars, los callbacks, las propiedades de la instancia y los métodos estáticos de Observer.",
+   "api": [
+    "Observer.ObserverVars.allowClicks",
+    "Observer.ObserverVars.capture",
+    "Observer.ObserverVars.dragMinimum",
+    "Observer.ObserverVars.event",
+    "Observer.ObserverVars.ignore",
+    "Observer.ObserverVars.ignoreCheck",
+    "Observer.ObserverVars.lineHeight",
+    "Observer.ObserverVars.lockAxis",
+    "Observer.ObserverVars.onLockAxis",
+    "Observer.ObserverVars.onDisable",
+    "Observer.ObserverVars.onEnable",
+    "Observer.ObserverVars.onDrag",
+    "Observer.ObserverVars.onDragStart",
+    "Observer.ObserverVars.onDragEnd",
+    "Observer.ObserverVars.onHover",
+    "Observer.ObserverVars.onHoverEnd",
+    "Observer.ObserverVars.onToggleX",
+    "Observer.ObserverVars.onToggleY",
+    "Observer.ObserverVars.onChangeX",
+    "Observer.ObserverVars.onChangeY",
+    "Observer.ObserverVars.onClick",
+    "Observer.ObserverVars.onPress",
+    "Observer.ObserverVars.onRelease",
+    "Observer.ObserverVars.onMove",
+    "Observer.ObserverVars.onWheel",
+    "Observer.ObserverVars.onStop",
+    "Observer.ObserverVars.onStopDelay",
+    "Observer.isTouch",
+    "Observer.eventTypes",
+    "Observer.version",
+    "Observer.deltaX",
+    "Observer.deltaY",
+    "Observer.event",
+    "Observer.isDragging",
+    "Observer.isEnabled",
+    "Observer.isPressed",
+    "Observer.startX",
+    "Observer.startY",
+    "Observer.target",
+    "Observer.vars",
+    "Observer.velocityX",
+    "Observer.velocityY",
+    "Observer.x",
+    "Observer.y",
+    "Observer.axis",
+    "Observer.getAll",
+    "Observer.getById",
+    "Observer.disable",
+    "Observer.enable",
+    "Observer.kill",
+    "Observer.scrollX",
+    "Observer.scrollY"
+   ],
+   "requiere": [
+    "scr-observer"
+   ],
+   "relacionadas": [
+    "scr-normalize",
+    "int-draggable"
+   ],
+   "etiquetas": [
+    "scroll",
+    "gestos",
+    "referencia"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-observer-api.md"
+  },
+  {
+   "id": "scr-observer",
+   "titulo": "Observer, intención de movimiento unificada",
+   "capa": "07-scroll",
+   "tipo": "plugin",
+   "ambito": "Observer",
+   "resumen": "Detecta rueda, toque, puntero y scroll con una sola API, con direcciones, deltas y velocidad. Base de las páginas que cambian de sección sin scroll real.",
+   "api": [
+    "Observer",
+    "Observer.create",
+    "ScrollTrigger.observe",
+    "Observer.ObserverVars.target",
+    "Observer.ObserverVars.type",
+    "Observer.ObserverVars.onUp",
+    "Observer.ObserverVars.onDown",
+    "Observer.ObserverVars.onLeft",
+    "Observer.ObserverVars.onRight",
+    "Observer.ObserverVars.onChange",
+    "Observer.ObserverVars.tolerance",
+    "Observer.ObserverVars.debounce",
+    "Observer.ObserverVars.wheelSpeed",
+    "Observer.ObserverVars.preventDefault",
+    "Observer.ObserverVars.id"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "scr-observer-api",
+    "scr-normalize",
+    "scr-smoother-api",
+    "int-draggable"
+   ],
+   "etiquetas": [
+    "scroll",
+    "gestos",
+    "rueda",
+    "tactil"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-observer.md"
+  },
+  {
+   "id": "scr-pin",
+   "titulo": "pin, fijar un elemento durante un tramo de scroll",
+   "capa": "07-scroll",
+   "tipo": "concepto",
+   "ambito": "ScrollTrigger",
+   "resumen": "Qué hace pin en el DOM (pin-spacer, position fixed, padding), opciones pinSpacing, pinType, pinReparent, anticipatePin, y causas de pines que saltan.",
+   "api": [
+    "ScrollTrigger.Vars.pin",
+    "ScrollTrigger.Vars.pinSpacing",
+    "ScrollTrigger.Vars.pinType",
+    "ScrollTrigger.Vars.pinReparent",
+    "ScrollTrigger.Vars.pinSpacer",
+    "ScrollTrigger.Vars.pinnedContainer",
+    "ScrollTrigger.Vars.anticipatePin",
+    "ScrollTrigger.pin"
+   ],
+   "requiere": [
+    "scr-start-end"
+   ],
+   "relacionadas": [
+    "scr-scrub",
+    "scr-horizontal",
+    "scr-refresh",
+    "scr-normalize",
+    "cal-st-errores",
+    "rec-pin-horizontal"
+   ],
+   "etiquetas": [
+    "scroll",
+    "pin",
+    "layout"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-pin.md"
+  },
+  {
+   "id": "scr-refresh",
+   "titulo": "refresh, cuándo y cómo se recalculan las posiciones",
+   "capa": "07-scroll",
+   "tipo": "concepto",
+   "ambito": "ScrollTrigger",
+   "resumen": "Diferencia entre refresh y update, qué dispara un refresco, orden de creación, sort, refreshPriority, invalidateOnRefresh, saveStyles y memoria del scroll.",
+   "api": [
+    "ScrollTrigger.refresh",
+    "ScrollTrigger.update",
+    "ScrollTrigger.sort",
+    "ScrollTrigger.saveStyles",
+    "ScrollTrigger.clearScrollMemory",
+    "ScrollTrigger.addEventListener",
+    "ScrollTrigger.removeEventListener",
+    "ScrollTrigger.Vars.onRefresh",
+    "ScrollTrigger.Vars.onRefreshInit",
+    "ScrollTrigger.Vars.invalidateOnRefresh",
+    "ScrollTrigger.Vars.refreshPriority"
+   ],
+   "requiere": [
+    "scr-start-end"
+   ],
+   "relacionadas": [
+    "scr-pin",
+    "scr-estaticos",
+    "scr-instancia",
+    "scr-normalize",
+    "nuc-matchmedia",
+    "nuc-context",
+    "cal-st-errores",
+    "fra-agnostico"
+   ],
+   "etiquetas": [
+    "scroll",
+    "responsive",
+    "medidas"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-refresh.md"
+  },
+  {
+   "id": "scr-scrollerproxy",
+   "titulo": "ScrollTrigger.scrollerProxy(), integrar otro scroll",
+   "capa": "07-scroll",
+   "tipo": "api",
+   "ambito": "ScrollTrigger",
+   "resumen": "Sustituye los getters y setters de scroll de un elemento para que ScrollTrigger funcione con librerías de scroll suave o desplazamientos propios.",
+   "api": [
+    "ScrollTrigger.scrollerProxy",
+    "ScrollTrigger.ScrollerProxyVars.scrollTop",
+    "ScrollTrigger.ScrollerProxyVars.scrollLeft",
+    "ScrollTrigger.ScrollerProxyVars.scrollWidth",
+    "ScrollTrigger.ScrollerProxyVars.scrollHeight",
+    "ScrollTrigger.ScrollerProxyVars.getBoundingClientRect",
+    "ScrollTrigger.ScrollerProxyVars.pinType",
+    "ScrollTrigger.ScrollerProxyVars.fixedMarkers",
+    "ScrollTrigger.ScrollerProxyVars.content",
+    "ScrollTrigger.RectObj.top",
+    "ScrollTrigger.RectObj.left",
+    "ScrollTrigger.RectObj.width",
+    "ScrollTrigger.RectObj.height"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "scr-smoother",
+    "scr-pin",
+    "scr-refresh"
+   ],
+   "etiquetas": [
+    "scroll",
+    "integracion",
+    "librerias"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-scrollerproxy.md"
+  },
+  {
+   "id": "scr-scrollto",
+   "titulo": "ScrollToPlugin, animar la posición de scroll",
+   "capa": "07-scroll",
+   "tipo": "plugin",
+   "ambito": "ScrollToPlugin",
+   "resumen": "Anima el scroll de ventana o contenedor hasta un valor, selector o elemento, con desfases, autoKill y relativos. Incluye su relación con scroll-behavior y anclas.",
+   "api": [
+    "ScrollToPlugin",
+    "ScrollToPlugin.Vars.x",
+    "ScrollToPlugin.Vars.y",
+    "ScrollToPlugin.Vars.offsetX",
+    "ScrollToPlugin.Vars.offsetY",
+    "ScrollToPlugin.Vars.autoKill",
+    "ScrollToPlugin.Vars.onAutoKill",
+    "ScrollToPlugin.config",
+    "ScrollToPlugin.ConfigVars.autoKill",
+    "ScrollToPlugin.ConfigVars.autoKillThreshold",
+    "ScrollToPlugin.max",
+    "ScrollToPlugin.offset"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "scr-instancia",
+    "scr-smoother-api",
+    "scr-snap"
+   ],
+   "etiquetas": [
+    "scroll",
+    "navegacion",
+    "anclas"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-scrollto.md"
+  },
+  {
+   "id": "scr-scrolltrigger",
+   "titulo": "ScrollTrigger, enlazar cualquier cosa con la posición de scroll",
+   "capa": "07-scroll",
+   "tipo": "plugin",
+   "ambito": "ScrollTrigger",
+   "resumen": "Mapa del plugin. Cómo funciona por dentro, formas de crearlo, tabla completa de ScrollTrigger.Vars y a qué ficha ir para cada problema.",
+   "api": [
+    "ScrollTrigger",
+    "ScrollTrigger.create",
+    "ScrollTrigger.Vars.trigger",
+    "ScrollTrigger.Vars.scroller",
+    "ScrollTrigger.Vars.markers",
+    "ScrollTrigger.Vars.id",
+    "ScrollTrigger.Vars.immediateRender",
+    "ScrollTrigger.StaticVars.animation",
+    "ScrollTrigger.MarkersVars.startColor",
+    "ScrollTrigger.MarkersVars.endColor",
+    "ScrollTrigger.MarkersVars.fontSize",
+    "ScrollTrigger.MarkersVars.fontWeight",
+    "ScrollTrigger.MarkersVars.indent"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "scr-start-end",
+    "scr-scrub",
+    "scr-pin",
+    "scr-toggle",
+    "scr-refresh",
+    "scr-instancia",
+    "scr-estaticos",
+    "cal-st-errores",
+    "nuc-context",
+    "fra-agnostico"
+   ],
+   "etiquetas": [
+    "scroll",
+    "plugin",
+    "mapa"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-scrolltrigger.md"
+  },
+  {
+   "id": "scr-scrub",
+   "titulo": "scrub, atar el cabezal de la animación al scroll",
+   "capa": "07-scroll",
+   "tipo": "concepto",
+   "ambito": "ScrollTrigger",
+   "resumen": "Diferencia entre scrub true y numérico, cómo se reparten las duraciones de un timeline, valores iniciales cacheados y por qué ease none es casi obligatorio.",
+   "api": [
+    "ScrollTrigger.Vars.scrub",
+    "ScrollTrigger.Vars.onScrubComplete",
+    "ScrollTrigger.Vars.immediateRender"
+   ],
+   "requiere": [
+    "scr-start-end"
+   ],
+   "relacionadas": [
+    "scr-scrolltrigger",
+    "scr-toggle",
+    "scr-snap",
+    "scr-pin",
+    "tim-basico"
+   ],
+   "etiquetas": [
+    "scroll",
+    "scrub",
+    "timeline"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-scrub.md"
+  },
+  {
+   "id": "scr-smoother-api",
+   "titulo": "Métodos y propiedades de ScrollSmoother",
+   "capa": "07-scroll",
+   "tipo": "referencia",
+   "ambito": "ScrollSmoother",
+   "resumen": "Referencia de la instancia, scrollTo, offset, scrollTop, paused, smooth, progress, content, wrapper, getVelocity, kill, y las diferencias entre scroll nativo y suavizado.",
+   "api": [
+    "ScrollSmoother.scrollTo",
+    "ScrollSmoother.offset",
+    "ScrollSmoother.scrollTop",
+    "ScrollSmoother.paused",
+    "ScrollSmoother.smooth",
+    "ScrollSmoother.progress",
+    "ScrollSmoother.scrollTrigger",
+    "ScrollSmoother.normalizer",
+    "ScrollSmoother.content",
+    "ScrollSmoother.wrapper",
+    "ScrollSmoother.getVelocity",
+    "ScrollSmoother.kill",
+    "ScrollSmoother.refresh"
+   ],
+   "requiere": [
+    "scr-smoother"
+   ],
+   "relacionadas": [
+    "scr-smoother-efectos",
+    "scr-scrollto",
+    "scr-instancia"
+   ],
+   "etiquetas": [
+    "scroll",
+    "referencia"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-smoother-api.md"
+  },
+  {
+   "id": "scr-smoother-efectos",
+   "titulo": "Efectos de ScrollSmoother, data-speed y data-lag",
+   "capa": "07-scroll",
+   "tipo": "concepto",
+   "ambito": "ScrollSmoother",
+   "resumen": "Parallax con data-speed, retardo con data-lag, valores auto y clamp, método effects(), prefijo y padding, y cómo se reparte el desplazamiento respecto al centro.",
+   "api": [
+    "ScrollSmoother.effects",
+    "ScrollSmoother.EffectsVars.speed",
+    "ScrollSmoother.EffectsVars.lag",
+    "ScrollSmoother.EffectsVars.effectsPadding",
+    "ScrollSmoother.Vars.effectsPrefix",
+    "ScrollSmoother.Vars.effectsPadding"
+   ],
+   "requiere": [
+    "scr-smoother"
+   ],
+   "relacionadas": [
+    "scr-smoother-api",
+    "rec-parallax"
+   ],
+   "etiquetas": [
+    "scroll",
+    "parallax"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-smoother-efectos.md"
+  },
+  {
+   "id": "scr-smoother",
+   "titulo": "ScrollSmoother, scroll suavizado sobre scroll nativo",
+   "capa": "07-scroll",
+   "tipo": "plugin",
+   "ambito": "ScrollSmoother",
+   "resumen": "Qué hace, estructura wrapper y content, cuándo compensa frente al scroll nativo, su límite en móvil y las interacciones con pin y position fixed.",
+   "api": [
+    "ScrollSmoother",
+    "ScrollSmoother.create",
+    "ScrollSmoother.get",
+    "ScrollSmoother.Vars.smooth",
+    "ScrollSmoother.Vars.smoothTouch",
+    "ScrollSmoother.Vars.speed",
+    "ScrollSmoother.Vars.ease",
+    "ScrollSmoother.Vars.effects",
+    "ScrollSmoother.Vars.wrapper",
+    "ScrollSmoother.Vars.content",
+    "ScrollSmoother.Vars.normalizeScroll",
+    "ScrollSmoother.Vars.ignoreMobileResize",
+    "ScrollSmoother.Vars.autoResize",
+    "ScrollSmoother.Vars.onUpdate",
+    "ScrollSmoother.Vars.onStop",
+    "ScrollSmoother.Vars.onFocusIn",
+    "ScrollSmoother.version"
+   ],
+   "requiere": [
+    "scr-scrolltrigger"
+   ],
+   "relacionadas": [
+    "scr-smoother-efectos",
+    "scr-smoother-api",
+    "scr-normalize",
+    "scr-scrollerproxy",
+    "cal-accesibilidad",
+    "rec-parallax"
+   ],
+   "etiquetas": [
+    "scroll",
+    "suavizado",
+    "parallax",
+    "movil"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-smoother.md"
+  },
+  {
+   "id": "scr-snap",
+   "titulo": "snap, ajustar el scroll a posiciones concretas",
+   "capa": "07-scroll",
+   "tipo": "concepto",
+   "ambito": "ScrollTrigger",
+   "resumen": "Formas de snap (incremento, array, función, etiquetas, objeto), opciones de SnapVars, snapDirectional y cuándo un ajuste se cancela o no arranca.",
+   "api": [
+    "ScrollTrigger.Vars.snap",
+    "ScrollTrigger.Vars.onSnapComplete",
+    "ScrollTrigger.SnapVars.snapTo",
+    "ScrollTrigger.SnapVars.delay",
+    "ScrollTrigger.SnapVars.duration",
+    "ScrollTrigger.SnapVars.ease",
+    "ScrollTrigger.SnapVars.inertia",
+    "ScrollTrigger.SnapVars.directional",
+    "ScrollTrigger.SnapVars.onStart",
+    "ScrollTrigger.SnapVars.onComplete",
+    "ScrollTrigger.SnapVars.onInterrupt",
+    "ScrollTrigger.RangeObject.min",
+    "ScrollTrigger.RangeObject.max",
+    "ScrollTrigger.snapDirectional",
+    "ScrollTrigger.getTween"
+   ],
+   "requiere": [
+    "scr-scrub"
+   ],
+   "relacionadas": [
+    "scr-pin",
+    "scr-horizontal",
+    "scr-instancia",
+    "css-snap"
+   ],
+   "etiquetas": [
+    "scroll",
+    "snap"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-snap.md"
+  },
+  {
+   "id": "scr-start-end",
+   "titulo": "start y end, cómo se calcula el tramo activo",
+   "capa": "07-scroll",
+   "tipo": "concepto",
+   "ambito": "ScrollTrigger",
+   "resumen": "Sintaxis de start y end (palabras, porcentajes, relativos, max, clamp, funciones), valores por defecto y fórmula con la que salen los píxeles.",
+   "api": [
+    "ScrollTrigger.Vars.start",
+    "ScrollTrigger.Vars.end",
+    "ScrollTrigger.Vars.endTrigger",
+    "ScrollTrigger.Vars.trigger"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "scr-scrolltrigger",
+    "scr-refresh",
+    "scr-pin",
+    "scr-horizontal",
+    "cal-st-errores"
+   ],
+   "etiquetas": [
+    "scroll",
+    "posicion",
+    "medidas"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-start-end.md"
+  },
+  {
+   "id": "scr-toggle",
+   "titulo": "toggleActions, toggleClass y callbacks de ScrollTrigger",
+   "capa": "07-scroll",
+   "tipo": "concepto",
+   "ambito": "ScrollTrigger",
+   "resumen": "Las cuatro transiciones del tramo, acciones sobre la animación, clases, callbacks, once, y cómo evitar solapes con fastScrollEnd y preventOverlaps.",
+   "api": [
+    "ScrollTrigger.Vars.toggleActions",
+    "ScrollTrigger.Vars.toggleClass",
+    "ScrollTrigger.ToggleClassVars.className",
+    "ScrollTrigger.ToggleClassVars.targets",
+    "ScrollTrigger.Vars.once",
+    "ScrollTrigger.Vars.onEnter",
+    "ScrollTrigger.Vars.onLeave",
+    "ScrollTrigger.Vars.onEnterBack",
+    "ScrollTrigger.Vars.onLeaveBack",
+    "ScrollTrigger.Vars.onToggle",
+    "ScrollTrigger.Vars.onUpdate",
+    "ScrollTrigger.Vars.fastScrollEnd",
+    "ScrollTrigger.Vars.preventOverlaps",
+    "ScrollTrigger.callbackAnimation",
+    "ScrollTrigger.endAnimation",
+    "ScrollTrigger.getTrailing"
+   ],
+   "requiere": [
+    "scr-start-end"
+   ],
+   "relacionadas": [
+    "scr-scrub",
+    "scr-batch",
+    "scr-instancia",
+    "rec-revelar-scroll"
+   ],
+   "etiquetas": [
+    "scroll",
+    "callbacks",
+    "clases"
+   ],
+   "estado": "verificado",
+   "ruta": "07-scroll/scr-toggle.md"
+  },
+  {
+   "id": "txt-scramble",
+   "titulo": "ScrambleTextPlugin, texto que se descifra",
+   "capa": "08-texto",
+   "tipo": "plugin",
+   "ambito": "ScrambleTextPlugin",
+   "resumen": "Sustituye el texto de un elemento mostrando caracteres aleatorios que se van resolviendo, como un descifrado. Admite conjuntos propios, retardo y clases.",
+   "api": [
+    "ScrambleTextPlugin",
+    "ScrambleTextPlugin.Vars.text",
+    "ScrambleTextPlugin.Vars.chars",
+    "ScrambleTextPlugin.Vars.speed",
+    "ScrambleTextPlugin.Vars.delimiter",
+    "ScrambleTextPlugin.Vars.tweenLength",
+    "ScrambleTextPlugin.Vars.newClass",
+    "ScrambleTextPlugin.Vars.oldClass",
+    "ScrambleTextPlugin.Vars.revealDelay",
+    "ScrambleTextPlugin.Vars.rightToLeft"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "txt-text",
+    "txt-splittext",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "texto",
+    "hover"
+   ],
+   "estado": "verificado",
+   "ruta": "08-texto/txt-scramble.md"
+  },
+  {
+   "id": "txt-splittext-api",
+   "titulo": "SplitText, opciones, propiedades y métodos",
+   "capa": "08-texto",
+   "tipo": "api",
+   "ambito": "SplitText",
+   "resumen": "Referencia de SplitText.Vars con valores por defecto y comportamiento real de split(), revert() y kill(), incluida la restauración de ARIA y las animaciones.",
+   "api": [
+    "SplitText.create",
+    "SplitText.split",
+    "SplitText.revert",
+    "SplitText.kill",
+    "SplitText.isSplit",
+    "SplitText.elements",
+    "SplitText.Vars.type",
+    "SplitText.Vars.linesClass",
+    "SplitText.Vars.wordsClass",
+    "SplitText.Vars.charsClass",
+    "SplitText.Vars.tag",
+    "SplitText.Vars.propIndex",
+    "SplitText.Vars.deepSlice",
+    "SplitText.Vars.smartWrap",
+    "SplitText.Vars.specialChars",
+    "SplitText.Vars.reduceWhiteSpace",
+    "SplitText.Vars.ignore",
+    "SplitText.Vars.prepareText",
+    "SplitText.Vars.wordDelimiter",
+    "SplitText.Vars.onRevert",
+    "SplitText.Vars.overwrite",
+    "SplitText.WordDelimiterConfig.delimiter",
+    "SplitText.WordDelimiterConfig.replaceWith"
+   ],
+   "requiere": [
+    "txt-splittext"
+   ],
+   "relacionadas": [
+    "txt-splittext",
+    "nuc-limpieza",
+    "nuc-context"
+   ],
+   "etiquetas": [
+    "texto",
+    "referencia"
+   ],
+   "estado": "verificado",
+   "ruta": "08-texto/txt-splittext-api.md"
+  },
+  {
+   "id": "txt-splittext",
+   "titulo": "SplitText, partir texto en líneas, palabras y caracteres",
+   "capa": "08-texto",
+   "tipo": "plugin",
+   "ambito": "SplitText",
+   "resumen": "Envuelve líneas, palabras o caracteres en elementos propios para animarlos, con máscaras, ARIA automático y repartido responsive con autoSplit y onSplit.",
+   "api": [
+    "SplitText.create",
+    "SplitText.chars",
+    "SplitText.words",
+    "SplitText.lines",
+    "SplitText.masks",
+    "SplitText.revert",
+    "SplitText.Vars.autoSplit",
+    "SplitText.Vars.onSplit",
+    "SplitText.Vars.mask",
+    "SplitText.Vars.aria"
+   ],
+   "requiere": [],
+   "relacionadas": [
+    "txt-splittext-api",
+    "nuc-stagger",
+    "nuc-context",
+    "cal-accesibilidad",
+    "cal-fouc",
+    "rec-titular-texto"
+   ],
+   "etiquetas": [
+    "texto",
+    "stagger",
+    "accesibilidad",
+    "responsive"
+   ],
+   "estado": "verificado",
+   "ruta": "08-texto/txt-splittext.md"
+  },
+  {
+   "id": "txt-text",
+   "titulo": "TextPlugin, reemplazar texto poco a poco",
+   "capa": "08-texto",
+   "tipo": "plugin",
+   "ambito": "TextPlugin",
+   "resumen": "Reemplaza el contenido de un elemento carácter a carácter o palabra a palabra, conservando HTML sencillo y permitiendo rebobinar. Efecto máquina de escribir.",
+   "api": [
+    "TextPlugin",
+    "TextPlugin.Vars.value",
+    "TextPlugin.Vars.type",
+    "TextPlugin.Vars.rtl",
+    "TextPlugin.Vars.speed",
+    "TextPlugin.Vars.delimiter",
+    "TextPlugin.Vars.padSpace",
+    "TextPlugin.Vars.newClass",
+    "TextPlugin.Vars.oldClass",
+    "TextPlugin.Vars.preserveSpaces"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "txt-scramble",
+    "txt-splittext"
+   ],
+   "etiquetas": [
+    "texto"
+   ],
+   "estado": "verificado",
+   "ruta": "08-texto/txt-text.md"
+  },
+  {
+   "id": "svg-drawsvg",
+   "titulo": "DrawSVGPlugin, dibujar trazos",
+   "capa": "09-svg",
+   "tipo": "plugin",
+   "ambito": "DrawSVGPlugin",
+   "resumen": "Revela u oculta el trazo de formas SVG controlando stroke-dasharray y stroke-dashoffset. El valor describe el segmento visible, no un porcentaje de avance.",
+   "api": [
+    "DrawSVGPlugin",
+    "DrawSVGPlugin.getLength",
+    "DrawSVGPlugin.getPosition"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "svg-guia",
+    "svg-morphsvg",
+    "scr-scrub"
+   ],
+   "etiquetas": [
+    "svg",
+    "trazo"
+   ],
+   "estado": "verificado",
+   "ruta": "09-svg/svg-drawsvg.md"
+  },
+  {
+   "id": "svg-guia",
+   "titulo": "Animar SVG con GSAP, guía y trampas",
+   "capa": "09-svg",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Qué normaliza GSAP en SVG (transforms, transformOrigin, svgOrigin, smoothOrigin), qué plugin elegir y qué límites del formato conviene conocer antes de animar.",
+   "api": [
+    "gsap.to",
+    "gsap.getProperty"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "svg-drawsvg",
+    "svg-morphsvg",
+    "svg-motionpath",
+    "css-origin",
+    "css-attr",
+    "cal-rendimiento"
+   ],
+   "etiquetas": [
+    "svg",
+    "transforms",
+    "rendimiento"
+   ],
+   "estado": "verificado",
+   "ruta": "09-svg/svg-guia.md"
+  },
+  {
+   "id": "svg-morphsvg-api",
+   "titulo": "RawPath y utilidades de MorphSVGPlugin",
+   "capa": "09-svg",
+   "tipo": "api",
+   "ambito": "MorphSVGPlugin",
+   "resumen": "El formato RawPath con los tipos de 3.15.1, y convertToPath, getRawPath, stringToRawPath, rawPathToString y normalizeStrings con sus trampas.",
+   "api": [
+    "MorphSVGPlugin.convertToPath",
+    "MorphSVGPlugin.getRawPath",
+    "MorphSVGPlugin.stringToRawPath",
+    "MorphSVGPlugin.rawPathToString",
+    "MorphSVGPlugin.normalizeStrings",
+    "MorphSVGPlugin.defaultRender",
+    "MorphSVGPlugin.defaultType",
+    "MorphSVGPlugin.defaultUpdateTarget",
+    "gsap.plugins.NormalizeVars.shapeIndex",
+    "gsap.plugins.NormalizeVars.map",
+    "gsap.plugins.RawPath.totalPoints",
+    "gsap.plugins.PathSegment.closed"
+   ],
+   "requiere": [
+    "svg-morphsvg"
+   ],
+   "relacionadas": [
+    "svg-morphsvg",
+    "svg-motionpath-api",
+    "fra-typescript"
+   ],
+   "etiquetas": [
+    "svg",
+    "rawpath",
+    "typescript"
+   ],
+   "estado": "verificado",
+   "ruta": "09-svg/svg-morphsvg-api.md"
+  },
+  {
+   "id": "svg-morphsvg",
+   "titulo": "MorphSVGPlugin, transformar una forma en otra",
+   "capa": "09-svg",
+   "tipo": "plugin",
+   "ambito": "MorphSVGPlugin",
+   "resumen": "Interpola el atributo d de un path hacia otra forma aunque tengan distinto número de puntos. Opciones de calidad, rendimiento y salida a canvas.",
+   "api": [
+    "MorphSVGPlugin",
+    "gsap.plugins.MorphSVGVars.shape",
+    "gsap.plugins.MorphSVGVars.type",
+    "gsap.plugins.MorphSVGVars.origin",
+    "gsap.plugins.MorphSVGVars.shapeIndex",
+    "gsap.plugins.MorphSVGVars.precompile",
+    "gsap.plugins.MorphSVGVars.map",
+    "gsap.plugins.MorphSVGVars.render",
+    "gsap.plugins.MorphSVGVars.updateTarget"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "svg-morphsvg-api",
+    "svg-guia",
+    "svg-drawsvg"
+   ],
+   "etiquetas": [
+    "svg",
+    "morph",
+    "canvas"
+   ],
+   "estado": "verificado",
+   "ruta": "09-svg/svg-morphsvg.md"
+  },
+  {
+   "id": "svg-motionpath-api",
+   "titulo": "MotionPathPlugin, métodos estáticos",
+   "capa": "09-svg",
+   "tipo": "api",
+   "ambito": "MotionPathPlugin",
+   "resumen": "Utilidades de rutas y coordenadas, sin tween. RawPath, posición en ruta, cortes, y conversión entre sistemas de coordenadas con transformaciones anidadas.",
+   "api": [
+    "MotionPathPlugin.arrayToRawPath",
+    "MotionPathPlugin.cacheRawPathMeasurements",
+    "MotionPathPlugin.convertCoordinates",
+    "MotionPathPlugin.convertToPath",
+    "MotionPathPlugin.getAlignMatrix",
+    "MotionPathPlugin.getGlobalMatrix",
+    "MotionPathPlugin.getPositionOnPath",
+    "MotionPathPlugin.getRawPath",
+    "MotionPathPlugin.getRelativePosition",
+    "MotionPathPlugin.pointsToSegment",
+    "MotionPathPlugin.rawPathToString",
+    "MotionPathPlugin.sliceRawPath",
+    "MotionPathPlugin.stringToRawPath",
+    "gsap.plugins.ArrayToRawPathObject.curviness",
+    "gsap.plugins.ArrayToRawPathObject.relative",
+    "gsap.plugins.ArrayToRawPathObject.type",
+    "gsap.plugins.ArrayToRawPathObject.x",
+    "gsap.plugins.ArrayToRawPathObject.y"
+   ],
+   "requiere": [
+    "svg-motionpath"
+   ],
+   "relacionadas": [
+    "svg-motionpath",
+    "svg-morphsvg-api",
+    "int-flip"
+   ],
+   "etiquetas": [
+    "svg",
+    "rawpath",
+    "coordenadas",
+    "matriz"
+   ],
+   "estado": "verificado",
+   "ruta": "09-svg/svg-motionpath-api.md"
+  },
+  {
+   "id": "svg-motionpath",
+   "titulo": "MotionPathPlugin, animar a lo largo de una ruta",
+   "capa": "09-svg",
+   "tipo": "plugin",
+   "ambito": "MotionPathPlugin",
+   "resumen": "Mueve cualquier objetivo por un path SVG, datos de ruta o puntos, con autoRotate, align y start/end. También suaviza transiciones entre valores de otras propiedades.",
+   "api": [
+    "MotionPathPlugin",
+    "MotionPath.Vars.path",
+    "MotionPath.Vars.align",
+    "MotionPath.Vars.alignOrigin",
+    "MotionPath.Vars.autoRotate",
+    "MotionPath.Vars.curviness",
+    "MotionPath.Vars.start",
+    "MotionPath.Vars.end",
+    "MotionPath.Vars.offsetX",
+    "MotionPath.Vars.offsetY",
+    "MotionPath.Vars.relative",
+    "MotionPath.Vars.resolution",
+    "MotionPath.Vars.type",
+    "MotionPath.Vars.useRadians",
+    "MotionPath.Vars.fromCurrent"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "svg-motionpath-api",
+    "svg-motionpathhelper",
+    "svg-guia",
+    "scr-scrub"
+   ],
+   "etiquetas": [
+    "svg",
+    "ruta",
+    "movimiento"
+   ],
+   "estado": "verificado",
+   "ruta": "09-svg/svg-motionpath.md"
+  },
+  {
+   "id": "svg-motionpathhelper",
+   "titulo": "MotionPathHelper, editar rutas en el navegador",
+   "capa": "09-svg",
+   "tipo": "plugin",
+   "ambito": "MotionPathHelper",
+   "resumen": "Herramienta de desarrollo para editar visualmente una ruta de motionPath y copiar el resultado. También hace editable cualquier path con editPath().",
+   "api": [
+    "MotionPathHelper.create",
+    "MotionPathHelper.editPath",
+    "MotionPathHelper.kill",
+    "MotionPathHelper.Vars.ease",
+    "MotionPathHelper.Vars.end",
+    "MotionPathHelper.Vars.duration",
+    "MotionPathHelper.Vars.path",
+    "MotionPathHelper.Vars.pathColor",
+    "MotionPathHelper.Vars.pathWidth",
+    "MotionPathHelper.Vars.pathOpacity",
+    "MotionPathHelper.Vars.selected",
+    "MotionPathHelper.Vars.start",
+    "MotionPathHelper.EditPathVars.anchorSnap",
+    "MotionPathHelper.EditPathVars.callbackScope",
+    "MotionPathHelper.EditPathVars.draggable",
+    "MotionPathHelper.EditPathVars.handleSize",
+    "MotionPathHelper.EditPathVars.handleSnap",
+    "MotionPathHelper.EditPathVars.onDeleteAnchor",
+    "MotionPathHelper.EditPathVars.onPress",
+    "MotionPathHelper.EditPathVars.onRelease",
+    "MotionPathHelper.EditPathVars.onUpdate",
+    "MotionPathHelper.EditPathVars.selected"
+   ],
+   "requiere": [
+    "svg-motionpath"
+   ],
+   "relacionadas": [
+    "svg-motionpath",
+    "esp-gsdevtools"
+   ],
+   "etiquetas": [
+    "svg",
+    "ruta",
+    "herramienta",
+    "desarrollo"
+   ],
+   "estado": "verificado",
+   "ruta": "09-svg/svg-motionpathhelper.md"
+  },
+  {
+   "id": "int-draggable-api",
+   "titulo": "Draggable, opciones, propiedades y métodos",
+   "capa": "10-interaccion",
+   "tipo": "api",
+   "ambito": "Draggable",
+   "resumen": "Referencia completa de Draggable.Vars, propiedades de instancia, métodos, eventos y formas de bounds, con el orden real de callbacks.",
+   "api": [
+    "Draggable.get",
+    "Draggable.timeSinceDrag",
+    "Draggable.zIndex",
+    "Draggable.addEventListener",
+    "Draggable.removeEventListener",
+    "Draggable.dispatchEvent",
+    "Draggable.applyBounds",
+    "Draggable.disable",
+    "Draggable.enable",
+    "Draggable.enabled",
+    "Draggable.endDrag",
+    "Draggable.startDrag",
+    "Draggable.getDirection",
+    "Draggable.kill",
+    "Draggable.update",
+    "Draggable.isDragging",
+    "Draggable.isPressed",
+    "Draggable.isThrowing",
+    "Draggable.scrollProxy",
+    "Draggable.BoundsMinMax.minX",
+    "Draggable.BoundsRectangle.width",
+    "Draggable.BoundsRotation.minRotation",
+    "Draggable.Rectangle.bottom"
+   ],
+   "requiere": [
+    "int-draggable"
+   ],
+   "relacionadas": [
+    "int-draggable",
+    "int-inertia"
+   ],
+   "etiquetas": [
+    "puntero",
+    "referencia"
+   ],
+   "estado": "verificado",
+   "ruta": "10-interaccion/int-draggable-api.md"
+  },
+  {
+   "id": "int-draggable",
+   "titulo": "Draggable, arrastrar, girar y lanzar elementos",
+   "capa": "10-interaccion",
+   "tipo": "plugin",
+   "ambito": "Draggable",
+   "resumen": "Hace arrastrable cualquier elemento con ratón o táctil, con límites, ajuste, ejes bloqueados, detección de solape, autoscroll e inercia.",
+   "api": [
+    "Draggable.create",
+    "Draggable.Vars.type",
+    "Draggable.Vars.bounds",
+    "Draggable.Vars.edgeResistance",
+    "Draggable.Vars.dragResistance",
+    "Draggable.Vars.inertia",
+    "Draggable.Vars.snap",
+    "Draggable.Vars.liveSnap",
+    "Draggable.Vars.lockAxis",
+    "Draggable.Vars.trigger",
+    "Draggable.Vars.autoScroll",
+    "Draggable.hitTest",
+    "Draggable.SnapObject.points",
+    "Draggable.SnapObject.radius",
+    "Draggable.SnapObject.x",
+    "Draggable.SnapObject.y",
+    "Draggable.SnapObject.top",
+    "Draggable.SnapObject.left",
+    "Draggable.SnapObject.rotation"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "int-draggable-api",
+    "int-inertia",
+    "scr-observer",
+    "nuc-context"
+   ],
+   "etiquetas": [
+    "puntero",
+    "tactil",
+    "interaccion",
+    "arrastrar"
+   ],
+   "estado": "verificado",
+   "ruta": "10-interaccion/int-draggable.md"
+  },
+  {
+   "id": "int-flip-api",
+   "titulo": "Flip, métodos estáticos, FlipState y ElementState",
+   "capa": "10-interaccion",
+   "tipo": "api",
+   "ambito": "Flip",
+   "resumen": "Flip.fit, to, makeAbsolute, killFlipsOf, isFlipping, getByTarget y convertCoordinates, más los métodos de FlipState y los datos de ElementState.",
+   "api": [
+    "Flip.fit",
+    "Flip.to",
+    "Flip.makeAbsolute",
+    "Flip.killFlipsOf",
+    "Flip.isFlipping",
+    "Flip.getByTarget",
+    "Flip.convertCoordinates",
+    "Flip.register",
+    "Flip.FitVars.fitChild",
+    "Flip.FitVars.getVars",
+    "Flip.FitReturnVars.width",
+    "Flip.FlipState.compare",
+    "Flip.FlipState.add",
+    "Flip.FlipState.clear",
+    "Flip.FlipState.update",
+    "Flip.FlipState.fit",
+    "Flip.FlipState.recordInlineStyles",
+    "Flip.FlipState.interrupt",
+    "Flip.FlipState.getProperty",
+    "Flip.FlipState.getElementState",
+    "Flip.FlipState.makeAbsolute",
+    "Flip.ElementState.isDifferent",
+    "Flip.StateCompare.changed",
+    "Flip.StateCompare.unchanged",
+    "Flip.StateCompare.enter",
+    "Flip.StateCompare.leave"
+   ],
+   "requiere": [
+    "int-flip"
+   ],
+   "relacionadas": [
+    "int-flip",
+    "int-flip-batch",
+    "svg-motionpath-api"
+   ],
+   "etiquetas": [
+    "layout",
+    "referencia"
+   ],
+   "estado": "verificado",
+   "ruta": "10-interaccion/int-flip-api.md"
+  },
+  {
+   "id": "int-flip-batch",
+   "titulo": "Flip.batch, coordinar varios Flip",
+   "capa": "10-interaccion",
+   "tipo": "api",
+   "ambito": "Flip",
+   "resumen": "Ordena getState, cambios y animaciones de varias partes independientes para que no se contaminen. Pensado para vistas formadas por partes que se actualizan por separado.",
+   "api": [
+    "Flip.batch",
+    "FlipBatch.actions",
+    "FlipBatch.state",
+    "FlipBatch.timeline",
+    "FlipBatch.id",
+    "FlipBatch.data",
+    "FlipBatch.add",
+    "FlipBatch.clear",
+    "FlipBatch.getState",
+    "FlipBatch.getStateById",
+    "FlipBatch.kill",
+    "FlipBatch.remove",
+    "FlipBatch.run",
+    "FlipBatchAction.batch",
+    "FlipBatchAction.state",
+    "FlipBatchAction.states",
+    "FlipBatchAction.timeline",
+    "FlipBatchAction.targets",
+    "FlipBatchAction.vars",
+    "FlipBatchAction.getStateById",
+    "FlipBatchAction.kill",
+    "Flip.BatchActionConfig.getState",
+    "Flip.BatchActionConfig.loadState",
+    "Flip.BatchActionConfig.setState",
+    "Flip.BatchActionConfig.animate",
+    "Flip.BatchActionConfig.onEnter",
+    "Flip.BatchActionConfig.onLeave",
+    "Flip.BatchActionConfig.onStart",
+    "Flip.BatchActionConfig.onComplete",
+    "Flip.BatchActionConfig.once"
+   ],
+   "requiere": [
+    "int-flip"
+   ],
+   "relacionadas": [
+    "int-flip",
+    "int-flip-api",
+    "fra-agnostico"
+   ],
+   "etiquetas": [
+    "layout",
+    "partes"
+   ],
+   "estado": "verificado",
+   "ruta": "10-interaccion/int-flip-batch.md"
+  },
+  {
+   "id": "int-flip",
+   "titulo": "Flip, animar cambios de estado del DOM",
+   "capa": "10-interaccion",
+   "tipo": "plugin",
+   "ambito": "Flip",
+   "resumen": "Captura posición y tamaño, deja que cambies el DOM como quieras y anima desde el estado anterior al nuevo, incluso con reparenting, flex, grid y scrollTrigger.",
+   "api": [
+    "Flip.getState",
+    "Flip.from",
+    "Flip.AnimationVars.absolute",
+    "Flip.AnimationVars.simple",
+    "Flip.AnimationVars.props",
+    "Flip.TweenVarOverrides.scale",
+    "Flip.FromToVars.absoluteOnLeave",
+    "Flip.FromToVars.prune",
+    "Flip.FromToVars.fade",
+    "Flip.FromToVars.nested",
+    "Flip.FromToVars.onEnter",
+    "Flip.FromToVars.onLeave",
+    "Flip.FromToVars.spin",
+    "Flip.FromToVars.targets",
+    "Flip.FromToVars.toggleClass",
+    "Flip.FromToVars.zIndex"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "int-flip-api",
+    "int-flip-batch",
+    "rec-transicion-flip",
+    "scr-scrolltrigger",
+    "fra-agnostico"
+   ],
+   "etiquetas": [
+    "layout",
+    "transicion",
+    "estado",
+    "flex",
+    "grid"
+   ],
+   "estado": "verificado",
+   "ruta": "10-interaccion/int-flip.md"
+  },
+  {
+   "id": "int-inertia",
+   "titulo": "InertiaPlugin, detenerse con inercia",
+   "capa": "10-interaccion",
+   "tipo": "plugin",
+   "ambito": "InertiaPlugin",
+   "resumen": "Lleva cualquier propiedad numérica a reposo desde una velocidad inicial, con duración automática, límites y puntos de ajuste. Es lo que da el lanzamiento a Draggable.",
+   "api": [
+    "InertiaPlugin",
+    "InertiaPlugin.getVelocity",
+    "gsap.InertiaObject.min",
+    "gsap.InertiaObject.max",
+    "gsap.InertiaObject.end",
+    "gsap.InertiaObject.velocity",
+    "gsap.InertiaDuration.min",
+    "gsap.InertiaDuration.max",
+    "gsap.InertiaDuration.overshoot"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "int-velocitytracker",
+    "int-draggable",
+    "scr-observer"
+   ],
+   "etiquetas": [
+    "puntero",
+    "velocidad",
+    "fisica"
+   ],
+   "estado": "verificado",
+   "ruta": "10-interaccion/int-inertia.md"
+  },
+  {
+   "id": "int-velocitytracker",
+   "titulo": "VelocityTracker, medir la velocidad de propiedades",
+   "capa": "10-interaccion",
+   "tipo": "api",
+   "ambito": "VelocityTracker",
+   "resumen": "Rastrea la velocidad de cualquier propiedad numérica en cada tick. Base de inertia con velocity auto, y accesible desde InertiaPlugin sin importar nada más.",
+   "api": [
+    "VelocityTracker",
+    "gsap.VelocityTrackerInstance.target",
+    "gsap.VelocityTrackerInstance.add",
+    "gsap.VelocityTrackerInstance.kill",
+    "gsap.VelocityTrackerInstance.remove",
+    "gsap.VelocityTrackerInstance.getAll",
+    "gsap.VelocityTrackerInstance.get",
+    "gsap.VelocityTrackerStatic.getByTarget",
+    "gsap.VelocityTrackerStatic.getVelocity",
+    "gsap.VelocityTrackerStatic.isTracking",
+    "gsap.VelocityTrackerStatic.track",
+    "gsap.VelocityTrackerStatic.untrack"
+   ],
+   "requiere": [
+    "int-inertia"
+   ],
+   "relacionadas": [
+    "int-inertia",
+    "int-draggable",
+    "nuc-ticker"
+   ],
+   "etiquetas": [
+    "velocidad",
+    "puntero"
+   ],
+   "estado": "verificado",
+   "ruta": "10-interaccion/int-velocitytracker.md"
+  },
+  {
+   "id": "esp-cssrule",
+   "titulo": "CSSRulePlugin, animar reglas de hojas de estilo",
+   "capa": "11-especializados",
+   "tipo": "plugin",
+   "ambito": "CSSRulePlugin",
+   "resumen": "Anima una regla CSS, incluidos ::before y ::after. Obsoleto en favor de variables CSS, pero sigue en el paquete.",
+   "api": [
+    "CSSRulePlugin",
+    "CSSRulePlugin.getRule"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "css-variables",
+    "css-plugin"
+   ],
+   "etiquetas": [
+    "css",
+    "pseudoelementos",
+    "obsoleto"
+   ],
+   "estado": "verificado",
+   "ruta": "11-especializados/esp-cssrule.md"
+  },
+  {
+   "id": "esp-easel",
+   "titulo": "EaselPlugin, filtros de EaselJS",
+   "capa": "11-especializados",
+   "tipo": "plugin",
+   "ambito": "EaselPlugin",
+   "resumen": "Anima tint, exposure, brightness, saturation, contrast, hue y colorize en objetos de EaselJS, además de frame en MovieClip, mediante easel.",
+   "api": [
+    "EaselPlugin"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "esp-pixi"
+   ],
+   "etiquetas": [
+    "canvas",
+    "filtros"
+   ],
+   "estado": "verificado",
+   "ruta": "11-especializados/esp-easel.md"
+  },
+  {
+   "id": "esp-gsdevtools",
+   "titulo": "GSDevTools, interfaz de depuración de animaciones",
+   "capa": "11-especializados",
+   "tipo": "plugin",
+   "ambito": "GSDevTools",
+   "resumen": "Barra de control visual para reproducir, cortar y ralentizar animaciones, con selector por id, atajos de teclado y persistencia entre recargas.",
+   "api": [
+    "GSDevTools.create",
+    "GSDevTools.getById",
+    "GSDevTools.kill",
+    "GSDevTools.Vars.animation",
+    "GSDevTools.Vars.container",
+    "GSDevTools.Vars.css",
+    "GSDevTools.Vars.globalSync",
+    "GSDevTools.Vars.hideGlobalTimeline",
+    "GSDevTools.Vars.id",
+    "GSDevTools.Vars.inTime",
+    "GSDevTools.Vars.keyboard",
+    "GSDevTools.Vars.loop",
+    "GSDevTools.Vars.minimal",
+    "GSDevTools.Vars.outTime",
+    "GSDevTools.Vars.paused",
+    "GSDevTools.Vars.persist",
+    "GSDevTools.Vars.timeScale",
+    "GSDevTools.Vars.visibility"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "cal-depuracion",
+    "svg-motionpathhelper",
+    "tim-etiquetas"
+   ],
+   "etiquetas": [
+    "depuracion",
+    "herramienta",
+    "desarrollo"
+   ],
+   "estado": "verificado",
+   "ruta": "11-especializados/esp-gsdevtools.md"
+  },
+  {
+   "id": "esp-physics2d",
+   "titulo": "Physics2DPlugin, trayectorias con velocidad y gravedad",
+   "capa": "11-especializados",
+   "tipo": "plugin",
+   "ambito": "Physics2DPlugin",
+   "resumen": "Mueve x e y con velocidad, ángulo, gravedad, aceleración y fricción. Sin colisiones, pero reversible y exacto. Ideal para partículas y proyectiles.",
+   "api": [
+    "Physics2DPlugin",
+    "Physics2DPlugin.Vars.acceleration",
+    "Physics2DPlugin.Vars.accelerationAngle",
+    "Physics2DPlugin.Vars.angle",
+    "Physics2DPlugin.Vars.friction",
+    "Physics2DPlugin.Vars.gravity",
+    "Physics2DPlugin.Vars.velocity",
+    "Physics2DPlugin.Vars.xProp",
+    "Physics2DPlugin.Vars.yProp"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "esp-physicsprops",
+    "int-inertia"
+   ],
+   "etiquetas": [
+    "fisica",
+    "particulas"
+   ],
+   "estado": "verificado",
+   "ruta": "11-especializados/esp-physics2d.md"
+  },
+  {
+   "id": "esp-physicsprops",
+   "titulo": "PhysicsPropsPlugin, cualquier propiedad con física",
+   "capa": "11-especializados",
+   "tipo": "plugin",
+   "ambito": "PhysicsPropsPlugin",
+   "resumen": "Anima propiedades numéricas con velocidad, aceleración y fricción propias, sin valor final definido. Cada propiedad lleva sus parámetros.",
+   "api": [
+    "PhysicsPropsPlugin",
+    "PhysicsPropsPlugin.Values.acceleration",
+    "PhysicsPropsPlugin.Values.friction",
+    "PhysicsPropsPlugin.Values.velocity"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "esp-physics2d",
+    "int-inertia"
+   ],
+   "etiquetas": [
+    "fisica"
+   ],
+   "estado": "verificado",
+   "ruta": "11-especializados/esp-physicsprops.md"
+  },
+  {
+   "id": "esp-pixi",
+   "titulo": "PixiPlugin, animar objetos de PixiJS",
+   "capa": "11-especializados",
+   "tipo": "plugin",
+   "ambito": "PixiPlugin",
+   "resumen": "Simplifica animar PixiJS. Propiedades planas, rotación en grados, colores como en CSS, y filtros de color y desenfoque sin crearlos a mano.",
+   "api": [
+    "PixiPlugin.registerPIXI",
+    "PixiPlugin.PixiMatrix.a",
+    "PixiPlugin.PixiMatrix.b",
+    "PixiPlugin.PixiMatrix.c",
+    "PixiPlugin.PixiMatrix.d",
+    "PixiPlugin.PixiMatrix.tx",
+    "PixiPlugin.PixiMatrix.ty",
+    "PixiPlugin.PixiMatrix.array",
+    "PixiPlugin.Vars.saturation",
+    "PixiPlugin.Vars.brightness",
+    "PixiPlugin.Vars.contrast",
+    "PixiPlugin.Vars.hue",
+    "PixiPlugin.Vars.colorize",
+    "PixiPlugin.Vars.colorizeAmount",
+    "PixiPlugin.Vars.colorMatrixFilter",
+    "PixiPlugin.Vars.combineCMF",
+    "PixiPlugin.Vars.blur",
+    "PixiPlugin.Vars.blurX",
+    "PixiPlugin.Vars.blurY",
+    "PixiPlugin.Vars.blurPadding"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "css-rotacion",
+    "eas-guia"
+   ],
+   "etiquetas": [
+    "canvas",
+    "webgl",
+    "filtros"
+   ],
+   "estado": "verificado",
+   "ruta": "11-especializados/esp-pixi.md"
+  },
+  {
+   "id": "fra-agnostico",
+   "titulo": "Contrato de integración de GSAP con cualquier tecnología",
+   "capa": "12-frameworks",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Entrar, cambiar y salir sobre lo que se anima (nodo, objeto o escena): adaptador montar(raiz), tabla de ganchos por tecnología, orden de ejecución, servidor y entornos sin window.",
+   "api": [
+    "gsap.context",
+    "gsap.Context.revert",
+    "gsap.Context.add",
+    "gsap.registerPlugin",
+    "ScrollTrigger.refresh",
+    "gsap.TweenVars.overwrite"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fra-vanilla",
+    "fra-webcomponents",
+    "fra-canvas-webgl",
+    "fra-react-usegsap",
+    "fra-vue-nuxt",
+    "fra-svelte",
+    "fra-angular",
+    "fra-nextjs",
+    "nuc-context",
+    "nuc-limpieza",
+    "nuc-immediate-render",
+    "rec-salida",
+    "scr-refresh",
+    "cal-fouc"
+   ],
+   "etiquetas": [
+    "agnostico",
+    "ciclo-de-vida",
+    "limpieza",
+    "ssr",
+    "canvas",
+    "webgl",
+    "worker"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-agnostico.md"
+  },
+  {
+   "id": "fra-angular",
+   "titulo": "GSAP en Angular",
+   "capa": "12-frameworks",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Entrar, cambiar y salir en Angular: afterNextRender, DestroyRef, effect, animate.leave, Flip con afterNextRender y rutas, probados en una app real de Angular 22.",
+   "api": [
+    "gsap.context",
+    "gsap.Context.revert",
+    "gsap.Context.add",
+    "gsap.registerPlugin",
+    "Flip.getState",
+    "Flip.from"
+   ],
+   "requiere": [
+    "fra-agnostico"
+   ],
+   "relacionadas": [
+    "nuc-context",
+    "fra-typescript",
+    "rec-salida",
+    "int-flip"
+   ],
+   "etiquetas": [
+    "angular",
+    "ssr",
+    "signals"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-angular.md"
+  },
+  {
+   "id": "fra-canvas-webgl",
+   "titulo": "GSAP en canvas, WebGL y Three.js",
+   "capa": "12-frameworks",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Aplicar entrar, cambiar y salir a una escena sin DOM: un render por tick, bucle propio, color, uniforms, resize, pausa, Observer y Draggable, y liberar recursos.",
+   "api": [
+    "gsap.ticker.add",
+    "gsap.ticker.remove",
+    "gsap.updateRoot",
+    "gsap.utils.splitColor",
+    "gsap.quickTo",
+    "gsap.context",
+    "gsap.Context.add",
+    "gsap.Context.revert",
+    "Draggable.create",
+    "Observer.create"
+   ],
+   "requiere": [
+    "fra-agnostico"
+   ],
+   "relacionadas": [
+    "nuc-ticker",
+    "nuc-global",
+    "nuc-quickto",
+    "fun-objetivos",
+    "esp-pixi",
+    "rec-salida",
+    "scr-observer",
+    "int-draggable",
+    "cal-rendimiento"
+   ],
+   "etiquetas": [
+    "canvas",
+    "webgl",
+    "three",
+    "escena",
+    "render",
+    "ticker",
+    "dispose"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-canvas-webgl.md"
+  },
+  {
+   "id": "fra-nextjs",
+   "titulo": "GSAP en Next.js (SSR, \"use client\" y registro de plugins)",
+   "capa": "12-frameworks",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Qué se ejecuta en servidor y qué no, dónde registrar plugins y por qué un tween en el módulo rompe la build. Comprobado con una build real de Next 16.4.5.",
+   "api": [
+    "gsap.registerPlugin",
+    "gsap.context",
+    "gsap.set"
+   ],
+   "requiere": [
+    "fra-agnostico",
+    "fra-react-usegsap"
+   ],
+   "relacionadas": [
+    "cal-fouc",
+    "fra-typescript",
+    "fun-instalacion",
+    "cal-st-errores"
+   ],
+   "etiquetas": [
+    "nextjs",
+    "ssr",
+    "react",
+    "use-client",
+    "app-router"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-nextjs.md"
+  },
+  {
+   "id": "fra-react-avanzado",
+   "titulo": "Patrones avanzados de GSAP en React",
+   "capa": "12-frameworks",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Compartir timelines entre componentes, efectos reutilizables, animaciones de salida, FLIP con listas y cierres obsoletos en callbacks de GSAP.",
+   "api": [
+    "gsap.timeline",
+    "Animation.reversed",
+    "gsap.utils.selector",
+    "Flip.getState",
+    "Flip.from"
+   ],
+   "requiere": [
+    "fra-agnostico",
+    "fra-react-usegsap"
+   ],
+   "relacionadas": [
+    "nuc-efectos",
+    "int-flip",
+    "tim-anidado",
+    "rec-transicion-flip",
+    "rec-salida"
+   ],
+   "etiquetas": [
+    "react",
+    "timeline",
+    "salida",
+    "flip",
+    "reutilizable"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-react-avanzado.md"
+  },
+  {
+   "id": "fra-react-usegsap",
+   "titulo": "useGSAP en React",
+   "capa": "12-frameworks",
+   "tipo": "api",
+   "ambito": "transversal",
+   "resumen": "El hook de @gsap/react, sus opciones (scope, dependencies, revertOnUpdate), contextSafe y su comportamiento real leído del código 2.1.2 y probado con React 19.",
+   "api": [
+    "gsap.context",
+    "gsap.Context.add",
+    "gsap.Context.revert",
+    "gsap.registerPlugin"
+   ],
+   "requiere": [
+    "fra-agnostico"
+   ],
+   "relacionadas": [
+    "fra-react-avanzado",
+    "fra-nextjs",
+    "nuc-context",
+    "nuc-quickto"
+   ],
+   "etiquetas": [
+    "react",
+    "hook",
+    "limpieza",
+    "usegsap"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-react-usegsap.md"
+  },
+  {
+   "id": "fra-svelte",
+   "titulo": "GSAP en Svelte 5 y SvelteKit",
+   "capa": "12-frameworks",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Entrar, cambiar y salir en Svelte 5 y SvelteKit: onMount, $effect, transiciones gobernadas por GSAP, Flip con tick y onNavigate, probados en app real.",
+   "api": [
+    "gsap.context",
+    "gsap.Context.revert",
+    "gsap.Context.add",
+    "gsap.registerPlugin",
+    "Flip.getState",
+    "Flip.from",
+    "Animation.progress"
+   ],
+   "requiere": [
+    "fra-agnostico"
+   ],
+   "relacionadas": [
+    "nuc-context",
+    "cal-fouc",
+    "rec-salida",
+    "int-flip"
+   ],
+   "etiquetas": [
+    "svelte",
+    "sveltekit",
+    "ssr"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-svelte.md"
+  },
+  {
+   "id": "fra-typescript",
+   "titulo": "GSAP con TypeScript",
+   "capa": "12-frameworks",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Qué tipos usar (gsap.TweenVars, gsap.core.Timeline, ScrollTrigger.Vars), cómo resuelve TS los plugins según moduleResolution y qué rompió el renombrado de archivos de 3.15.0.",
+   "api": [
+    "gsap.TweenVars",
+    "gsap.TimelineVars",
+    "gsap.Context",
+    "gsap.MatchMedia",
+    "ScrollTrigger.Vars",
+    "gsap.plugins.RawPath"
+   ],
+   "requiere": [
+    "fun-instalacion"
+   ],
+   "relacionadas": [
+    "ver-historial",
+    "fra-react-usegsap",
+    "fra-nextjs"
+   ],
+   "etiquetas": [
+    "typescript",
+    "tipos",
+    "moduleResolution"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-typescript.md"
+  },
+  {
+   "id": "fra-vanilla",
+   "titulo": "GSAP sin framework: páginas de servidor y transiciones",
+   "capa": "12-frameworks",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Aplicar el contrato en páginas sin framework: PHP, plantillas, HTML estático, carga por CDN y transiciones de página con Barba o Swup.",
+   "api": [
+    "gsap.context",
+    "gsap.Context.revert",
+    "gsap.Context.add",
+    "Animation.revert"
+   ],
+   "requiere": [
+    "fra-agnostico"
+   ],
+   "relacionadas": [
+    "nuc-context",
+    "nuc-limpieza",
+    "fra-wordpress",
+    "fra-webflow",
+    "fun-instalacion",
+    "cal-st-errores"
+   ],
+   "etiquetas": [
+    "sin-framework",
+    "php",
+    "plantillas",
+    "spa"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-vanilla.md"
+  },
+  {
+   "id": "fra-vue-nuxt",
+   "titulo": "GSAP en Vue 3 y Nuxt",
+   "capa": "12-frameworks",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Entrar, cambiar y salir en Vue: onMounted, watch post, Transition con done, Flip con nextTick y rutas, probado en app real; plugin de cliente en Nuxt 4.",
+   "api": [
+    "gsap.context",
+    "gsap.Context.revert",
+    "gsap.Context.add",
+    "gsap.registerPlugin",
+    "ScrollTrigger.refresh",
+    "Flip.getState",
+    "Flip.from"
+   ],
+   "requiere": [
+    "fra-agnostico"
+   ],
+   "relacionadas": [
+    "nuc-context",
+    "cal-fouc",
+    "rec-salida",
+    "int-flip"
+   ],
+   "etiquetas": [
+    "vue",
+    "nuxt",
+    "ssr"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-vue-nuxt.md"
+  },
+  {
+   "id": "fra-webcomponents",
+   "titulo": "GSAP en Web Components y Lit",
+   "capa": "12-frameworks",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Aplicar el contrato en Custom Elements, cuando connectedCallback corre varias veces o sin hijos, Shadow DOM como ámbito y los ganchos de Lit.",
+   "api": [
+    "gsap.context",
+    "gsap.Context.revert"
+   ],
+   "requiere": [
+    "fra-agnostico"
+   ],
+   "relacionadas": [
+    "fra-vanilla",
+    "nuc-context"
+   ],
+   "etiquetas": [
+    "web-components",
+    "custom-elements",
+    "shadow-dom",
+    "lit"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-webcomponents.md"
+  },
+  {
+   "id": "fra-webflow",
+   "titulo": "GSAP en Webflow",
+   "capa": "12-frameworks",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Integración de GSAP desde los ajustes del sitio, dónde poner código propio, registro de plugins y cómo convive con las Interactions visuales.",
+   "api": [
+    "gsap.registerPlugin",
+    "gsap.to",
+    "SplitText.create"
+   ],
+   "requiere": [
+    "fra-vanilla"
+   ],
+   "relacionadas": [
+    "fra-agnostico",
+    "fun-instalacion",
+    "cal-fouc",
+    "cal-conflictos",
+    "fra-wordpress"
+   ],
+   "etiquetas": [
+    "webflow",
+    "cms",
+    "cdn"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-webflow.md"
+  },
+  {
+   "id": "fra-wordpress",
+   "titulo": "GSAP en WordPress",
+   "capa": "12-frameworks",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Encolar GSAP y plugins con dependencias en functions.php, tema hijo, espera al DOM y a load, y correcciones al ejemplo oficial.",
+   "api": [
+    "gsap.registerPlugin",
+    "gsap.to",
+    "ScrollTrigger.refresh"
+   ],
+   "requiere": [
+    "fra-vanilla"
+   ],
+   "relacionadas": [
+    "fra-agnostico",
+    "fun-instalacion",
+    "fra-webflow",
+    "cal-fouc"
+   ],
+   "etiquetas": [
+    "wordpress",
+    "cms",
+    "cdn",
+    "php"
+   ],
+   "estado": "verificado",
+   "ruta": "12-frameworks/fra-wordpress.md"
+  },
+  {
+   "id": "cal-accesibilidad",
+   "titulo": "Animación accesible, reduced motion y texto dividido",
+   "capa": "13-calidad",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "prefers-reduced-motion con gsap.matchMedia, interruptor propio con matchMediaRefresh, cuándo reducir o quitar, y SplitText con lectores de pantalla.",
+   "api": [
+    "gsap.matchMedia",
+    "gsap.matchMediaRefresh",
+    "gsap.MatchMedia.add",
+    "gsap.Context.conditions",
+    "SplitText.Vars.aria"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-matchmedia",
+    "txt-splittext",
+    "cal-fouc",
+    "css-autoalpha"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "a11y",
+    "reduced-motion",
+    "matchmedia"
+   ],
+   "estado": "verificado",
+   "ruta": "13-calidad/cal-accesibilidad.md"
+  },
+  {
+   "id": "cal-conflictos",
+   "titulo": "Tweens en conflicto y modos de overwrite",
+   "capa": "13-calidad",
+   "tipo": "concepto",
+   "ambito": "transversal",
+   "resumen": "Qué pasa cuando dos tweens animan lo mismo, cómo elegir entre false, true y auto, y cuándo actúa cada modo.",
+   "api": [
+    "gsap.TweenVars.overwrite",
+    "gsap.defaults",
+    "gsap.killTweensOf",
+    "gsap.getTweensOf"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-overwrite",
+    "nuc-defaults-config",
+    "cal-errores-comunes",
+    "cal-rendimiento"
+   ],
+   "etiquetas": [
+    "overwrite",
+    "conflictos",
+    "interaccion"
+   ],
+   "estado": "verificado",
+   "ruta": "13-calidad/cal-conflictos.md"
+  },
+  {
+   "id": "cal-depuracion",
+   "titulo": "Depurar animaciones GSAP",
+   "capa": "13-calidad",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Método en cinco pasos, avisos de consola y su causa, inspección de tweens activos, ralentizar todo, marcadores y GSDevTools.",
+   "api": [
+    "gsap.getTweensOf",
+    "gsap.getById",
+    "gsap.globalTimeline",
+    "gsap.exportRoot",
+    "gsap.version",
+    "gsap.GSAPConfig.nullTargetWarn",
+    "Timeline.getChildren",
+    "ScrollTrigger.getAll",
+    "ScrollTrigger.getById",
+    "GSDevTools.create"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "cal-errores-comunes",
+    "cal-st-errores",
+    "esp-gsdevtools",
+    "nuc-global",
+    "cal-conflictos"
+   ],
+   "etiquetas": [
+    "depuracion",
+    "consola",
+    "avisos",
+    "gsdevtools"
+   ],
+   "estado": "verificado",
+   "ruta": "13-calidad/cal-depuracion.md"
+  },
+  {
+   "id": "cal-errores-comunes",
+   "titulo": "Errores comunes con GSAP, por síntoma",
+   "capa": "13-calidad",
+   "tipo": "diagnostico",
+   "ambito": "transversal",
+   "resumen": "Síntomas reconocibles con su causa y corrección probada, from() que se queda a medias, saltos en timelines, valores duplicados, transiciones CSS y bucles.",
+   "api": [
+    "gsap.from",
+    "gsap.fromTo",
+    "gsap.TweenVars.immediateRender",
+    "gsap.TweenVars.repeatRefresh",
+    "Timeline.to",
+    "gsap.getProperty"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-immediate-render",
+    "nuc-control",
+    "nuc-repeat-yoyo",
+    "css-transforms",
+    "cal-st-errores",
+    "cal-conflictos",
+    "cal-depuracion"
+   ],
+   "etiquetas": [
+    "errores",
+    "diagnostico",
+    "from",
+    "immediateRender",
+    "transforms"
+   ],
+   "estado": "verificado",
+   "ruta": "13-calidad/cal-errores-comunes.md"
+  },
+  {
+   "id": "cal-fouc",
+   "titulo": "Evitar el flash de contenido sin estilo (FOUC)",
+   "capa": "13-calidad",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Ocultar en CSS y revelar con autoAlpha, la trampa de from() con visibility hidden, noscript y SSR.",
+   "api": [
+    "gsap.set",
+    "gsap.fromTo",
+    "gsap.TweenVars.immediateRender"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "css-autoalpha",
+    "nuc-immediate-render",
+    "cal-accesibilidad",
+    "fra-agnostico"
+   ],
+   "etiquetas": [
+    "fouc",
+    "carga",
+    "autoalpha",
+    "ssr"
+   ],
+   "estado": "verificado",
+   "ruta": "13-calidad/cal-fouc.md"
+  },
+  {
+   "id": "cal-rendimiento",
+   "titulo": "Rendimiento de animaciones con GSAP",
+   "capa": "13-calidad",
+   "tipo": "concepto",
+   "ambito": "transversal",
+   "resumen": "Qué cuesta de verdad al animar: propiedades, número de elementos, quickTo, force3D, lazy y ticker. Separa datos medidos de criterio práctico.",
+   "api": [
+    "gsap.config",
+    "gsap.GSAPConfig.force3D",
+    "gsap.GSAPConfig.autoSleep",
+    "gsap.GSAPConfig.nullTargetWarn",
+    "gsap.quickTo",
+    "gsap.quickSetter",
+    "gsap.ticker.lagSmoothing",
+    "gsap.ticker.fps",
+    "gsap.TweenVars.lazy",
+    "ScrollTrigger.config"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-quickto",
+    "nuc-quicksetter",
+    "nuc-ticker",
+    "nuc-defaults-config",
+    "css-transforms",
+    "scr-batch",
+    "cal-conflictos"
+   ],
+   "etiquetas": [
+    "rendimiento",
+    "gpu",
+    "ticker",
+    "transform"
+   ],
+   "estado": "verificado",
+   "ruta": "13-calidad/cal-rendimiento.md"
+  },
+  {
+   "id": "cal-st-errores",
+   "titulo": "Errores de ScrollTrigger, por síntoma",
+   "capa": "13-calidad",
+   "tipo": "diagnostico",
+   "ambito": "ScrollTrigger",
+   "resumen": "Síntomas de scroll con causa y corrección probada, ScrollTrigger anidado, valores viejos, orden de creación, refresh, saltos al cargar y navegación sin recarga.",
+   "api": [
+    "ScrollTrigger.refresh",
+    "ScrollTrigger.create",
+    "ScrollTrigger.getAll",
+    "ScrollTrigger.update",
+    "ScrollTrigger.Vars.refreshPriority",
+    "ScrollTrigger.Vars.invalidateOnRefresh",
+    "gsap.TweenVars.immediateRender"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "scr-scrolltrigger",
+    "scr-refresh",
+    "scr-scrub",
+    "scr-pin",
+    "scr-start-end",
+    "cal-errores-comunes",
+    "cal-depuracion"
+   ],
+   "etiquetas": [
+    "scroll",
+    "errores",
+    "diagnostico",
+    "refresh",
+    "pin"
+   ],
+   "estado": "verificado",
+   "ruta": "13-calidad/cal-st-errores.md"
+  },
+  {
+   "id": "rec-acordeon",
+   "titulo": "Acordeón accesible con height auto",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Abre y cierra paneles animando hasta height auto, con aria-expanded, hidden, interrupción sin saltos y altura libre al terminar.",
+   "api": [
+    "gsap.fromTo",
+    "gsap.TweenVars.overwrite",
+    "gsap.matchMedia",
+    "gsap.set"
+   ],
+   "requiere": [
+    "css-clearprops"
+   ],
+   "relacionadas": [
+    "css-plugin",
+    "nuc-overwrite",
+    "cal-accesibilidad",
+    "nuc-context"
+   ],
+   "etiquetas": [
+    "interaccion",
+    "accesibilidad",
+    "altura",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-acordeon.md"
+  },
+  {
+   "id": "rec-boton-magnetico",
+   "titulo": "Botón magnético",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Atrae un botón hacia el puntero con quickTo y lo devuelve al salir, midiendo una referencia estable para evitar temblores.",
+   "api": [
+    "gsap.quickTo",
+    "gsap.getProperty",
+    "gsap.matchMedia"
+   ],
+   "requiere": [
+    "nuc-quickto"
+   ],
+   "relacionadas": [
+    "rec-seguidor-cursor",
+    "nuc-getproperty",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "puntero",
+    "interaccion",
+    "boton",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-boton-magnetico.md"
+  },
+  {
+   "id": "rec-contador",
+   "titulo": "Contador numérico animado",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Cuenta hasta una cifra con un objeto proxy y formato local con Intl.NumberFormat, al entrar en el viewport y sin perder el texto.",
+   "api": [
+    "gsap.to",
+    "gsap.TweenVars.onUpdate",
+    "ScrollTrigger.Vars.once",
+    "gsap.TweenVars.snap"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "css-snap",
+    "nuc-callbacks",
+    "rec-helpers",
+    "cal-accesibilidad",
+    "rec-revelar-scroll"
+   ],
+   "etiquetas": [
+    "numero",
+    "texto",
+    "scroll",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-contador.md"
+  },
+  {
+   "id": "rec-helpers",
+   "titulo": "Catálogo de funciones auxiliares oficiales",
+   "capa": "14-recetas",
+   "tipo": "referencia",
+   "ambito": "transversal",
+   "resumen": "Las 28 helper functions de gsap.com, agrupadas por problema, con cuándo usarlas, qué requieren y qué alternativa nativa existe.",
+   "api": [
+    "ScrollTrigger.snapDirectional",
+    "SplitText.Vars.deepSlice",
+    "Flip.from",
+    "gsap.delayedCall",
+    "gsap.utils.pipe",
+    "gsap.utils.shuffle"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "rec-marquee",
+    "rec-secuencia-imagenes",
+    "rec-contador",
+    "rec-transicion-flip",
+    "svg-motionpathhelper",
+    "eas-guia",
+    "utl-funciones"
+   ],
+   "etiquetas": [
+    "catalogo",
+    "helpers",
+    "referencia"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-helpers.md"
+  },
+  {
+   "id": "rec-marquee",
+   "titulo": "Marquesina infinita sin saltos",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Cinta de logos o texto en bucle continuo, con clones accesibles, pausa, remedición al redimensionar y versión estática reducida.",
+   "api": [
+    "gsap.fromTo",
+    "gsap.delayedCall",
+    "gsap.matchMedia",
+    "Animation.timeScale",
+    "Animation.progress",
+    "gsap.TweenVars.repeat"
+   ],
+   "requiere": [
+    "nuc-repeat-yoyo"
+   ],
+   "relacionadas": [
+    "rec-helpers",
+    "nuc-delayedcall",
+    "nuc-tiempo",
+    "cal-accesibilidad",
+    "utl-funciones"
+   ],
+   "etiquetas": [
+    "bucle",
+    "carrusel",
+    "ticker",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-marquee.md"
+  },
+  {
+   "id": "rec-parallax",
+   "titulo": "Parallax con scrub",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "ScrollTrigger",
+   "resumen": "Desplaza imágenes o fondos a otra velocidad que el scroll, con disparador en el padre y sin saltos al cargar.",
+   "api": [
+    "ScrollTrigger.Vars.scrub",
+    "ScrollTrigger.Vars.trigger",
+    "gsap.fromTo"
+   ],
+   "requiere": [
+    "scr-scrub"
+   ],
+   "relacionadas": [
+    "scr-start-end",
+    "scr-smoother-efectos",
+    "cal-accesibilidad",
+    "cal-rendimiento"
+   ],
+   "etiquetas": [
+    "scroll",
+    "scrub",
+    "imagen",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-parallax.md"
+  },
+  {
+   "id": "rec-pin-horizontal",
+   "titulo": "Sección fija con desplazamiento horizontal",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "ScrollTrigger",
+   "resumen": "Fija una sección y convierte el scroll vertical en movimiento horizontal, responsive, con scroll nativo como alternativa reducida.",
+   "api": [
+    "ScrollTrigger.Vars.pin",
+    "ScrollTrigger.Vars.invalidateOnRefresh",
+    "ScrollTrigger.Vars.containerAnimation",
+    "ScrollTrigger.Vars.snap",
+    "ScrollTrigger.Vars.scrub"
+   ],
+   "requiere": [
+    "scr-pin",
+    "scr-scrub"
+   ],
+   "relacionadas": [
+    "scr-horizontal",
+    "scr-refresh",
+    "cal-st-errores",
+    "rec-parallax"
+   ],
+   "etiquetas": [
+    "scroll",
+    "pin",
+    "horizontal",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-pin-horizontal.md"
+  },
+  {
+   "id": "rec-revelar-scroll",
+   "titulo": "Revelar elementos al hacer scroll",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "ScrollTrigger",
+   "resumen": "Aparición por lotes con ScrollTrigger.batch, sin parpadeo inicial, con movimiento reducido y limpieza completa de estilos.",
+   "api": [
+    "ScrollTrigger.batch",
+    "ScrollTrigger.Vars.once",
+    "ScrollTrigger.Vars.onLeaveBack",
+    "gsap.matchMedia",
+    "gsap.context",
+    "gsap.matchMediaRefresh"
+   ],
+   "requiere": [
+    "nuc-context",
+    "nuc-matchmedia"
+   ],
+   "relacionadas": [
+    "scr-batch",
+    "scr-toggle",
+    "cal-fouc",
+    "cal-accesibilidad",
+    "rec-titular-texto"
+   ],
+   "etiquetas": [
+    "scroll",
+    "entrada",
+    "accesibilidad",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-revelar-scroll.md"
+  },
+  {
+   "id": "rec-salida",
+   "titulo": "Animar una salida antes de retirar lo que sale",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Retrasar la retirada hasta que la animación termine, con promesa que siempre resuelve, salida interrumpida, reapertura, orden frente a revert y movimiento reducido.",
+   "api": [
+    "gsap.TweenVars.onInterrupt",
+    "gsap.Context.add",
+    "gsap.Context.revert",
+    "Animation.then",
+    "gsap.TweenVars.overwrite",
+    "gsap.matchMedia"
+   ],
+   "requiere": [
+    "nuc-context"
+   ],
+   "relacionadas": [
+    "fra-agnostico",
+    "nuc-promesas",
+    "nuc-callbacks",
+    "nuc-limpieza",
+    "nuc-overwrite",
+    "rec-transicion-paginas",
+    "int-flip",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "salida",
+    "retirada",
+    "ciclo-de-vida",
+    "promesas",
+    "interaccion"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-salida.md"
+  },
+  {
+   "id": "rec-secuencia-imagenes",
+   "titulo": "Secuencia de imágenes ligada al scroll",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "ScrollTrigger",
+   "resumen": "Reproduce fotogramas en canvas según el scroll, con objeto proxy, snap al entero, recorte cover y fotograma fijo en modo reducido.",
+   "api": [
+    "ScrollTrigger.Vars.scrub",
+    "ScrollTrigger.Vars.pin",
+    "gsap.TweenVars.snap",
+    "gsap.TweenVars.onUpdate"
+   ],
+   "requiere": [
+    "scr-scrub"
+   ],
+   "relacionadas": [
+    "rec-helpers",
+    "scr-pin",
+    "cal-rendimiento",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "scroll",
+    "canvas",
+    "imagen",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-secuencia-imagenes.md"
+  },
+  {
+   "id": "rec-seguidor-cursor",
+   "titulo": "Seguidor de cursor con quickTo",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "core",
+   "resumen": "Elemento decorativo que sigue al puntero con retardo, sin crear un tween por evento y sin viajar desde la esquina al aparecer.",
+   "api": [
+    "gsap.quickTo",
+    "gsap.matchMedia",
+    "Tween.resetTo"
+   ],
+   "requiere": [
+    "nuc-quickto"
+   ],
+   "relacionadas": [
+    "nuc-quicksetter",
+    "rec-boton-magnetico",
+    "cal-rendimiento",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "puntero",
+    "interaccion",
+    "rendimiento",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-seguidor-cursor.md"
+  },
+  {
+   "id": "rec-titular-texto",
+   "titulo": "Titular animado por líneas, palabras o letras",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "SplitText",
+   "resumen": "Divide y anima un titular con máscara, que se recompone al cambiar el ancho o las fuentes y no daña a lectores de pantalla.",
+   "api": [
+    "SplitText.create",
+    "SplitText.Vars.autoSplit",
+    "SplitText.Vars.onSplit",
+    "SplitText.Vars.mask",
+    "SplitText.Vars.aria"
+   ],
+   "requiere": [
+    "txt-splittext"
+   ],
+   "relacionadas": [
+    "txt-splittext-api",
+    "rec-revelar-scroll",
+    "cal-fouc",
+    "cal-accesibilidad"
+   ],
+   "etiquetas": [
+    "texto",
+    "entrada",
+    "responsive",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-titular-texto.md"
+  },
+  {
+   "id": "rec-transicion-flip",
+   "titulo": "Filtrar y reordenar con Flip",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "Flip",
+   "resumen": "Anima cambios de disposición de flex o grid guardando el estado, aplicando el cambio y dejando a Flip animar la diferencia.",
+   "api": [
+    "Flip.getState",
+    "Flip.from",
+    "Flip.killFlipsOf",
+    "Flip.isFlipping"
+   ],
+   "requiere": [
+    "int-flip"
+   ],
+   "relacionadas": [
+    "int-flip-api",
+    "int-flip-batch",
+    "rec-helpers",
+    "cal-accesibilidad",
+    "nuc-context"
+   ],
+   "etiquetas": [
+    "layout",
+    "filtro",
+    "interaccion",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-transicion-flip.md"
+  },
+  {
+   "id": "rec-transicion-paginas",
+   "titulo": "Transición entre páginas",
+   "capa": "14-recetas",
+   "tipo": "patron",
+   "ambito": "transversal",
+   "resumen": "Navegación sin recarga con salida, sustitución, historial, foco y entrada, sin fugas de ScrollTrigger entre páginas.",
+   "api": [
+    "gsap.to",
+    "gsap.fromTo",
+    "gsap.killTweensOf",
+    "ScrollTrigger.refresh",
+    "Animation.then"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "nuc-context",
+    "nuc-promesas",
+    "scr-refresh",
+    "fra-agnostico",
+    "fra-vanilla",
+    "cal-accesibilidad",
+    "cal-st-errores"
+   ],
+   "etiquetas": [
+    "navegacion",
+    "sin-recarga",
+    "accesibilidad",
+    "plantilla"
+   ],
+   "estado": "verificado",
+   "ruta": "14-recetas/rec-transicion-paginas.md"
+  },
+  {
+   "id": "ver-historial",
+   "titulo": "Historial de cambios de GSAP, de 3.12.7 a 3.15.1",
+   "capa": "15-versiones",
+   "tipo": "referencia",
+   "ambito": "transversal",
+   "resumen": "Cambios reales leídos en los diffs de código y tipos, separados en API nueva, corrección e interno, y a quién afecta el renombrado de tipos de 3.15.0.",
+   "api": [
+    "gsap.TweenVars.easeReverse",
+    "gsap.TweenVars.yoyoEase",
+    "SplitText.create",
+    "SplitText.Vars.aria",
+    "SplitText.Vars.overwrite",
+    "SplitText.kill",
+    "gsap.utils.distribute",
+    "gsap.plugins.RawPath"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "ver-migracion-v3",
+    "ver-repo-privado",
+    "fra-typescript",
+    "fun-licencia",
+    "txt-splittext",
+    "svg-morphsvg",
+    "nuc-repeat-yoyo"
+   ],
+   "etiquetas": [
+    "versiones",
+    "changelog",
+    "migracion"
+   ],
+   "estado": "verificado",
+   "ruta": "15-versiones/ver-historial.md"
+  },
+  {
+   "id": "ver-migracion-v3",
+   "titulo": "Migrar de GSAP 1.x/2.x a GSAP 3",
+   "capa": "15-versiones",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "Equivalencias de TweenMax, duración, eases, staggers, overwrite y plugins, qué sigue funcionando en 3.15.1 y qué ya no compila en TypeScript.",
+   "api": [
+    "gsap.to",
+    "gsap.timeline",
+    "gsap.defaults",
+    "gsap.config",
+    "gsap.getProperty",
+    "gsap.registerPlugin",
+    "gsap.globalTimeline",
+    "gsap.ticker.add",
+    "gsap.ticker.remove",
+    "gsap.parseEase",
+    "gsap.TweenVars.callbackScope",
+    "Timeline.getChildren"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "ver-historial",
+    "cal-errores-comunes",
+    "cal-conflictos",
+    "fun-plugins",
+    "svg-motionpath",
+    "int-inertia",
+    "nuc-stagger"
+   ],
+   "etiquetas": [
+    "migracion",
+    "legacy",
+    "tweenmax"
+   ],
+   "estado": "verificado",
+   "ruta": "15-versiones/ver-migracion-v3.md"
+  },
+  {
+   "id": "ver-repo-privado",
+   "titulo": "Salir del repositorio privado de Club GSAP",
+   "capa": "15-versiones",
+   "tipo": "guia",
+   "ambito": "transversal",
+   "resumen": "GSAP es gratuito y público en npm. Cómo retirar .npmrc, token y paquetes de Club como @gsap/business, con npm y Yarn, y limpiar cachés.",
+   "api": [
+    "gsap.registerPlugin"
+   ],
+   "requiere": null,
+   "relacionadas": [
+    "fun-licencia",
+    "fun-instalacion",
+    "ver-historial"
+   ],
+   "etiquetas": [
+    "npm",
+    "club",
+    "migracion",
+    "instalacion"
+   ],
+   "estado": "verificado",
+   "ruta": "15-versiones/ver-repo-privado.md"
+  },
+  {
+   "id": "tar-rutas",
+   "titulo": "Rutas por intención, síntoma, decisión y tecnología",
+   "capa": "16-tareas",
+   "tipo": "referencia",
+   "ambito": "transversal",
+   "resumen": "Punto de entrada del sistema. Lleva de lo que quieres hacer, o de lo que falla, a la ficha exacta y a la plantilla reutilizable.",
+   "api": null,
+   "requiere": null,
+   "relacionadas": [
+    "fun-que-es",
+    "fra-agnostico",
+    "cal-errores-comunes",
+    "cal-st-errores"
+   ],
+   "etiquetas": [
+    "indice",
+    "diagnostico",
+    "decision"
+   ],
+   "estado": "verificado",
+   "ruta": "16-tareas/tar-rutas.md"
+  }
+ ]
+}

@@ -1,0 +1,7191 @@
+{
+ "version": "3.15.1",
+ "generado_de": "gsap/types/*.d.ts",
+ "total": 1574,
+ "tipos": {
+  "Animation": {
+   "tipo": "class",
+   "archivo": "animation.d.ts",
+   "miembros": {
+    "version": {
+     "k": "prop",
+     "st": true
+    },
+    "data": {
+     "k": "prop",
+     "st": false
+    },
+    "parent": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollTrigger": {
+     "k": "prop",
+     "st": false
+    },
+    "delay": {
+     "k": "metodo",
+     "st": false
+    },
+    "duration": {
+     "k": "metodo",
+     "st": false
+    },
+    "endTime": {
+     "k": "metodo",
+     "st": false
+    },
+    "eventCallback": {
+     "k": "metodo",
+     "st": false
+    },
+    "invalidate": {
+     "k": "metodo",
+     "st": false
+    },
+    "isActive": {
+     "k": "metodo",
+     "st": false
+    },
+    "iteration": {
+     "k": "metodo",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "pause": {
+     "k": "metodo",
+     "st": false
+    },
+    "paused": {
+     "k": "metodo",
+     "st": false
+    },
+    "play": {
+     "k": "metodo",
+     "st": false
+    },
+    "progress": {
+     "k": "metodo",
+     "st": false
+    },
+    "rawTime": {
+     "k": "metodo",
+     "st": false
+    },
+    "render": {
+     "k": "metodo",
+     "st": false
+    },
+    "repeat": {
+     "k": "metodo",
+     "st": false
+    },
+    "repeatDelay": {
+     "k": "metodo",
+     "st": false
+    },
+    "restart": {
+     "k": "metodo",
+     "st": false
+    },
+    "resume": {
+     "k": "metodo",
+     "st": false
+    },
+    "reverse": {
+     "k": "metodo",
+     "st": false
+    },
+    "reversed": {
+     "k": "metodo",
+     "st": false
+    },
+    "revert": {
+     "k": "metodo",
+     "st": false
+    },
+    "startTime": {
+     "k": "metodo",
+     "st": false
+    },
+    "seek": {
+     "k": "metodo",
+     "st": false
+    },
+    "then": {
+     "k": "metodo",
+     "st": false
+    },
+    "time": {
+     "k": "metodo",
+     "st": false
+    },
+    "timeScale": {
+     "k": "metodo",
+     "st": false
+    },
+    "totalDuration": {
+     "k": "metodo",
+     "st": false
+    },
+    "totalProgress": {
+     "k": "metodo",
+     "st": false
+    },
+    "totalTime": {
+     "k": "metodo",
+     "st": false
+    },
+    "yoyo": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "CustomBounce": {
+   "tipo": "class",
+   "archivo": "custom-bounce.d.ts",
+   "miembros": {
+    "ease": {
+     "k": "prop",
+     "st": false
+    },
+    "create": {
+     "k": "metodo",
+     "st": true
+    },
+    "register": {
+     "k": "metodo",
+     "st": true
+    }
+   }
+  },
+  "CustomBounceVars": {
+   "tipo": "interface",
+   "archivo": "custom-bounce.d.ts",
+   "miembros": {
+    "strength": {
+     "k": "prop",
+     "st": false
+    },
+    "endAtStart": {
+     "k": "prop",
+     "st": false
+    },
+    "squash": {
+     "k": "prop",
+     "st": false
+    },
+    "squashID": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "CustomEase": {
+   "tipo": "class",
+   "archivo": "custom-ease.d.ts",
+   "miembros": {
+    "id": {
+     "k": "prop",
+     "st": false
+    },
+    "ease": {
+     "k": "prop",
+     "st": false
+    },
+    "data": {
+     "k": "prop",
+     "st": false
+    },
+    "segment": {
+     "k": "prop",
+     "st": false
+    },
+    "setData": {
+     "k": "metodo",
+     "st": false
+    },
+    "getSVGData": {
+     "k": "metodo",
+     "st": false
+    },
+    "create": {
+     "k": "metodo",
+     "st": true
+    },
+    "register": {
+     "k": "metodo",
+     "st": true
+    },
+    "get": {
+     "k": "metodo",
+     "st": true
+    }
+   }
+  },
+  "CustomEaseConfig": {
+   "tipo": "interface",
+   "archivo": "custom-ease.d.ts",
+   "miembros": {
+    "precision": {
+     "k": "prop",
+     "st": false
+    },
+    "height": {
+     "k": "prop",
+     "st": false
+    },
+    "originY": {
+     "k": "prop",
+     "st": false
+    },
+    "width": {
+     "k": "prop",
+     "st": false
+    },
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    },
+    "invert": {
+     "k": "prop",
+     "st": false
+    },
+    "path": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "CustomWiggle": {
+   "tipo": "class",
+   "archivo": "custom-wiggle.d.ts",
+   "miembros": {
+    "ease": {
+     "k": "prop",
+     "st": false
+    },
+    "create": {
+     "k": "metodo",
+     "st": true
+    },
+    "register": {
+     "k": "metodo",
+     "st": true
+    }
+   }
+  },
+  "CustomWiggleVars": {
+   "tipo": "interface",
+   "archivo": "custom-wiggle.d.ts",
+   "miembros": {
+    "type": {
+     "k": "prop",
+     "st": false
+    },
+    "wiggles": {
+     "k": "prop",
+     "st": false
+    },
+    "amplitudeEase": {
+     "k": "prop",
+     "st": false
+    },
+    "timingEase": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Draggable": {
+   "tipo": "class",
+   "archivo": "Draggable.d.ts",
+   "miembros": {
+    "version": {
+     "k": "prop",
+     "st": true
+    },
+    "zIndex": {
+     "k": "prop",
+     "st": true
+    },
+    "autoScroll": {
+     "k": "prop",
+     "st": false
+    },
+    "deltaX": {
+     "k": "prop",
+     "st": false
+    },
+    "deltaY": {
+     "k": "prop",
+     "st": false
+    },
+    "endRotation": {
+     "k": "prop",
+     "st": false
+    },
+    "endX": {
+     "k": "prop",
+     "st": false
+    },
+    "endY": {
+     "k": "prop",
+     "st": false
+    },
+    "isDragging": {
+     "k": "prop",
+     "st": false
+    },
+    "isPressed": {
+     "k": "prop",
+     "st": false
+    },
+    "isThrowing": {
+     "k": "prop",
+     "st": false
+    },
+    "lockAxis": {
+     "k": "prop",
+     "st": false
+    },
+    "maxRotation": {
+     "k": "prop",
+     "st": false
+    },
+    "maxX": {
+     "k": "prop",
+     "st": false
+    },
+    "maxY": {
+     "k": "prop",
+     "st": false
+    },
+    "minX": {
+     "k": "prop",
+     "st": false
+    },
+    "minY": {
+     "k": "prop",
+     "st": false
+    },
+    "minRotation": {
+     "k": "prop",
+     "st": false
+    },
+    "pointerEvent": {
+     "k": "prop",
+     "st": false
+    },
+    "pointerX": {
+     "k": "prop",
+     "st": false
+    },
+    "pointerY": {
+     "k": "prop",
+     "st": false
+    },
+    "rotation": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollProxy": {
+     "k": "prop",
+     "st": false
+    },
+    "startX": {
+     "k": "prop",
+     "st": false
+    },
+    "startY": {
+     "k": "prop",
+     "st": false
+    },
+    "target": {
+     "k": "prop",
+     "st": false
+    },
+    "tween": {
+     "k": "prop",
+     "st": false
+    },
+    "vars": {
+     "k": "prop",
+     "st": false
+    },
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    },
+    "create": {
+     "k": "metodo",
+     "st": true
+    },
+    "get": {
+     "k": "metodo",
+     "st": true
+    },
+    "hitTest": {
+     "k": "metodo",
+     "st": true
+    },
+    "timeSinceDrag": {
+     "k": "metodo",
+     "st": true
+    },
+    "addEventListener": {
+     "k": "metodo",
+     "st": false
+    },
+    "applyBounds": {
+     "k": "metodo",
+     "st": false
+    },
+    "disable": {
+     "k": "metodo",
+     "st": false
+    },
+    "dispatchEvent": {
+     "k": "metodo",
+     "st": false
+    },
+    "enable": {
+     "k": "metodo",
+     "st": false
+    },
+    "enabled": {
+     "k": "metodo",
+     "st": false
+    },
+    "endDrag": {
+     "k": "metodo",
+     "st": false
+    },
+    "getDirection": {
+     "k": "metodo",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "removeEventListener": {
+     "k": "metodo",
+     "st": false
+    },
+    "startDrag": {
+     "k": "metodo",
+     "st": false
+    },
+    "update": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "Draggable.BoundsMinMax": {
+   "tipo": "interface",
+   "archivo": "Draggable.d.ts",
+   "miembros": {
+    "minX": {
+     "k": "prop",
+     "st": false
+    },
+    "minY": {
+     "k": "prop",
+     "st": false
+    },
+    "maxX": {
+     "k": "prop",
+     "st": false
+    },
+    "maxY": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Draggable.BoundsRectangle": {
+   "tipo": "interface",
+   "archivo": "Draggable.d.ts",
+   "miembros": {
+    "height": {
+     "k": "prop",
+     "st": false
+    },
+    "left": {
+     "k": "prop",
+     "st": false
+    },
+    "top": {
+     "k": "prop",
+     "st": false
+    },
+    "width": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Draggable.BoundsRotation": {
+   "tipo": "interface",
+   "archivo": "Draggable.d.ts",
+   "miembros": {
+    "minRotation": {
+     "k": "prop",
+     "st": false
+    },
+    "maxRotation": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Draggable.Rectangle": {
+   "tipo": "interface",
+   "archivo": "Draggable.d.ts",
+   "miembros": {
+    "bottom": {
+     "k": "prop",
+     "st": false
+    },
+    "left": {
+     "k": "prop",
+     "st": false
+    },
+    "right": {
+     "k": "prop",
+     "st": false
+    },
+    "top": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Draggable.SnapObject": {
+   "tipo": "interface",
+   "archivo": "Draggable.d.ts",
+   "miembros": {
+    "left": {
+     "k": "prop",
+     "st": false
+    },
+    "points": {
+     "k": "prop",
+     "st": false
+    },
+    "radius": {
+     "k": "prop",
+     "st": false
+    },
+    "rotation": {
+     "k": "prop",
+     "st": false
+    },
+    "top": {
+     "k": "prop",
+     "st": false
+    },
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Draggable.Vars": {
+   "tipo": "interface",
+   "archivo": "Draggable.d.ts",
+   "miembros": {
+    "activeCursor": {
+     "k": "prop",
+     "st": false
+    },
+    "allowContextMenu": {
+     "k": "prop",
+     "st": false
+    },
+    "allowEventDefault": {
+     "k": "prop",
+     "st": false
+    },
+    "allowNativeTouchScrolling": {
+     "k": "prop",
+     "st": false
+    },
+    "autoScroll": {
+     "k": "prop",
+     "st": false
+    },
+    "bounds": {
+     "k": "prop",
+     "st": false
+    },
+    "callbackScope": {
+     "k": "prop",
+     "st": false
+    },
+    "clickableTest": {
+     "k": "prop",
+     "st": false
+    },
+    "cursor": {
+     "k": "prop",
+     "st": false
+    },
+    "dragClickables": {
+     "k": "prop",
+     "st": false
+    },
+    "dragResistance": {
+     "k": "prop",
+     "st": false
+    },
+    "edgeResistance": {
+     "k": "prop",
+     "st": false
+    },
+    "force3D": {
+     "k": "prop",
+     "st": false
+    },
+    "inertia": {
+     "k": "prop",
+     "st": false
+    },
+    "liveSnap": {
+     "k": "prop",
+     "st": false
+    },
+    "lockAxis": {
+     "k": "prop",
+     "st": false
+    },
+    "maxDuration": {
+     "k": "prop",
+     "st": false
+    },
+    "minDuration": {
+     "k": "prop",
+     "st": false
+    },
+    "minimumMovement": {
+     "k": "prop",
+     "st": false
+    },
+    "onClick": {
+     "k": "prop",
+     "st": false
+    },
+    "onClickParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onDrag": {
+     "k": "prop",
+     "st": false
+    },
+    "onDragParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onDragStart": {
+     "k": "prop",
+     "st": false
+    },
+    "onDragStartParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onDragEnd": {
+     "k": "prop",
+     "st": false
+    },
+    "onDragEndParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onLockAxis": {
+     "k": "prop",
+     "st": false
+    },
+    "onMove": {
+     "k": "prop",
+     "st": false
+    },
+    "onMoveParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onPress": {
+     "k": "prop",
+     "st": false
+    },
+    "onPressParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onPressInit": {
+     "k": "prop",
+     "st": false
+    },
+    "onPressInitParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onRelease": {
+     "k": "prop",
+     "st": false
+    },
+    "onReleaseParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onThrowComplete": {
+     "k": "prop",
+     "st": false
+    },
+    "onThrowCompleteParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onThrowUpdate": {
+     "k": "prop",
+     "st": false
+    },
+    "onThrowUpdateParams": {
+     "k": "prop",
+     "st": false
+    },
+    "overshootTolerance": {
+     "k": "prop",
+     "st": false
+    },
+    "resistance": {
+     "k": "prop",
+     "st": false
+    },
+    "snap": {
+     "k": "prop",
+     "st": false
+    },
+    "throwProps": {
+     "k": "prop",
+     "st": false
+    },
+    "throwResistance": {
+     "k": "prop",
+     "st": false
+    },
+    "trigger": {
+     "k": "prop",
+     "st": false
+    },
+    "type": {
+     "k": "prop",
+     "st": false
+    },
+    "zIndexBoost": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "EaseFunction": {
+   "tipo": "interface",
+   "archivo": "custom-bounce.d.ts",
+   "miembros": {
+    "custom": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Element": {
+   "tipo": "interface",
+   "archivo": "css-plugin.d.ts",
+   "miembros": {
+    "_gsap": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Flip": {
+   "tipo": "class",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "version": {
+     "k": "prop",
+     "st": true
+    },
+    "batch": {
+     "k": "metodo",
+     "st": true
+    },
+    "convertCoordinates": {
+     "k": "metodo",
+     "st": true
+    },
+    "fit": {
+     "k": "metodo",
+     "st": true
+    },
+    "from": {
+     "k": "metodo",
+     "st": true
+    },
+    "getState": {
+     "k": "metodo",
+     "st": true
+    },
+    "getByTarget": {
+     "k": "metodo",
+     "st": true
+    },
+    "isFlipping": {
+     "k": "metodo",
+     "st": true
+    },
+    "killFlipsOf": {
+     "k": "metodo",
+     "st": true
+    },
+    "makeAbsolute": {
+     "k": "metodo",
+     "st": true
+    },
+    "to": {
+     "k": "metodo",
+     "st": true
+    },
+    "register": {
+     "k": "metodo",
+     "st": true
+    }
+   }
+  },
+  "Flip.AnimationVars": {
+   "tipo": "interface",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "absolute": {
+     "k": "prop",
+     "st": false
+    },
+    "simple": {
+     "k": "prop",
+     "st": false
+    },
+    "props": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Flip.BatchActionConfig": {
+   "tipo": "interface",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "getState": {
+     "k": "prop",
+     "st": false
+    },
+    "loadState": {
+     "k": "prop",
+     "st": false
+    },
+    "setState": {
+     "k": "prop",
+     "st": false
+    },
+    "animate": {
+     "k": "prop",
+     "st": false
+    },
+    "onEnter": {
+     "k": "prop",
+     "st": false
+    },
+    "onLeave": {
+     "k": "prop",
+     "st": false
+    },
+    "onStart": {
+     "k": "prop",
+     "st": false
+    },
+    "onComplete": {
+     "k": "prop",
+     "st": false
+    },
+    "once": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Flip.ElementState": {
+   "tipo": "class",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "bounds": {
+     "k": "prop",
+     "st": false
+    },
+    "cache": {
+     "k": "prop",
+     "st": false
+    },
+    "display": {
+     "k": "prop",
+     "st": false
+    },
+    "element": {
+     "k": "prop",
+     "st": false
+    },
+    "getProp": {
+     "k": "prop",
+     "st": false
+    },
+    "height": {
+     "k": "prop",
+     "st": false
+    },
+    "id": {
+     "k": "prop",
+     "st": false
+    },
+    "isVisible": {
+     "k": "prop",
+     "st": false
+    },
+    "matrix": {
+     "k": "prop",
+     "st": false
+    },
+    "opacity": {
+     "k": "prop",
+     "st": false
+    },
+    "parent": {
+     "k": "prop",
+     "st": false
+    },
+    "position": {
+     "k": "prop",
+     "st": false
+    },
+    "rotation": {
+     "k": "prop",
+     "st": false
+    },
+    "scaleX": {
+     "k": "prop",
+     "st": false
+    },
+    "scaleY": {
+     "k": "prop",
+     "st": false
+    },
+    "simple": {
+     "k": "prop",
+     "st": false
+    },
+    "skewX": {
+     "k": "prop",
+     "st": false
+    },
+    "width": {
+     "k": "prop",
+     "st": false
+    },
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    },
+    "isDifferent": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "Flip.FitReturnVars": {
+   "tipo": "interface",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "width": {
+     "k": "prop",
+     "st": false
+    },
+    "height": {
+     "k": "prop",
+     "st": false
+    },
+    "rotation": {
+     "k": "prop",
+     "st": false
+    },
+    "scaleX": {
+     "k": "prop",
+     "st": false
+    },
+    "scaleY": {
+     "k": "prop",
+     "st": false
+    },
+    "skewX": {
+     "k": "prop",
+     "st": false
+    },
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Flip.FitVars": {
+   "tipo": "interface",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "fitChild": {
+     "k": "prop",
+     "st": false
+    },
+    "getVars": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Flip.FlipState": {
+   "tipo": "class",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "alt": {
+     "k": "prop",
+     "st": false
+    },
+    "elementStates": {
+     "k": "prop",
+     "st": false
+    },
+    "idLookup": {
+     "k": "prop",
+     "st": false
+    },
+    "props": {
+     "k": "prop",
+     "st": false
+    },
+    "simple": {
+     "k": "prop",
+     "st": false
+    },
+    "targets": {
+     "k": "prop",
+     "st": false
+    },
+    "add": {
+     "k": "metodo",
+     "st": false
+    },
+    "clear": {
+     "k": "metodo",
+     "st": false
+    },
+    "compare": {
+     "k": "metodo",
+     "st": false
+    },
+    "update": {
+     "k": "metodo",
+     "st": false
+    },
+    "fit": {
+     "k": "metodo",
+     "st": false
+    },
+    "recordInlineStyles": {
+     "k": "metodo",
+     "st": false
+    },
+    "interrupt": {
+     "k": "metodo",
+     "st": false
+    },
+    "getProperty": {
+     "k": "metodo",
+     "st": false
+    },
+    "getElementState": {
+     "k": "metodo",
+     "st": false
+    },
+    "makeAbsolute": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "Flip.FlipStateVars": {
+   "tipo": "interface",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "simple": {
+     "k": "prop",
+     "st": false
+    },
+    "props": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Flip.FromToVars": {
+   "tipo": "interface",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "absoluteOnLeave": {
+     "k": "prop",
+     "st": false
+    },
+    "prune": {
+     "k": "prop",
+     "st": false
+    },
+    "fade": {
+     "k": "prop",
+     "st": false
+    },
+    "nested": {
+     "k": "prop",
+     "st": false
+    },
+    "onEnter": {
+     "k": "prop",
+     "st": false
+    },
+    "onLeave": {
+     "k": "prop",
+     "st": false
+    },
+    "spin": {
+     "k": "prop",
+     "st": false
+    },
+    "targets": {
+     "k": "prop",
+     "st": false
+    },
+    "toggleClass": {
+     "k": "prop",
+     "st": false
+    },
+    "zIndex": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Flip.StateCompare": {
+   "tipo": "interface",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "changed": {
+     "k": "prop",
+     "st": false
+    },
+    "unchanged": {
+     "k": "prop",
+     "st": false
+    },
+    "enter": {
+     "k": "prop",
+     "st": false
+    },
+    "leave": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Flip.TweenVarOverrides": {
+   "tipo": "interface",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "scale": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "FlipBatch": {
+   "tipo": "class",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "actions": {
+     "k": "prop",
+     "st": false
+    },
+    "state": {
+     "k": "prop",
+     "st": false
+    },
+    "timeline": {
+     "k": "prop",
+     "st": false
+    },
+    "id": {
+     "k": "prop",
+     "st": false
+    },
+    "data": {
+     "k": "prop",
+     "st": false
+    },
+    "add": {
+     "k": "metodo",
+     "st": false
+    },
+    "clear": {
+     "k": "metodo",
+     "st": false
+    },
+    "getState": {
+     "k": "metodo",
+     "st": false
+    },
+    "getStateById": {
+     "k": "metodo",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "remove": {
+     "k": "metodo",
+     "st": false
+    },
+    "run": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "FlipBatchAction": {
+   "tipo": "class",
+   "archivo": "Flip.d.ts",
+   "miembros": {
+    "batch": {
+     "k": "prop",
+     "st": false
+    },
+    "state": {
+     "k": "prop",
+     "st": false
+    },
+    "states": {
+     "k": "prop",
+     "st": false
+    },
+    "timeline": {
+     "k": "prop",
+     "st": false
+    },
+    "targets": {
+     "k": "prop",
+     "st": false
+    },
+    "vars": {
+     "k": "prop",
+     "st": false
+    },
+    "getStateById": {
+     "k": "metodo",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "GSDevTools": {
+   "tipo": "class",
+   "archivo": "gs-dev-tools.d.ts",
+   "miembros": {
+    "create": {
+     "k": "metodo",
+     "st": true
+    },
+    "getById": {
+     "k": "metodo",
+     "st": true
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "GSDevTools.Vars": {
+   "tipo": "interface",
+   "archivo": "gs-dev-tools.d.ts",
+   "miembros": {
+    "animation": {
+     "k": "prop",
+     "st": false
+    },
+    "container": {
+     "k": "prop",
+     "st": false
+    },
+    "css": {
+     "k": "prop",
+     "st": false
+    },
+    "globalSync": {
+     "k": "prop",
+     "st": false
+    },
+    "hideGlobalTimeline": {
+     "k": "prop",
+     "st": false
+    },
+    "id": {
+     "k": "prop",
+     "st": false
+    },
+    "inTime": {
+     "k": "prop",
+     "st": false
+    },
+    "keyboard": {
+     "k": "prop",
+     "st": false
+    },
+    "loop": {
+     "k": "prop",
+     "st": false
+    },
+    "minimal": {
+     "k": "prop",
+     "st": false
+    },
+    "outTime": {
+     "k": "prop",
+     "st": false
+    },
+    "paused": {
+     "k": "prop",
+     "st": false
+    },
+    "persist": {
+     "k": "prop",
+     "st": false
+    },
+    "timeScale": {
+     "k": "prop",
+     "st": false
+    },
+    "visibility": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "MotionPath.Vars": {
+   "tipo": "interface",
+   "archivo": "motion-path-plugin.d.ts",
+   "miembros": {
+    "align": {
+     "k": "prop",
+     "st": false
+    },
+    "alignOrigin": {
+     "k": "prop",
+     "st": false
+    },
+    "autoRotate": {
+     "k": "prop",
+     "st": false
+    },
+    "curviness": {
+     "k": "prop",
+     "st": false
+    },
+    "end": {
+     "k": "prop",
+     "st": false
+    },
+    "offsetX": {
+     "k": "prop",
+     "st": false
+    },
+    "offsetY": {
+     "k": "prop",
+     "st": false
+    },
+    "path": {
+     "k": "prop",
+     "st": false
+    },
+    "relative": {
+     "k": "prop",
+     "st": false
+    },
+    "resolution": {
+     "k": "prop",
+     "st": false
+    },
+    "start": {
+     "k": "prop",
+     "st": false
+    },
+    "type": {
+     "k": "prop",
+     "st": false
+    },
+    "useRadians": {
+     "k": "prop",
+     "st": false
+    },
+    "fromCurrent": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "MotionPathHelper": {
+   "tipo": "class",
+   "archivo": "motion-path-helper.d.ts",
+   "miembros": {
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "create": {
+     "k": "metodo",
+     "st": true
+    },
+    "editPath": {
+     "k": "metodo",
+     "st": true
+    }
+   }
+  },
+  "MotionPathHelper.EditPathVars": {
+   "tipo": "interface",
+   "archivo": "motion-path-helper.d.ts",
+   "miembros": {
+    "anchorSnap": {
+     "k": "prop",
+     "st": false
+    },
+    "callbackScope": {
+     "k": "prop",
+     "st": false
+    },
+    "draggable": {
+     "k": "prop",
+     "st": false
+    },
+    "handleSize": {
+     "k": "prop",
+     "st": false
+    },
+    "handleSnap": {
+     "k": "prop",
+     "st": false
+    },
+    "onDeleteAnchor": {
+     "k": "prop",
+     "st": false
+    },
+    "onPress": {
+     "k": "prop",
+     "st": false
+    },
+    "onRelease": {
+     "k": "prop",
+     "st": false
+    },
+    "onUpdate": {
+     "k": "prop",
+     "st": false
+    },
+    "selected": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "MotionPathHelper.Vars": {
+   "tipo": "interface",
+   "archivo": "motion-path-helper.d.ts",
+   "miembros": {
+    "ease": {
+     "k": "prop",
+     "st": false
+    },
+    "end": {
+     "k": "prop",
+     "st": false
+    },
+    "duration": {
+     "k": "prop",
+     "st": false
+    },
+    "path": {
+     "k": "prop",
+     "st": false
+    },
+    "pathColor": {
+     "k": "prop",
+     "st": false
+    },
+    "pathWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "pathOpacity": {
+     "k": "prop",
+     "st": false
+    },
+    "selected": {
+     "k": "prop",
+     "st": false
+    },
+    "start": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Observer": {
+   "tipo": "class",
+   "archivo": "Observer.d.ts",
+   "miembros": {
+    "isTouch": {
+     "k": "prop",
+     "st": true
+    },
+    "eventTypes": {
+     "k": "prop",
+     "st": true
+    },
+    "version": {
+     "k": "prop",
+     "st": true
+    },
+    "deltaX": {
+     "k": "prop",
+     "st": false
+    },
+    "deltaY": {
+     "k": "prop",
+     "st": false
+    },
+    "event": {
+     "k": "prop",
+     "st": false
+    },
+    "isDragging": {
+     "k": "prop",
+     "st": false
+    },
+    "isEnabled": {
+     "k": "prop",
+     "st": false
+    },
+    "isPressed": {
+     "k": "prop",
+     "st": false
+    },
+    "startX": {
+     "k": "prop",
+     "st": false
+    },
+    "startY": {
+     "k": "prop",
+     "st": false
+    },
+    "target": {
+     "k": "prop",
+     "st": false
+    },
+    "vars": {
+     "k": "prop",
+     "st": false
+    },
+    "velocityX": {
+     "k": "prop",
+     "st": false
+    },
+    "velocityY": {
+     "k": "prop",
+     "st": false
+    },
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    },
+    "axis": {
+     "k": "prop",
+     "st": false
+    },
+    "create": {
+     "k": "metodo",
+     "st": true
+    },
+    "getAll": {
+     "k": "metodo",
+     "st": true
+    },
+    "getById": {
+     "k": "metodo",
+     "st": true
+    },
+    "disable": {
+     "k": "metodo",
+     "st": false
+    },
+    "enable": {
+     "k": "metodo",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "scrollX": {
+     "k": "metodo",
+     "st": false
+    },
+    "scrollY": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "Observer.ObserverVars": {
+   "tipo": "interface",
+   "archivo": "Observer.d.ts",
+   "miembros": {
+    "allowClicks": {
+     "k": "prop",
+     "st": false
+    },
+    "capture": {
+     "k": "prop",
+     "st": false
+    },
+    "debounce": {
+     "k": "prop",
+     "st": false
+    },
+    "dragMinimum": {
+     "k": "prop",
+     "st": false
+    },
+    "event": {
+     "k": "prop",
+     "st": false
+    },
+    "id": {
+     "k": "prop",
+     "st": false
+    },
+    "ignore": {
+     "k": "prop",
+     "st": false
+    },
+    "ignoreCheck": {
+     "k": "prop",
+     "st": false
+    },
+    "lineHeight": {
+     "k": "prop",
+     "st": false
+    },
+    "lockAxis": {
+     "k": "prop",
+     "st": false
+    },
+    "onLockAxis": {
+     "k": "prop",
+     "st": false
+    },
+    "onDown": {
+     "k": "prop",
+     "st": false
+    },
+    "onUp": {
+     "k": "prop",
+     "st": false
+    },
+    "onLeft": {
+     "k": "prop",
+     "st": false
+    },
+    "onRight": {
+     "k": "prop",
+     "st": false
+    },
+    "onDisable": {
+     "k": "prop",
+     "st": false
+    },
+    "onDrag": {
+     "k": "prop",
+     "st": false
+    },
+    "onDragStart": {
+     "k": "prop",
+     "st": false
+    },
+    "onDragEnd": {
+     "k": "prop",
+     "st": false
+    },
+    "onEnable": {
+     "k": "prop",
+     "st": false
+    },
+    "onHover": {
+     "k": "prop",
+     "st": false
+    },
+    "onHoverEnd": {
+     "k": "prop",
+     "st": false
+    },
+    "onToggleY": {
+     "k": "prop",
+     "st": false
+    },
+    "onToggleX": {
+     "k": "prop",
+     "st": false
+    },
+    "onChangeX": {
+     "k": "prop",
+     "st": false
+    },
+    "onChangeY": {
+     "k": "prop",
+     "st": false
+    },
+    "onChange": {
+     "k": "prop",
+     "st": false
+    },
+    "onClick": {
+     "k": "prop",
+     "st": false
+    },
+    "onPress": {
+     "k": "prop",
+     "st": false
+    },
+    "onRelease": {
+     "k": "prop",
+     "st": false
+    },
+    "onMove": {
+     "k": "prop",
+     "st": false
+    },
+    "onWheel": {
+     "k": "prop",
+     "st": false
+    },
+    "onStop": {
+     "k": "prop",
+     "st": false
+    },
+    "onStopDelay": {
+     "k": "prop",
+     "st": false
+    },
+    "preventDefault": {
+     "k": "prop",
+     "st": false
+    },
+    "target": {
+     "k": "prop",
+     "st": false
+    },
+    "tolerance": {
+     "k": "prop",
+     "st": false
+    },
+    "type": {
+     "k": "prop",
+     "st": false
+    },
+    "wheelSpeed": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Physics2DPlugin.Vars": {
+   "tipo": "interface",
+   "archivo": "physics-2d-plugin.d.ts",
+   "miembros": {
+    "acceleration": {
+     "k": "prop",
+     "st": false
+    },
+    "accelerationAngle": {
+     "k": "prop",
+     "st": false
+    },
+    "angle": {
+     "k": "prop",
+     "st": false
+    },
+    "friction": {
+     "k": "prop",
+     "st": false
+    },
+    "gravity": {
+     "k": "prop",
+     "st": false
+    },
+    "velocity": {
+     "k": "prop",
+     "st": false
+    },
+    "xProp": {
+     "k": "prop",
+     "st": false
+    },
+    "yProp": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "PhysicsPropsPlugin.Values": {
+   "tipo": "interface",
+   "archivo": "physics-props-plugin.d.ts",
+   "miembros": {
+    "acceleration": {
+     "k": "prop",
+     "st": false
+    },
+    "friction": {
+     "k": "prop",
+     "st": false
+    },
+    "velocity": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "PixiPlugin.PixiMatrix": {
+   "tipo": "interface",
+   "archivo": "pixi-plugin.d.ts",
+   "miembros": {
+    "a": {
+     "k": "prop",
+     "st": false
+    },
+    "b": {
+     "k": "prop",
+     "st": false
+    },
+    "c": {
+     "k": "prop",
+     "st": false
+    },
+    "d": {
+     "k": "prop",
+     "st": false
+    },
+    "tx": {
+     "k": "prop",
+     "st": false
+    },
+    "ty": {
+     "k": "prop",
+     "st": false
+    },
+    "array": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "PixiPlugin.Vars": {
+   "tipo": "interface",
+   "archivo": "pixi-plugin.d.ts",
+   "miembros": {
+    "alpha": {
+     "k": "prop",
+     "st": false
+    },
+    "anchor": {
+     "k": "prop",
+     "st": false
+    },
+    "anchorX": {
+     "k": "prop",
+     "st": false
+    },
+    "anchorY": {
+     "k": "prop",
+     "st": false
+    },
+    "angle": {
+     "k": "prop",
+     "st": false
+    },
+    "autoAlpha": {
+     "k": "prop",
+     "st": false
+    },
+    "blur": {
+     "k": "prop",
+     "st": false
+    },
+    "blurX": {
+     "k": "prop",
+     "st": false
+    },
+    "blurY": {
+     "k": "prop",
+     "st": false
+    },
+    "blurPadding": {
+     "k": "prop",
+     "st": false
+    },
+    "brightness": {
+     "k": "prop",
+     "st": false
+    },
+    "colorize": {
+     "k": "prop",
+     "st": false
+    },
+    "colorizeAmount": {
+     "k": "prop",
+     "st": false
+    },
+    "colorMatrixFilter": {
+     "k": "prop",
+     "st": false
+    },
+    "combineCMF": {
+     "k": "prop",
+     "st": false
+    },
+    "contrast": {
+     "k": "prop",
+     "st": false
+    },
+    "fillColor": {
+     "k": "prop",
+     "st": false
+    },
+    "height": {
+     "k": "prop",
+     "st": false
+    },
+    "hue": {
+     "k": "prop",
+     "st": false
+    },
+    "lineColor": {
+     "k": "prop",
+     "st": false
+    },
+    "matrix": {
+     "k": "prop",
+     "st": false
+    },
+    "pivot": {
+     "k": "prop",
+     "st": false
+    },
+    "pivotX": {
+     "k": "prop",
+     "st": false
+    },
+    "pivotY": {
+     "k": "prop",
+     "st": false
+    },
+    "position": {
+     "k": "prop",
+     "st": false
+    },
+    "positionX": {
+     "k": "prop",
+     "st": false
+    },
+    "positionY": {
+     "k": "prop",
+     "st": false
+    },
+    "resolution": {
+     "k": "prop",
+     "st": false
+    },
+    "rotation": {
+     "k": "prop",
+     "st": false
+    },
+    "saturation": {
+     "k": "prop",
+     "st": false
+    },
+    "scale": {
+     "k": "prop",
+     "st": false
+    },
+    "scaleX": {
+     "k": "prop",
+     "st": false
+    },
+    "scaleY": {
+     "k": "prop",
+     "st": false
+    },
+    "skew": {
+     "k": "prop",
+     "st": false
+    },
+    "skewX": {
+     "k": "prop",
+     "st": false
+    },
+    "skewY": {
+     "k": "prop",
+     "st": false
+    },
+    "tilePosition": {
+     "k": "prop",
+     "st": false
+    },
+    "tilePositionX": {
+     "k": "prop",
+     "st": false
+    },
+    "tilePositionY": {
+     "k": "prop",
+     "st": false
+    },
+    "tileScale": {
+     "k": "prop",
+     "st": false
+    },
+    "tileScaleX": {
+     "k": "prop",
+     "st": false
+    },
+    "tileScaleY": {
+     "k": "prop",
+     "st": false
+    },
+    "tileX": {
+     "k": "prop",
+     "st": false
+    },
+    "tileY": {
+     "k": "prop",
+     "st": false
+    },
+    "tint": {
+     "k": "prop",
+     "st": false
+    },
+    "width": {
+     "k": "prop",
+     "st": false
+    },
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    },
+    "zIndex": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrambleTextPlugin.Vars": {
+   "tipo": "interface",
+   "archivo": "scramble-text-plugin.d.ts",
+   "miembros": {
+    "text": {
+     "k": "prop",
+     "st": false
+    },
+    "chars": {
+     "k": "prop",
+     "st": false
+    },
+    "speed": {
+     "k": "prop",
+     "st": false
+    },
+    "delimiter": {
+     "k": "prop",
+     "st": false
+    },
+    "tweenLength": {
+     "k": "prop",
+     "st": false
+    },
+    "newClass": {
+     "k": "prop",
+     "st": false
+    },
+    "oldClass": {
+     "k": "prop",
+     "st": false
+    },
+    "revealDelay": {
+     "k": "prop",
+     "st": false
+    },
+    "rightToLeft": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollSmoother": {
+   "tipo": "class",
+   "archivo": "scroll-smoother.d.ts",
+   "miembros": {
+    "version": {
+     "k": "prop",
+     "st": true
+    },
+    "scrollTrigger": {
+     "k": "prop",
+     "st": false
+    },
+    "progress": {
+     "k": "prop",
+     "st": false
+    },
+    "normalizer": {
+     "k": "prop",
+     "st": false
+    },
+    "create": {
+     "k": "metodo",
+     "st": true
+    },
+    "get": {
+     "k": "metodo",
+     "st": true
+    },
+    "refresh": {
+     "k": "metodo",
+     "st": true
+    },
+    "content": {
+     "k": "metodo",
+     "st": false
+    },
+    "effects": {
+     "k": "metodo",
+     "st": false
+    },
+    "getVelocity": {
+     "k": "metodo",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "offset": {
+     "k": "metodo",
+     "st": false
+    },
+    "paused": {
+     "k": "metodo",
+     "st": false
+    },
+    "scrollTo": {
+     "k": "metodo",
+     "st": false
+    },
+    "scrollTop": {
+     "k": "metodo",
+     "st": false
+    },
+    "smooth": {
+     "k": "metodo",
+     "st": false
+    },
+    "wrapper": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "ScrollSmoother.EffectsVars": {
+   "tipo": "interface",
+   "archivo": "scroll-smoother.d.ts",
+   "miembros": {
+    "speed": {
+     "k": "prop",
+     "st": false
+    },
+    "lag": {
+     "k": "prop",
+     "st": false
+    },
+    "effectsPadding": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollSmoother.Vars": {
+   "tipo": "interface",
+   "archivo": "scroll-smoother.d.ts",
+   "miembros": {
+    "autoResize": {
+     "k": "prop",
+     "st": false
+    },
+    "content": {
+     "k": "prop",
+     "st": false
+    },
+    "ease": {
+     "k": "prop",
+     "st": false
+    },
+    "effects": {
+     "k": "prop",
+     "st": false
+    },
+    "effectsPrefix": {
+     "k": "prop",
+     "st": false
+    },
+    "effectsPadding": {
+     "k": "prop",
+     "st": false
+    },
+    "ignoreMobileResize": {
+     "k": "prop",
+     "st": false
+    },
+    "normalizeScroll": {
+     "k": "prop",
+     "st": false
+    },
+    "onFocusIn": {
+     "k": "prop",
+     "st": false
+    },
+    "onUpdate": {
+     "k": "prop",
+     "st": false
+    },
+    "onStop": {
+     "k": "prop",
+     "st": false
+    },
+    "smooth": {
+     "k": "prop",
+     "st": false
+    },
+    "smoothTouch": {
+     "k": "prop",
+     "st": false
+    },
+    "speed": {
+     "k": "prop",
+     "st": false
+    },
+    "wrapper": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollToPlugin": {
+   "tipo": "class",
+   "archivo": "scroll-to-plugin.d.ts",
+   "miembros": {
+    "config": {
+     "k": "metodo",
+     "st": true
+    },
+    "max": {
+     "k": "metodo",
+     "st": true
+    },
+    "offset": {
+     "k": "metodo",
+     "st": true
+    }
+   }
+  },
+  "ScrollToPlugin.ConfigVars": {
+   "tipo": "interface",
+   "archivo": "scroll-to-plugin.d.ts",
+   "miembros": {
+    "autoKill": {
+     "k": "prop",
+     "st": false
+    },
+    "autoKillThreshold": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollToPlugin.Vars": {
+   "tipo": "interface",
+   "archivo": "scroll-to-plugin.d.ts",
+   "miembros": {
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    },
+    "offsetX": {
+     "k": "prop",
+     "st": false
+    },
+    "offsetY": {
+     "k": "prop",
+     "st": false
+    },
+    "autoKill": {
+     "k": "prop",
+     "st": false
+    },
+    "onAutoKill": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger": {
+   "tipo": "class",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "version": {
+     "k": "prop",
+     "st": true
+    },
+    "isTouch": {
+     "k": "prop",
+     "st": true
+    },
+    "animation": {
+     "k": "prop",
+     "st": false
+    },
+    "callbackAnimation": {
+     "k": "prop",
+     "st": false
+    },
+    "direction": {
+     "k": "prop",
+     "st": false
+    },
+    "end": {
+     "k": "prop",
+     "st": false
+    },
+    "isActive": {
+     "k": "prop",
+     "st": false
+    },
+    "pin": {
+     "k": "prop",
+     "st": false
+    },
+    "progress": {
+     "k": "prop",
+     "st": false
+    },
+    "scroller": {
+     "k": "prop",
+     "st": false
+    },
+    "start": {
+     "k": "prop",
+     "st": false
+    },
+    "trigger": {
+     "k": "prop",
+     "st": false
+    },
+    "vars": {
+     "k": "prop",
+     "st": false
+    },
+    "addEventListener": {
+     "k": "metodo",
+     "st": true
+    },
+    "batch": {
+     "k": "metodo",
+     "st": true
+    },
+    "clearMatchMedia": {
+     "k": "metodo",
+     "st": true
+    },
+    "clearScrollMemory": {
+     "k": "metodo",
+     "st": true
+    },
+    "config": {
+     "k": "metodo",
+     "st": true
+    },
+    "create": {
+     "k": "metodo",
+     "st": true
+    },
+    "defaults": {
+     "k": "metodo",
+     "st": true
+    },
+    "getAll": {
+     "k": "metodo",
+     "st": true
+    },
+    "disable": {
+     "k": "metodo",
+     "st": true
+    },
+    "enable": {
+     "k": "metodo",
+     "st": true
+    },
+    "getById": {
+     "k": "metodo",
+     "st": true
+    },
+    "getScrollFunc": {
+     "k": "metodo",
+     "st": true
+    },
+    "isInViewport": {
+     "k": "metodo",
+     "st": true
+    },
+    "isScrolling": {
+     "k": "metodo",
+     "st": true
+    },
+    "killAll": {
+     "k": "metodo",
+     "st": true
+    },
+    "matchMedia": {
+     "k": "metodo",
+     "st": true
+    },
+    "maxScroll": {
+     "k": "metodo",
+     "st": true
+    },
+    "normalizeScroll": {
+     "k": "metodo",
+     "st": true
+    },
+    "observe": {
+     "k": "metodo",
+     "st": true
+    },
+    "positionInViewport": {
+     "k": "metodo",
+     "st": true
+    },
+    "refresh": {
+     "k": "metodo",
+     "st": true
+    },
+    "register": {
+     "k": "metodo",
+     "st": true
+    },
+    "removeEventListener": {
+     "k": "metodo",
+     "st": true
+    },
+    "saveStyles": {
+     "k": "metodo",
+     "st": true
+    },
+    "scrollerProxy": {
+     "k": "metodo",
+     "st": true
+    },
+    "snapDirectional": {
+     "k": "metodo",
+     "st": true
+    },
+    "sort": {
+     "k": "metodo",
+     "st": true
+    },
+    "update": {
+     "k": "metodo",
+     "st": true
+    },
+    "endAnimation": {
+     "k": "metodo",
+     "st": false
+    },
+    "getTween": {
+     "k": "metodo",
+     "st": false
+    },
+    "getTrailing": {
+     "k": "metodo",
+     "st": false
+    },
+    "getVelocity": {
+     "k": "metodo",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "labelToScroll": {
+     "k": "metodo",
+     "st": false
+    },
+    "next": {
+     "k": "metodo",
+     "st": false
+    },
+    "previous": {
+     "k": "metodo",
+     "st": false
+    },
+    "scroll": {
+     "k": "metodo",
+     "st": false
+    },
+    "tweenTo": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.BatchVars": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "interval": {
+     "k": "prop",
+     "st": false
+    },
+    "batchMax": {
+     "k": "prop",
+     "st": false
+    },
+    "anticipatePin": {
+     "k": "prop",
+     "st": false
+    },
+    "end": {
+     "k": "prop",
+     "st": false
+    },
+    "fastScrollEnd": {
+     "k": "prop",
+     "st": false
+    },
+    "horizontal": {
+     "k": "prop",
+     "st": false
+    },
+    "once": {
+     "k": "prop",
+     "st": false
+    },
+    "onEnter": {
+     "k": "prop",
+     "st": false
+    },
+    "onEnterBack": {
+     "k": "prop",
+     "st": false
+    },
+    "onLeave": {
+     "k": "prop",
+     "st": false
+    },
+    "onLeaveBack": {
+     "k": "prop",
+     "st": false
+    },
+    "onRefresh": {
+     "k": "prop",
+     "st": false
+    },
+    "onRefreshInit": {
+     "k": "prop",
+     "st": false
+    },
+    "onUpdate": {
+     "k": "prop",
+     "st": false
+    },
+    "onToggle": {
+     "k": "prop",
+     "st": false
+    },
+    "pin": {
+     "k": "prop",
+     "st": false
+    },
+    "pinReparent": {
+     "k": "prop",
+     "st": false
+    },
+    "pinSpacing": {
+     "k": "prop",
+     "st": false
+    },
+    "pinSpacer": {
+     "k": "prop",
+     "st": false
+    },
+    "pinType": {
+     "k": "prop",
+     "st": false
+    },
+    "preventOverlaps": {
+     "k": "prop",
+     "st": false
+    },
+    "scroller": {
+     "k": "prop",
+     "st": false
+    },
+    "start": {
+     "k": "prop",
+     "st": false
+    },
+    "toggleClass": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.ConfigVars": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "limitCallbacks": {
+     "k": "prop",
+     "st": false
+    },
+    "syncInterval": {
+     "k": "prop",
+     "st": false
+    },
+    "autoRefreshEvents": {
+     "k": "prop",
+     "st": false
+    },
+    "ignoreMobileResize": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.MarkersVars": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "endColor": {
+     "k": "prop",
+     "st": false
+    },
+    "fontSize": {
+     "k": "prop",
+     "st": false
+    },
+    "fontWeight": {
+     "k": "prop",
+     "st": false
+    },
+    "indent": {
+     "k": "prop",
+     "st": false
+    },
+    "startColor": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.NormalizeVars": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "momentum": {
+     "k": "prop",
+     "st": false
+    },
+    "content": {
+     "k": "prop",
+     "st": false
+    },
+    "allowNestedScroll": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.RangeObject": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "min": {
+     "k": "prop",
+     "st": false
+    },
+    "max": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.RectObj": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "top": {
+     "k": "prop",
+     "st": false
+    },
+    "left": {
+     "k": "prop",
+     "st": false
+    },
+    "width": {
+     "k": "prop",
+     "st": false
+    },
+    "height": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.ScrollerProxyVars": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "scrollTop": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollLeft": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollHeight": {
+     "k": "prop",
+     "st": false
+    },
+    "fixedMarkers": {
+     "k": "prop",
+     "st": false
+    },
+    "getBoundingClientRect": {
+     "k": "prop",
+     "st": false
+    },
+    "pinType": {
+     "k": "prop",
+     "st": false
+    },
+    "content": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.SnapVars": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "delay": {
+     "k": "prop",
+     "st": false
+    },
+    "duration": {
+     "k": "prop",
+     "st": false
+    },
+    "inertia": {
+     "k": "prop",
+     "st": false
+    },
+    "ease": {
+     "k": "prop",
+     "st": false
+    },
+    "snapTo": {
+     "k": "prop",
+     "st": false
+    },
+    "directional": {
+     "k": "prop",
+     "st": false
+    },
+    "onInterrupt": {
+     "k": "prop",
+     "st": false
+    },
+    "onStart": {
+     "k": "prop",
+     "st": false
+    },
+    "onComplete": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.StaticVars": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "animation": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.ToggleClassVars": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "className": {
+     "k": "prop",
+     "st": false
+    },
+    "targets": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "ScrollTrigger.Vars": {
+   "tipo": "interface",
+   "archivo": "scroll-trigger.d.ts",
+   "miembros": {
+    "anticipatePin": {
+     "k": "prop",
+     "st": false
+    },
+    "containerAnimation": {
+     "k": "prop",
+     "st": false
+    },
+    "end": {
+     "k": "prop",
+     "st": false
+    },
+    "endTrigger": {
+     "k": "prop",
+     "st": false
+    },
+    "fastScrollEnd": {
+     "k": "prop",
+     "st": false
+    },
+    "horizontal": {
+     "k": "prop",
+     "st": false
+    },
+    "id": {
+     "k": "prop",
+     "st": false
+    },
+    "immediateRender": {
+     "k": "prop",
+     "st": false
+    },
+    "invalidateOnRefresh": {
+     "k": "prop",
+     "st": false
+    },
+    "markers": {
+     "k": "prop",
+     "st": false
+    },
+    "once": {
+     "k": "prop",
+     "st": false
+    },
+    "onEnter": {
+     "k": "prop",
+     "st": false
+    },
+    "onEnterBack": {
+     "k": "prop",
+     "st": false
+    },
+    "onKill": {
+     "k": "prop",
+     "st": false
+    },
+    "onLeave": {
+     "k": "prop",
+     "st": false
+    },
+    "onLeaveBack": {
+     "k": "prop",
+     "st": false
+    },
+    "onRefresh": {
+     "k": "prop",
+     "st": false
+    },
+    "onRefreshInit": {
+     "k": "prop",
+     "st": false
+    },
+    "onSnapComplete": {
+     "k": "prop",
+     "st": false
+    },
+    "onScrubComplete": {
+     "k": "prop",
+     "st": false
+    },
+    "onUpdate": {
+     "k": "prop",
+     "st": false
+    },
+    "onToggle": {
+     "k": "prop",
+     "st": false
+    },
+    "pin": {
+     "k": "prop",
+     "st": false
+    },
+    "pinnedContainer": {
+     "k": "prop",
+     "st": false
+    },
+    "pinReparent": {
+     "k": "prop",
+     "st": false
+    },
+    "pinSpacing": {
+     "k": "prop",
+     "st": false
+    },
+    "pinSpacer": {
+     "k": "prop",
+     "st": false
+    },
+    "pinType": {
+     "k": "prop",
+     "st": false
+    },
+    "preventOverlaps": {
+     "k": "prop",
+     "st": false
+    },
+    "refreshPriority": {
+     "k": "prop",
+     "st": false
+    },
+    "scroller": {
+     "k": "prop",
+     "st": false
+    },
+    "scrub": {
+     "k": "prop",
+     "st": false
+    },
+    "snap": {
+     "k": "prop",
+     "st": false
+    },
+    "start": {
+     "k": "prop",
+     "st": false
+    },
+    "toggleActions": {
+     "k": "prop",
+     "st": false
+    },
+    "toggleClass": {
+     "k": "prop",
+     "st": false
+    },
+    "trigger": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "SplitText": {
+   "tipo": "class",
+   "archivo": "split-text.d.ts",
+   "miembros": {
+    "chars": {
+     "k": "prop",
+     "st": false
+    },
+    "lines": {
+     "k": "prop",
+     "st": false
+    },
+    "words": {
+     "k": "prop",
+     "st": false
+    },
+    "masks": {
+     "k": "prop",
+     "st": false
+    },
+    "elements": {
+     "k": "prop",
+     "st": false
+    },
+    "isSplit": {
+     "k": "prop",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "revert": {
+     "k": "metodo",
+     "st": false
+    },
+    "split": {
+     "k": "metodo",
+     "st": false
+    },
+    "create": {
+     "k": "metodo",
+     "st": true
+    }
+   }
+  },
+  "SplitText.Vars": {
+   "tipo": "interface",
+   "archivo": "split-text.d.ts",
+   "miembros": {
+    "type": {
+     "k": "prop",
+     "st": false
+    },
+    "mask": {
+     "k": "prop",
+     "st": false
+    },
+    "wordDelimiter": {
+     "k": "prop",
+     "st": false
+    },
+    "linesClass": {
+     "k": "prop",
+     "st": false
+    },
+    "wordsClass": {
+     "k": "prop",
+     "st": false
+    },
+    "charsClass": {
+     "k": "prop",
+     "st": false
+    },
+    "aria": {
+     "k": "prop",
+     "st": false
+    },
+    "tag": {
+     "k": "prop",
+     "st": false
+    },
+    "propIndex": {
+     "k": "prop",
+     "st": false
+    },
+    "deepSlice": {
+     "k": "prop",
+     "st": false
+    },
+    "smartWrap": {
+     "k": "prop",
+     "st": false
+    },
+    "specialChars": {
+     "k": "prop",
+     "st": false
+    },
+    "reduceWhiteSpace": {
+     "k": "prop",
+     "st": false
+    },
+    "autoSplit": {
+     "k": "prop",
+     "st": false
+    },
+    "ignore": {
+     "k": "prop",
+     "st": false
+    },
+    "prepareText": {
+     "k": "prop",
+     "st": false
+    },
+    "onSplit": {
+     "k": "prop",
+     "st": false
+    },
+    "onRevert": {
+     "k": "prop",
+     "st": false
+    },
+    "overwrite": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "SplitText.WordDelimiterConfig": {
+   "tipo": "interface",
+   "archivo": "split-text.d.ts",
+   "miembros": {
+    "delimiter": {
+     "k": "prop",
+     "st": false
+    },
+    "replaceWith": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "TextPlugin.Vars": {
+   "tipo": "interface",
+   "archivo": "text-plugin.d.ts",
+   "miembros": {
+    "value": {
+     "k": "prop",
+     "st": false
+    },
+    "type": {
+     "k": "prop",
+     "st": false
+    },
+    "rtl": {
+     "k": "prop",
+     "st": false
+    },
+    "speed": {
+     "k": "prop",
+     "st": false
+    },
+    "delimiter": {
+     "k": "prop",
+     "st": false
+    },
+    "padSpace": {
+     "k": "prop",
+     "st": false
+    },
+    "newClass": {
+     "k": "prop",
+     "st": false
+    },
+    "oldClass": {
+     "k": "prop",
+     "st": false
+    },
+    "preserveSpaces": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "Timeline": {
+   "tipo": "class",
+   "archivo": "timeline.d.ts",
+   "miembros": {
+    "autoRemoveChildren": {
+     "k": "prop",
+     "st": false
+    },
+    "labels": {
+     "k": "prop",
+     "st": false
+    },
+    "smoothChildTiming": {
+     "k": "prop",
+     "st": false
+    },
+    "vars": {
+     "k": "prop",
+     "st": false
+    },
+    "updateRoot": {
+     "k": "metodo",
+     "st": true
+    },
+    "add": {
+     "k": "metodo",
+     "st": false
+    },
+    "addLabel": {
+     "k": "metodo",
+     "st": false
+    },
+    "addPause": {
+     "k": "metodo",
+     "st": false
+    },
+    "call": {
+     "k": "metodo",
+     "st": false
+    },
+    "clear": {
+     "k": "metodo",
+     "st": false
+    },
+    "currentLabel": {
+     "k": "metodo",
+     "st": false
+    },
+    "from": {
+     "k": "metodo",
+     "st": false
+    },
+    "fromTo": {
+     "k": "metodo",
+     "st": false
+    },
+    "getById": {
+     "k": "metodo",
+     "st": false
+    },
+    "getChildren": {
+     "k": "metodo",
+     "st": false
+    },
+    "getTweensOf": {
+     "k": "metodo",
+     "st": false
+    },
+    "nextLabel": {
+     "k": "metodo",
+     "st": false
+    },
+    "previousLabel": {
+     "k": "metodo",
+     "st": false
+    },
+    "recent": {
+     "k": "metodo",
+     "st": false
+    },
+    "remove": {
+     "k": "metodo",
+     "st": false
+    },
+    "removeLabel": {
+     "k": "metodo",
+     "st": false
+    },
+    "removePause": {
+     "k": "metodo",
+     "st": false
+    },
+    "set": {
+     "k": "metodo",
+     "st": false
+    },
+    "shiftChildren": {
+     "k": "metodo",
+     "st": false
+    },
+    "staggerFrom": {
+     "k": "metodo",
+     "st": false
+    },
+    "staggerFromTo": {
+     "k": "metodo",
+     "st": false
+    },
+    "staggerTo": {
+     "k": "metodo",
+     "st": false
+    },
+    "to": {
+     "k": "metodo",
+     "st": false
+    },
+    "tweenFromTo": {
+     "k": "metodo",
+     "st": false
+    },
+    "tweenTo": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "Tween": {
+   "tipo": "class",
+   "archivo": "tween.d.ts",
+   "miembros": {
+    "data": {
+     "k": "prop",
+     "st": false
+    },
+    "vars": {
+     "k": "prop",
+     "st": false
+    },
+    "ratio": {
+     "k": "prop",
+     "st": false
+    },
+    "to": {
+     "k": "metodo",
+     "st": true
+    },
+    "from": {
+     "k": "metodo",
+     "st": true
+    },
+    "fromTo": {
+     "k": "metodo",
+     "st": true
+    },
+    "set": {
+     "k": "metodo",
+     "st": true
+    },
+    "staggerFrom": {
+     "k": "metodo",
+     "st": true
+    },
+    "staggerFromTo": {
+     "k": "metodo",
+     "st": true
+    },
+    "staggerTo": {
+     "k": "metodo",
+     "st": true
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "resetTo": {
+     "k": "metodo",
+     "st": false
+    },
+    "targets": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap": {
+   "tipo": "namespace",
+   "archivo": "gsap-core.d.ts",
+   "miembros": {
+    "effects": {
+     "k": "const",
+     "st": true
+    },
+    "globalTimeline": {
+     "k": "const",
+     "st": true
+    },
+    "ticker": {
+     "k": "const",
+     "st": true
+    },
+    "version": {
+     "k": "const",
+     "st": true
+    },
+    "config": {
+     "k": "funcion",
+     "st": true
+    },
+    "context": {
+     "k": "funcion",
+     "st": true
+    },
+    "defaults": {
+     "k": "funcion",
+     "st": true
+    },
+    "delayedCall": {
+     "k": "funcion",
+     "st": true
+    },
+    "exportRoot": {
+     "k": "funcion",
+     "st": true
+    },
+    "from": {
+     "k": "funcion",
+     "st": true
+    },
+    "fromTo": {
+     "k": "funcion",
+     "st": true
+    },
+    "getById": {
+     "k": "funcion",
+     "st": true
+    },
+    "getProperty": {
+     "k": "funcion",
+     "st": true
+    },
+    "getTweensOf": {
+     "k": "funcion",
+     "st": true
+    },
+    "install": {
+     "k": "funcion",
+     "st": true
+    },
+    "isTweening": {
+     "k": "funcion",
+     "st": true
+    },
+    "killTweensOf": {
+     "k": "funcion",
+     "st": true
+    },
+    "matchMedia": {
+     "k": "funcion",
+     "st": true
+    },
+    "matchMediaRefresh": {
+     "k": "funcion",
+     "st": true
+    },
+    "parseEase": {
+     "k": "funcion",
+     "st": true
+    },
+    "quickSetter": {
+     "k": "funcion",
+     "st": true
+    },
+    "quickTo": {
+     "k": "funcion",
+     "st": true
+    },
+    "registerEase": {
+     "k": "funcion",
+     "st": true
+    },
+    "registerEffect": {
+     "k": "funcion",
+     "st": true
+    },
+    "registerPlugin": {
+     "k": "funcion",
+     "st": true
+    },
+    "set": {
+     "k": "funcion",
+     "st": true
+    },
+    "timeline": {
+     "k": "funcion",
+     "st": true
+    },
+    "to": {
+     "k": "funcion",
+     "st": true
+    },
+    "updateRoot": {
+     "k": "funcion",
+     "st": true
+    }
+   }
+  },
+  "gsap-trial/MotionPathPlugin": {
+   "tipo": "namespace",
+   "archivo": "motion-path-plugin.d.ts",
+   "miembros": {
+    "MotionPathPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap.AnimationVars": {
+   "tipo": "interface",
+   "archivo": "gsap-core.d.ts",
+   "miembros": {
+    "data": {
+     "k": "prop",
+     "st": false
+    },
+    "id": {
+     "k": "prop",
+     "st": false
+    },
+    "inherit": {
+     "k": "prop",
+     "st": false
+    },
+    "paused": {
+     "k": "prop",
+     "st": false
+    },
+    "repeat": {
+     "k": "prop",
+     "st": false
+    },
+    "repeatDelay": {
+     "k": "prop",
+     "st": false
+    },
+    "repeatRefresh": {
+     "k": "prop",
+     "st": false
+    },
+    "reversed": {
+     "k": "prop",
+     "st": false
+    },
+    "yoyo": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollTrigger": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.Back": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "easeIn": {
+     "k": "prop",
+     "st": false
+    },
+    "easeOut": {
+     "k": "prop",
+     "st": false
+    },
+    "easeInOut": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.BackConfig": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "config": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.CSSProperties": {
+   "tipo": "interface",
+   "archivo": "css-plugin.d.ts",
+   "miembros": {
+    "alpha": {
+     "k": "prop",
+     "st": false
+    },
+    "autoAlpha": {
+     "k": "prop",
+     "st": false
+    },
+    "rotate": {
+     "k": "prop",
+     "st": false
+    },
+    "rotateX": {
+     "k": "prop",
+     "st": false
+    },
+    "rotateY": {
+     "k": "prop",
+     "st": false
+    },
+    "rotateZ": {
+     "k": "prop",
+     "st": false
+    },
+    "rotation": {
+     "k": "prop",
+     "st": false
+    },
+    "rotationX": {
+     "k": "prop",
+     "st": false
+    },
+    "rotationY": {
+     "k": "prop",
+     "st": false
+    },
+    "rotationZ": {
+     "k": "prop",
+     "st": false
+    },
+    "scale": {
+     "k": "prop",
+     "st": false
+    },
+    "scaleX": {
+     "k": "prop",
+     "st": false
+    },
+    "scaleY": {
+     "k": "prop",
+     "st": false
+    },
+    "skew": {
+     "k": "prop",
+     "st": false
+    },
+    "skewX": {
+     "k": "prop",
+     "st": false
+    },
+    "skewY": {
+     "k": "prop",
+     "st": false
+    },
+    "smoothOrigin": {
+     "k": "prop",
+     "st": false
+    },
+    "svgOrigin": {
+     "k": "prop",
+     "st": false
+    },
+    "translateX": {
+     "k": "prop",
+     "st": false
+    },
+    "translateY": {
+     "k": "prop",
+     "st": false
+    },
+    "translateZ": {
+     "k": "prop",
+     "st": false
+    },
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "xPercent": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    },
+    "yPercent": {
+     "k": "prop",
+     "st": false
+    },
+    "z": {
+     "k": "prop",
+     "st": false
+    },
+    "alignContent": {
+     "k": "prop",
+     "st": false
+    },
+    "alignItems": {
+     "k": "prop",
+     "st": false
+    },
+    "alignSelf": {
+     "k": "prop",
+     "st": false
+    },
+    "alignmentBaseline": {
+     "k": "prop",
+     "st": false
+    },
+    "animation": {
+     "k": "prop",
+     "st": false
+    },
+    "animationDelay": {
+     "k": "prop",
+     "st": false
+    },
+    "animationDirection": {
+     "k": "prop",
+     "st": false
+    },
+    "animationDuration": {
+     "k": "prop",
+     "st": false
+    },
+    "animationFillMode": {
+     "k": "prop",
+     "st": false
+    },
+    "animationIterationCount": {
+     "k": "prop",
+     "st": false
+    },
+    "animationName": {
+     "k": "prop",
+     "st": false
+    },
+    "animationPlayState": {
+     "k": "prop",
+     "st": false
+    },
+    "animationTimingFunction": {
+     "k": "prop",
+     "st": false
+    },
+    "backfaceVisibility": {
+     "k": "prop",
+     "st": false
+    },
+    "background": {
+     "k": "prop",
+     "st": false
+    },
+    "backgroundAttachment": {
+     "k": "prop",
+     "st": false
+    },
+    "backgroundClip": {
+     "k": "prop",
+     "st": false
+    },
+    "backgroundColor": {
+     "k": "prop",
+     "st": false
+    },
+    "backgroundImage": {
+     "k": "prop",
+     "st": false
+    },
+    "backgroundOrigin": {
+     "k": "prop",
+     "st": false
+    },
+    "backgroundPosition": {
+     "k": "prop",
+     "st": false
+    },
+    "backgroundPositionX": {
+     "k": "prop",
+     "st": false
+    },
+    "backgroundPositionY": {
+     "k": "prop",
+     "st": false
+    },
+    "backgroundRepeat": {
+     "k": "prop",
+     "st": false
+    },
+    "backgroundSize": {
+     "k": "prop",
+     "st": false
+    },
+    "baselineShift": {
+     "k": "prop",
+     "st": false
+    },
+    "border": {
+     "k": "prop",
+     "st": false
+    },
+    "borderBottom": {
+     "k": "prop",
+     "st": false
+    },
+    "borderBottomColor": {
+     "k": "prop",
+     "st": false
+    },
+    "borderBottomLeftRadius": {
+     "k": "prop",
+     "st": false
+    },
+    "borderBottomRightRadius": {
+     "k": "prop",
+     "st": false
+    },
+    "borderBottomStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "borderBottomWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "borderCollapse": {
+     "k": "prop",
+     "st": false
+    },
+    "borderColor": {
+     "k": "prop",
+     "st": false
+    },
+    "borderImage": {
+     "k": "prop",
+     "st": false
+    },
+    "borderImageOutset": {
+     "k": "prop",
+     "st": false
+    },
+    "borderImageRepeat": {
+     "k": "prop",
+     "st": false
+    },
+    "borderImageSlice": {
+     "k": "prop",
+     "st": false
+    },
+    "borderImageSource": {
+     "k": "prop",
+     "st": false
+    },
+    "borderImageWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "borderLeft": {
+     "k": "prop",
+     "st": false
+    },
+    "borderLeftColor": {
+     "k": "prop",
+     "st": false
+    },
+    "borderLeftStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "borderLeftWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "borderRadius": {
+     "k": "prop",
+     "st": false
+    },
+    "borderRight": {
+     "k": "prop",
+     "st": false
+    },
+    "borderRightColor": {
+     "k": "prop",
+     "st": false
+    },
+    "borderRightStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "borderRightWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "borderSpacing": {
+     "k": "prop",
+     "st": false
+    },
+    "borderStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "borderTop": {
+     "k": "prop",
+     "st": false
+    },
+    "borderTopColor": {
+     "k": "prop",
+     "st": false
+    },
+    "borderTopLeftRadius": {
+     "k": "prop",
+     "st": false
+    },
+    "borderTopRightRadius": {
+     "k": "prop",
+     "st": false
+    },
+    "borderTopStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "borderTopWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "borderWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "bottom": {
+     "k": "prop",
+     "st": false
+    },
+    "boxShadow": {
+     "k": "prop",
+     "st": false
+    },
+    "boxSizing": {
+     "k": "prop",
+     "st": false
+    },
+    "breakAfter": {
+     "k": "prop",
+     "st": false
+    },
+    "breakBefore": {
+     "k": "prop",
+     "st": false
+    },
+    "breakInside": {
+     "k": "prop",
+     "st": false
+    },
+    "captionSide": {
+     "k": "prop",
+     "st": false
+    },
+    "caretColor": {
+     "k": "prop",
+     "st": false
+    },
+    "clear": {
+     "k": "prop",
+     "st": false
+    },
+    "clip": {
+     "k": "prop",
+     "st": false
+    },
+    "clipPath": {
+     "k": "prop",
+     "st": false
+    },
+    "clipRule": {
+     "k": "prop",
+     "st": false
+    },
+    "color": {
+     "k": "prop",
+     "st": false
+    },
+    "colorInterpolationFilters": {
+     "k": "prop",
+     "st": false
+    },
+    "columnCount": {
+     "k": "prop",
+     "st": false
+    },
+    "columnFill": {
+     "k": "prop",
+     "st": false
+    },
+    "columnGap": {
+     "k": "prop",
+     "st": false
+    },
+    "columnRule": {
+     "k": "prop",
+     "st": false
+    },
+    "columnRuleColor": {
+     "k": "prop",
+     "st": false
+    },
+    "columnRuleStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "columnRuleWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "columnSpan": {
+     "k": "prop",
+     "st": false
+    },
+    "columnWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "columns": {
+     "k": "prop",
+     "st": false
+    },
+    "content": {
+     "k": "prop",
+     "st": false
+    },
+    "counterIncrement": {
+     "k": "prop",
+     "st": false
+    },
+    "counterReset": {
+     "k": "prop",
+     "st": false
+    },
+    "cssFloat": {
+     "k": "prop",
+     "st": false
+    },
+    "cssText": {
+     "k": "prop",
+     "st": false
+    },
+    "cursor": {
+     "k": "prop",
+     "st": false
+    },
+    "direction": {
+     "k": "prop",
+     "st": false
+    },
+    "display": {
+     "k": "prop",
+     "st": false
+    },
+    "dominantBaseline": {
+     "k": "prop",
+     "st": false
+    },
+    "emptyCells": {
+     "k": "prop",
+     "st": false
+    },
+    "enableBackground": {
+     "k": "prop",
+     "st": false
+    },
+    "fill": {
+     "k": "prop",
+     "st": false
+    },
+    "fillOpacity": {
+     "k": "prop",
+     "st": false
+    },
+    "fillRule": {
+     "k": "prop",
+     "st": false
+    },
+    "filter": {
+     "k": "prop",
+     "st": false
+    },
+    "flex": {
+     "k": "prop",
+     "st": false
+    },
+    "flexBasis": {
+     "k": "prop",
+     "st": false
+    },
+    "flexDirection": {
+     "k": "prop",
+     "st": false
+    },
+    "flexFlow": {
+     "k": "prop",
+     "st": false
+    },
+    "flexGrow": {
+     "k": "prop",
+     "st": false
+    },
+    "flexShrink": {
+     "k": "prop",
+     "st": false
+    },
+    "flexWrap": {
+     "k": "prop",
+     "st": false
+    },
+    "floodColor": {
+     "k": "prop",
+     "st": false
+    },
+    "floodOpacity": {
+     "k": "prop",
+     "st": false
+    },
+    "font": {
+     "k": "prop",
+     "st": false
+    },
+    "fontFamily": {
+     "k": "prop",
+     "st": false
+    },
+    "fontFeatureSettings": {
+     "k": "prop",
+     "st": false
+    },
+    "fontKerning": {
+     "k": "prop",
+     "st": false
+    },
+    "fontSize": {
+     "k": "prop",
+     "st": false
+    },
+    "fontSizeAdjust": {
+     "k": "prop",
+     "st": false
+    },
+    "fontStretch": {
+     "k": "prop",
+     "st": false
+    },
+    "fontStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "fontSynthesis": {
+     "k": "prop",
+     "st": false
+    },
+    "fontVariant": {
+     "k": "prop",
+     "st": false
+    },
+    "fontVariantCaps": {
+     "k": "prop",
+     "st": false
+    },
+    "fontVariantEastAsian": {
+     "k": "prop",
+     "st": false
+    },
+    "fontVariantLigatures": {
+     "k": "prop",
+     "st": false
+    },
+    "fontVariantNumeric": {
+     "k": "prop",
+     "st": false
+    },
+    "fontVariantPosition": {
+     "k": "prop",
+     "st": false
+    },
+    "fontWeight": {
+     "k": "prop",
+     "st": false
+    },
+    "gap": {
+     "k": "prop",
+     "st": false
+    },
+    "glyphOrientationHorizontal": {
+     "k": "prop",
+     "st": false
+    },
+    "glyphOrientationVertical": {
+     "k": "prop",
+     "st": false
+    },
+    "grid": {
+     "k": "prop",
+     "st": false
+    },
+    "gridArea": {
+     "k": "prop",
+     "st": false
+    },
+    "gridAutoColumns": {
+     "k": "prop",
+     "st": false
+    },
+    "gridAutoFlow": {
+     "k": "prop",
+     "st": false
+    },
+    "gridAutoRows": {
+     "k": "prop",
+     "st": false
+    },
+    "gridColumn": {
+     "k": "prop",
+     "st": false
+    },
+    "gridColumnEnd": {
+     "k": "prop",
+     "st": false
+    },
+    "gridColumnGap": {
+     "k": "prop",
+     "st": false
+    },
+    "gridColumnStart": {
+     "k": "prop",
+     "st": false
+    },
+    "gridGap": {
+     "k": "prop",
+     "st": false
+    },
+    "gridRow": {
+     "k": "prop",
+     "st": false
+    },
+    "gridRowEnd": {
+     "k": "prop",
+     "st": false
+    },
+    "gridRowGap": {
+     "k": "prop",
+     "st": false
+    },
+    "gridRowStart": {
+     "k": "prop",
+     "st": false
+    },
+    "gridTemplate": {
+     "k": "prop",
+     "st": false
+    },
+    "gridTemplateAreas": {
+     "k": "prop",
+     "st": false
+    },
+    "gridTemplateColumns": {
+     "k": "prop",
+     "st": false
+    },
+    "gridTemplateRows": {
+     "k": "prop",
+     "st": false
+    },
+    "height": {
+     "k": "prop",
+     "st": false
+    },
+    "hyphens": {
+     "k": "prop",
+     "st": false
+    },
+    "imageOrientation": {
+     "k": "prop",
+     "st": false
+    },
+    "imageRendering": {
+     "k": "prop",
+     "st": false
+    },
+    "imeMode": {
+     "k": "prop",
+     "st": false
+    },
+    "justifyContent": {
+     "k": "prop",
+     "st": false
+    },
+    "justifyItems": {
+     "k": "prop",
+     "st": false
+    },
+    "justifySelf": {
+     "k": "prop",
+     "st": false
+    },
+    "kerning": {
+     "k": "prop",
+     "st": false
+    },
+    "layoutGrid": {
+     "k": "prop",
+     "st": false
+    },
+    "layoutGridChar": {
+     "k": "prop",
+     "st": false
+    },
+    "layoutGridLine": {
+     "k": "prop",
+     "st": false
+    },
+    "layoutGridMode": {
+     "k": "prop",
+     "st": false
+    },
+    "layoutGridType": {
+     "k": "prop",
+     "st": false
+    },
+    "left": {
+     "k": "prop",
+     "st": false
+    },
+    "letterSpacing": {
+     "k": "prop",
+     "st": false
+    },
+    "lightingColor": {
+     "k": "prop",
+     "st": false
+    },
+    "lineBreak": {
+     "k": "prop",
+     "st": false
+    },
+    "lineHeight": {
+     "k": "prop",
+     "st": false
+    },
+    "listStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "listStyleImage": {
+     "k": "prop",
+     "st": false
+    },
+    "listStylePosition": {
+     "k": "prop",
+     "st": false
+    },
+    "listStyleType": {
+     "k": "prop",
+     "st": false
+    },
+    "margin": {
+     "k": "prop",
+     "st": false
+    },
+    "marginBottom": {
+     "k": "prop",
+     "st": false
+    },
+    "marginLeft": {
+     "k": "prop",
+     "st": false
+    },
+    "marginRight": {
+     "k": "prop",
+     "st": false
+    },
+    "marginTop": {
+     "k": "prop",
+     "st": false
+    },
+    "marker": {
+     "k": "prop",
+     "st": false
+    },
+    "markerEnd": {
+     "k": "prop",
+     "st": false
+    },
+    "markerMid": {
+     "k": "prop",
+     "st": false
+    },
+    "markerStart": {
+     "k": "prop",
+     "st": false
+    },
+    "mask": {
+     "k": "prop",
+     "st": false
+    },
+    "maskComposite": {
+     "k": "prop",
+     "st": false
+    },
+    "maskImage": {
+     "k": "prop",
+     "st": false
+    },
+    "maskPosition": {
+     "k": "prop",
+     "st": false
+    },
+    "maskRepeat": {
+     "k": "prop",
+     "st": false
+    },
+    "maskSize": {
+     "k": "prop",
+     "st": false
+    },
+    "maskType": {
+     "k": "prop",
+     "st": false
+    },
+    "maxHeight": {
+     "k": "prop",
+     "st": false
+    },
+    "maxWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "minHeight": {
+     "k": "prop",
+     "st": false
+    },
+    "minWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "msContentZoomChaining": {
+     "k": "prop",
+     "st": false
+    },
+    "msContentZoomLimit": {
+     "k": "prop",
+     "st": false
+    },
+    "msContentZoomLimitMax": {
+     "k": "prop",
+     "st": false
+    },
+    "msContentZoomLimitMin": {
+     "k": "prop",
+     "st": false
+    },
+    "msContentZoomSnap": {
+     "k": "prop",
+     "st": false
+    },
+    "msContentZoomSnapPoints": {
+     "k": "prop",
+     "st": false
+    },
+    "msContentZoomSnapType": {
+     "k": "prop",
+     "st": false
+    },
+    "msContentZooming": {
+     "k": "prop",
+     "st": false
+    },
+    "msFlowFrom": {
+     "k": "prop",
+     "st": false
+    },
+    "msFlowInto": {
+     "k": "prop",
+     "st": false
+    },
+    "msFontFeatureSettings": {
+     "k": "prop",
+     "st": false
+    },
+    "msGridColumn": {
+     "k": "prop",
+     "st": false
+    },
+    "msGridColumnAlign": {
+     "k": "prop",
+     "st": false
+    },
+    "msGridColumnSpan": {
+     "k": "prop",
+     "st": false
+    },
+    "msGridColumns": {
+     "k": "prop",
+     "st": false
+    },
+    "msGridRow": {
+     "k": "prop",
+     "st": false
+    },
+    "msGridRowAlign": {
+     "k": "prop",
+     "st": false
+    },
+    "msGridRowSpan": {
+     "k": "prop",
+     "st": false
+    },
+    "msGridRows": {
+     "k": "prop",
+     "st": false
+    },
+    "msHighContrastAdjust": {
+     "k": "prop",
+     "st": false
+    },
+    "msHyphenateLimitChars": {
+     "k": "prop",
+     "st": false
+    },
+    "msHyphenateLimitLines": {
+     "k": "prop",
+     "st": false
+    },
+    "msHyphenateLimitZone": {
+     "k": "prop",
+     "st": false
+    },
+    "msHyphens": {
+     "k": "prop",
+     "st": false
+    },
+    "msImeAlign": {
+     "k": "prop",
+     "st": false
+    },
+    "msOverflowStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollChaining": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollLimit": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollLimitXMax": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollLimitXMin": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollLimitYMax": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollLimitYMin": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollRails": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollSnapPointsX": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollSnapPointsY": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollSnapType": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollSnapX": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollSnapY": {
+     "k": "prop",
+     "st": false
+    },
+    "msScrollTranslation": {
+     "k": "prop",
+     "st": false
+    },
+    "msTextCombineHorizontal": {
+     "k": "prop",
+     "st": false
+    },
+    "msTextSizeAdjust": {
+     "k": "prop",
+     "st": false
+    },
+    "msTouchAction": {
+     "k": "prop",
+     "st": false
+    },
+    "msTouchSelect": {
+     "k": "prop",
+     "st": false
+    },
+    "msUserSelect": {
+     "k": "prop",
+     "st": false
+    },
+    "msWrapFlow": {
+     "k": "prop",
+     "st": false
+    },
+    "msWrapMargin": {
+     "k": "prop",
+     "st": false
+    },
+    "msWrapThrough": {
+     "k": "prop",
+     "st": false
+    },
+    "objectFit": {
+     "k": "prop",
+     "st": false
+    },
+    "objectPosition": {
+     "k": "prop",
+     "st": false
+    },
+    "opacity": {
+     "k": "prop",
+     "st": false
+    },
+    "order": {
+     "k": "prop",
+     "st": false
+    },
+    "orphans": {
+     "k": "prop",
+     "st": false
+    },
+    "outline": {
+     "k": "prop",
+     "st": false
+    },
+    "outlineColor": {
+     "k": "prop",
+     "st": false
+    },
+    "outlineOffset": {
+     "k": "prop",
+     "st": false
+    },
+    "outlineStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "outlineWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "overflow": {
+     "k": "prop",
+     "st": false
+    },
+    "overflowAnchor": {
+     "k": "prop",
+     "st": false
+    },
+    "overflowWrap": {
+     "k": "prop",
+     "st": false
+    },
+    "overflowX": {
+     "k": "prop",
+     "st": false
+    },
+    "overflowY": {
+     "k": "prop",
+     "st": false
+    },
+    "padding": {
+     "k": "prop",
+     "st": false
+    },
+    "paddingBottom": {
+     "k": "prop",
+     "st": false
+    },
+    "paddingLeft": {
+     "k": "prop",
+     "st": false
+    },
+    "paddingRight": {
+     "k": "prop",
+     "st": false
+    },
+    "paddingTop": {
+     "k": "prop",
+     "st": false
+    },
+    "pageBreakAfter": {
+     "k": "prop",
+     "st": false
+    },
+    "pageBreakBefore": {
+     "k": "prop",
+     "st": false
+    },
+    "pageBreakInside": {
+     "k": "prop",
+     "st": false
+    },
+    "penAction": {
+     "k": "prop",
+     "st": false
+    },
+    "perspective": {
+     "k": "prop",
+     "st": false
+    },
+    "perspectiveOrigin": {
+     "k": "prop",
+     "st": false
+    },
+    "placeContent": {
+     "k": "prop",
+     "st": false
+    },
+    "placeItems": {
+     "k": "prop",
+     "st": false
+    },
+    "placeSelf": {
+     "k": "prop",
+     "st": false
+    },
+    "pointerEvents": {
+     "k": "prop",
+     "st": false
+    },
+    "position": {
+     "k": "prop",
+     "st": false
+    },
+    "quotes": {
+     "k": "prop",
+     "st": false
+    },
+    "resize": {
+     "k": "prop",
+     "st": false
+    },
+    "right": {
+     "k": "prop",
+     "st": false
+    },
+    "rowGap": {
+     "k": "prop",
+     "st": false
+    },
+    "rubyAlign": {
+     "k": "prop",
+     "st": false
+    },
+    "rubyOverhang": {
+     "k": "prop",
+     "st": false
+    },
+    "rubyPosition": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollBehavior": {
+     "k": "prop",
+     "st": false
+    },
+    "stopColor": {
+     "k": "prop",
+     "st": false
+    },
+    "stopOpacity": {
+     "k": "prop",
+     "st": false
+    },
+    "stroke": {
+     "k": "prop",
+     "st": false
+    },
+    "strokeDasharray": {
+     "k": "prop",
+     "st": false
+    },
+    "strokeDashoffset": {
+     "k": "prop",
+     "st": false
+    },
+    "strokeLinecap": {
+     "k": "prop",
+     "st": false
+    },
+    "strokeLinejoin": {
+     "k": "prop",
+     "st": false
+    },
+    "strokeMiterlimit": {
+     "k": "prop",
+     "st": false
+    },
+    "strokeOpacity": {
+     "k": "prop",
+     "st": false
+    },
+    "strokeWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "tabSize": {
+     "k": "prop",
+     "st": false
+    },
+    "tableLayout": {
+     "k": "prop",
+     "st": false
+    },
+    "textAlign": {
+     "k": "prop",
+     "st": false
+    },
+    "textAlignLast": {
+     "k": "prop",
+     "st": false
+    },
+    "textAnchor": {
+     "k": "prop",
+     "st": false
+    },
+    "textCombineUpright": {
+     "k": "prop",
+     "st": false
+    },
+    "textDecoration": {
+     "k": "prop",
+     "st": false
+    },
+    "textDecorationColor": {
+     "k": "prop",
+     "st": false
+    },
+    "textDecorationLine": {
+     "k": "prop",
+     "st": false
+    },
+    "textDecorationStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "textEmphasis": {
+     "k": "prop",
+     "st": false
+    },
+    "textEmphasisColor": {
+     "k": "prop",
+     "st": false
+    },
+    "textEmphasisPosition": {
+     "k": "prop",
+     "st": false
+    },
+    "textEmphasisStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "textIndent": {
+     "k": "prop",
+     "st": false
+    },
+    "textJustify": {
+     "k": "prop",
+     "st": false
+    },
+    "textKashida": {
+     "k": "prop",
+     "st": false
+    },
+    "textKashidaSpace": {
+     "k": "prop",
+     "st": false
+    },
+    "textOrientation": {
+     "k": "prop",
+     "st": false
+    },
+    "textOverflow": {
+     "k": "prop",
+     "st": false
+    },
+    "textShadow": {
+     "k": "prop",
+     "st": false
+    },
+    "textTransform": {
+     "k": "prop",
+     "st": false
+    },
+    "textUnderlinePosition": {
+     "k": "prop",
+     "st": false
+    },
+    "top": {
+     "k": "prop",
+     "st": false
+    },
+    "touchAction": {
+     "k": "prop",
+     "st": false
+    },
+    "transform": {
+     "k": "prop",
+     "st": false
+    },
+    "transformBox": {
+     "k": "prop",
+     "st": false
+    },
+    "transformOrigin": {
+     "k": "prop",
+     "st": false
+    },
+    "transformStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "transition": {
+     "k": "prop",
+     "st": false
+    },
+    "transitionDelay": {
+     "k": "prop",
+     "st": false
+    },
+    "transitionDuration": {
+     "k": "prop",
+     "st": false
+    },
+    "transitionProperty": {
+     "k": "prop",
+     "st": false
+    },
+    "transitionTimingFunction": {
+     "k": "prop",
+     "st": false
+    },
+    "translate": {
+     "k": "prop",
+     "st": false
+    },
+    "unicodeBidi": {
+     "k": "prop",
+     "st": false
+    },
+    "userSelect": {
+     "k": "prop",
+     "st": false
+    },
+    "verticalAlign": {
+     "k": "prop",
+     "st": false
+    },
+    "visibility": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAlignContent": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAlignItems": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAlignSelf": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAnimation": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAnimationDelay": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAnimationDirection": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAnimationDuration": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAnimationFillMode": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAnimationIterationCount": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAnimationName": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAnimationPlayState": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAnimationTimingFunction": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitAppearance": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBackfaceVisibility": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBackgroundClip": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBackgroundOrigin": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBackgroundSize": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBorderBottomLeftRadius": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBorderBottomRightRadius": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBorderImage": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBorderRadius": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBorderTopLeftRadius": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBorderTopRightRadius": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBoxAlign": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBoxDirection": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBoxFlex": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBoxOrdinalGroup": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBoxOrient": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBoxPack": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBoxShadow": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitBoxSizing": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnBreakAfter": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnBreakBefore": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnBreakInside": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnCount": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnGap": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnRule": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnRuleColor": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnRuleStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnRuleWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnSpan": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumnWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitColumns": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitFilter": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitFlex": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitFlexBasis": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitFlexDirection": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitFlexFlow": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitFlexGrow": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitFlexShrink": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitFlexWrap": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitJustifyContent": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitLineClamp": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMask": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskBoxImage": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskBoxImageOutset": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskBoxImageRepeat": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskBoxImageSlice": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskBoxImageSource": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskBoxImageWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskClip": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskComposite": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskImage": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskOrigin": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskPosition": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskRepeat": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitMaskSize": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitOrder": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitPerspective": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitPerspectiveOrigin": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTapHighlightColor": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTextFillColor": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTextSizeAdjust": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTextStroke": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTextStrokeColor": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTextStrokeWidth": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTransform": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTransformOrigin": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTransformStyle": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTransition": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTransitionDelay": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTransitionDuration": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTransitionProperty": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitTransitionTimingFunction": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitUserModify": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitUserSelect": {
+     "k": "prop",
+     "st": false
+    },
+    "webkitWritingMode": {
+     "k": "prop",
+     "st": false
+    },
+    "whiteSpace": {
+     "k": "prop",
+     "st": false
+    },
+    "widows": {
+     "k": "prop",
+     "st": false
+    },
+    "width": {
+     "k": "prop",
+     "st": false
+    },
+    "willChange": {
+     "k": "prop",
+     "st": false
+    },
+    "wordBreak": {
+     "k": "prop",
+     "st": false
+    },
+    "wordSpacing": {
+     "k": "prop",
+     "st": false
+    },
+    "wordWrap": {
+     "k": "prop",
+     "st": false
+    },
+    "writingMode": {
+     "k": "prop",
+     "st": false
+    },
+    "zIndex": {
+     "k": "prop",
+     "st": false
+    },
+    "zoom": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.CallbackVars": {
+   "tipo": "interface",
+   "archivo": "gsap-core.d.ts",
+   "miembros": {
+    "callbackScope": {
+     "k": "prop",
+     "st": false
+    },
+    "onComplete": {
+     "k": "prop",
+     "st": false
+    },
+    "onCompleteParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onRepeat": {
+     "k": "prop",
+     "st": false
+    },
+    "onRepeatParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onReverseComplete": {
+     "k": "prop",
+     "st": false
+    },
+    "onReverseCompleteParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onStart": {
+     "k": "prop",
+     "st": false
+    },
+    "onStartParams": {
+     "k": "prop",
+     "st": false
+    },
+    "onUpdate": {
+     "k": "prop",
+     "st": false
+    },
+    "onUpdateParams": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.Context": {
+   "tipo": "interface",
+   "archivo": "gsap-core.d.ts",
+   "miembros": {
+    "selector": {
+     "k": "prop",
+     "st": false
+    },
+    "isReverted": {
+     "k": "prop",
+     "st": false
+    },
+    "conditions": {
+     "k": "prop",
+     "st": false
+    },
+    "queries": {
+     "k": "prop",
+     "st": false
+    },
+    "add": {
+     "k": "metodo",
+     "st": false
+    },
+    "ignore": {
+     "k": "metodo",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "revert": {
+     "k": "metodo",
+     "st": false
+    },
+    "clear": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.Ease": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "easeIn": {
+     "k": "prop",
+     "st": false
+    },
+    "easeOut": {
+     "k": "prop",
+     "st": false
+    },
+    "easeInOut": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.EasePack": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "SlowMo": {
+     "k": "prop",
+     "st": false
+    },
+    "ExpoScaleEase": {
+     "k": "prop",
+     "st": false
+    },
+    "RoughEase": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.Elastic": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "easeIn": {
+     "k": "prop",
+     "st": false
+    },
+    "easeOut": {
+     "k": "prop",
+     "st": false
+    },
+    "easeInOut": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.ElasticConfig": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "config": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.ExpoScaleEase": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "config": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.GSAPConfig": {
+   "tipo": "interface",
+   "archivo": "gsap-core.d.ts",
+   "miembros": {
+    "autoKillThreshold": {
+     "k": "prop",
+     "st": false
+    },
+    "autoSleep": {
+     "k": "prop",
+     "st": false
+    },
+    "force3D": {
+     "k": "prop",
+     "st": false
+    },
+    "nullTargetWarn": {
+     "k": "prop",
+     "st": false
+    },
+    "resistance": {
+     "k": "prop",
+     "st": false
+    },
+    "stringFilter": {
+     "k": "prop",
+     "st": false
+    },
+    "unitFactors": {
+     "k": "prop",
+     "st": false
+    },
+    "units": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.InertiaDuration": {
+   "tipo": "interface",
+   "archivo": "inertia-plugin.d.ts",
+   "miembros": {
+    "min": {
+     "k": "prop",
+     "st": false
+    },
+    "max": {
+     "k": "prop",
+     "st": false
+    },
+    "overshoot": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.InertiaObject": {
+   "tipo": "interface",
+   "archivo": "inertia-plugin.d.ts",
+   "miembros": {
+    "min": {
+     "k": "prop",
+     "st": false
+    },
+    "max": {
+     "k": "prop",
+     "st": false
+    },
+    "end": {
+     "k": "prop",
+     "st": false
+    },
+    "velocity": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.Linear": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "easeNone": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.MatchMedia": {
+   "tipo": "interface",
+   "archivo": "gsap-core.d.ts",
+   "miembros": {
+    "contexts": {
+     "k": "prop",
+     "st": false
+    },
+    "add": {
+     "k": "metodo",
+     "st": false
+    },
+    "revert": {
+     "k": "metodo",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.Plugin": {
+   "tipo": "interface",
+   "archivo": "gsap-plugins.d.ts",
+   "miembros": {
+    "name": {
+     "k": "prop",
+     "st": false
+    },
+    "init": {
+     "k": "prop",
+     "st": false
+    },
+    "kill": {
+     "k": "prop",
+     "st": false
+    },
+    "render": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.PluginScope": {
+   "tipo": "interface",
+   "archivo": "gsap-plugins.d.ts",
+   "miembros": {
+    "_props": {
+     "k": "prop",
+     "st": false
+    },
+    "_pt": {
+     "k": "prop",
+     "st": false
+    },
+    "add": {
+     "k": "metodo",
+     "st": false
+    },
+    "name": {
+     "k": "prop",
+     "st": false
+    },
+    "init": {
+     "k": "prop",
+     "st": false
+    },
+    "kill": {
+     "k": "prop",
+     "st": false
+    },
+    "render": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.PluginStatic": {
+   "tipo": "interface",
+   "archivo": "gsap-plugins.d.ts",
+   "miembros": {
+    "targetTest": {
+     "k": "metodo",
+     "st": false
+    },
+    "get": {
+     "k": "metodo",
+     "st": false
+    },
+    "getSetter": {
+     "k": "metodo",
+     "st": false
+    },
+    "aliases": {
+     "k": "prop",
+     "st": false
+    },
+    "register": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.PropTween": {
+   "tipo": "interface",
+   "archivo": "gsap-plugins.d.ts",
+   "miembros": {
+    "_next": {
+     "k": "prop",
+     "st": false
+    },
+    "_prev": {
+     "k": "prop",
+     "st": false
+    },
+    "d": {
+     "k": "prop",
+     "st": false
+    },
+    "r": {
+     "k": "prop",
+     "st": false
+    },
+    "t": {
+     "k": "prop",
+     "st": false
+    },
+    "modifier": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.RoughEase": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "config": {
+     "k": "prop",
+     "st": false
+    },
+    "ease": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.RoughEaseEase": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "config": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.RoughEaseVars": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "clamp": {
+     "k": "prop",
+     "st": false
+    },
+    "points": {
+     "k": "prop",
+     "st": false
+    },
+    "randomize": {
+     "k": "prop",
+     "st": false
+    },
+    "strength": {
+     "k": "prop",
+     "st": false
+    },
+    "taper": {
+     "k": "prop",
+     "st": false
+    },
+    "template": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.SlowMo": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "config": {
+     "k": "prop",
+     "st": false
+    },
+    "ease": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.SlowMoEase": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "config": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.StaggerVars": {
+   "tipo": "interface",
+   "archivo": "gsap-core.d.ts",
+   "miembros": {
+    "repeat": {
+     "k": "prop",
+     "st": false
+    },
+    "repeatDelay": {
+     "k": "prop",
+     "st": false
+    },
+    "repeatRefresh": {
+     "k": "prop",
+     "st": false
+    },
+    "yoyo": {
+     "k": "prop",
+     "st": false
+    },
+    "yoyoEase": {
+     "k": "prop",
+     "st": false
+    },
+    "easeReverse": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.SteppedEase": {
+   "tipo": "interface",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "config": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.Ticker": {
+   "tipo": "interface",
+   "archivo": "gsap-core.d.ts",
+   "miembros": {
+    "add": {
+     "k": "metodo",
+     "st": false
+    },
+    "fps": {
+     "k": "metodo",
+     "st": false
+    },
+    "frame": {
+     "k": "prop",
+     "st": false
+    },
+    "lagSmoothing": {
+     "k": "metodo",
+     "st": false
+    },
+    "remove": {
+     "k": "metodo",
+     "st": false
+    },
+    "sleep": {
+     "k": "metodo",
+     "st": false
+    },
+    "tick": {
+     "k": "metodo",
+     "st": false
+    },
+    "time": {
+     "k": "prop",
+     "st": false
+    },
+    "deltaRatio": {
+     "k": "metodo",
+     "st": false
+    },
+    "wake": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.TimelineVars": {
+   "tipo": "interface",
+   "archivo": "gsap-core.d.ts",
+   "miembros": {
+    "autoRemoveChildren": {
+     "k": "prop",
+     "st": false
+    },
+    "defaults": {
+     "k": "prop",
+     "st": false
+    },
+    "delay": {
+     "k": "prop",
+     "st": false
+    },
+    "smoothChildTiming": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.TweenVars": {
+   "tipo": "interface",
+   "archivo": "css-plugin.d.ts",
+   "miembros": {
+    "css": {
+     "k": "prop",
+     "st": false
+    },
+    "cssRule": {
+     "k": "prop",
+     "st": false
+    },
+    "drawSVG": {
+     "k": "prop",
+     "st": false
+    },
+    "easel": {
+     "k": "prop",
+     "st": false
+    },
+    "delay": {
+     "k": "prop",
+     "st": false
+    },
+    "duration": {
+     "k": "prop",
+     "st": false
+    },
+    "ease": {
+     "k": "prop",
+     "st": false
+    },
+    "endArray": {
+     "k": "prop",
+     "st": false
+    },
+    "immediateRender": {
+     "k": "prop",
+     "st": false
+    },
+    "lazy": {
+     "k": "prop",
+     "st": false
+    },
+    "keyframes": {
+     "k": "prop",
+     "st": false
+    },
+    "onInterrupt": {
+     "k": "prop",
+     "st": false
+    },
+    "onInterruptParams": {
+     "k": "prop",
+     "st": false
+    },
+    "overwrite": {
+     "k": "prop",
+     "st": false
+    },
+    "runBackwards": {
+     "k": "prop",
+     "st": false
+    },
+    "stagger": {
+     "k": "prop",
+     "st": false
+    },
+    "startAt": {
+     "k": "prop",
+     "st": false
+    },
+    "yoyoEase": {
+     "k": "prop",
+     "st": false
+    },
+    "easeReverse": {
+     "k": "prop",
+     "st": false
+    },
+    "attr": {
+     "k": "prop",
+     "st": false
+    },
+    "modifiers": {
+     "k": "prop",
+     "st": false
+    },
+    "snap": {
+     "k": "prop",
+     "st": false
+    },
+    "inertia": {
+     "k": "prop",
+     "st": false
+    },
+    "morphSVG": {
+     "k": "prop",
+     "st": false
+    },
+    "motionPath": {
+     "k": "prop",
+     "st": false
+    },
+    "physics2D": {
+     "k": "prop",
+     "st": false
+    },
+    "physicsProps": {
+     "k": "prop",
+     "st": false
+    },
+    "pixi": {
+     "k": "prop",
+     "st": false
+    },
+    "scrambleText": {
+     "k": "prop",
+     "st": false
+    },
+    "scrollTo": {
+     "k": "prop",
+     "st": false
+    },
+    "text": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.VelocityTracker": {
+   "tipo": "interface",
+   "archivo": "utils/VelocityTracker.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    },
+    "register": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.VelocityTrackerInstance": {
+   "tipo": "interface",
+   "archivo": "utils/VelocityTracker.d.ts",
+   "miembros": {
+    "target": {
+     "k": "prop",
+     "st": false
+    },
+    "add": {
+     "k": "metodo",
+     "st": false
+    },
+    "kill": {
+     "k": "metodo",
+     "st": false
+    },
+    "remove": {
+     "k": "metodo",
+     "st": false
+    },
+    "getAll": {
+     "k": "metodo",
+     "st": false
+    },
+    "get": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.VelocityTrackerStatic": {
+   "tipo": "interface",
+   "archivo": "utils/VelocityTracker.d.ts",
+   "miembros": {
+    "getByTarget": {
+     "k": "metodo",
+     "st": false
+    },
+    "getVelocity": {
+     "k": "metodo",
+     "st": false
+    },
+    "isTracking": {
+     "k": "metodo",
+     "st": false
+    },
+    "track": {
+     "k": "metodo",
+     "st": false
+    },
+    "untrack": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins": {
+   "tipo": "namespace",
+   "archivo": "css-plugin.d.ts",
+   "miembros": {
+    "css": {
+     "k": "const",
+     "st": true
+    },
+    "cssRule": {
+     "k": "const",
+     "st": true
+    },
+    "drawSVG": {
+     "k": "const",
+     "st": true
+    },
+    "easel": {
+     "k": "const",
+     "st": true
+    },
+    "attr": {
+     "k": "const",
+     "st": true
+    },
+    "modifiers": {
+     "k": "const",
+     "st": true
+    },
+    "snap": {
+     "k": "const",
+     "st": true
+    },
+    "inertia": {
+     "k": "const",
+     "st": true
+    },
+    "morphSVG": {
+     "k": "const",
+     "st": true
+    },
+    "motionPath": {
+     "k": "const",
+     "st": true
+    },
+    "physics2D": {
+     "k": "const",
+     "st": true
+    },
+    "physicsProps": {
+     "k": "const",
+     "st": true
+    },
+    "pixi": {
+     "k": "const",
+     "st": true
+    },
+    "scrambleText": {
+     "k": "const",
+     "st": true
+    },
+    "text": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap.plugins.ArrayToRawPathObject": {
+   "tipo": "interface",
+   "archivo": "motion-path-plugin.d.ts",
+   "miembros": {
+    "curviness": {
+     "k": "prop",
+     "st": false
+    },
+    "relative": {
+     "k": "prop",
+     "st": false
+    },
+    "type": {
+     "k": "prop",
+     "st": false
+    },
+    "x": {
+     "k": "prop",
+     "st": false
+    },
+    "y": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.AttrPluginClass": {
+   "tipo": "interface",
+   "archivo": "gsap-plugins.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.CSSPluginClass": {
+   "tipo": "interface",
+   "archivo": "css-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.CSSRulePlugin": {
+   "tipo": "interface",
+   "archivo": "css-rule-plugin.d.ts",
+   "miembros": {
+    "getRule": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.CSSRulePluginClass": {
+   "tipo": "interface",
+   "archivo": "css-rule-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.DrawSVGPlugin": {
+   "tipo": "interface",
+   "archivo": "draw-svg-plugin.d.ts",
+   "miembros": {
+    "getLength": {
+     "k": "metodo",
+     "st": false
+    },
+    "getPosition": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.DrawSVGPluginClass": {
+   "tipo": "interface",
+   "archivo": "draw-svg-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.EaselPluginClass": {
+   "tipo": "interface",
+   "archivo": "easel-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.InertiaPlugin": {
+   "tipo": "interface",
+   "archivo": "inertia-plugin.d.ts",
+   "miembros": {
+    "getVelocity": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.InertiaPluginClass": {
+   "tipo": "interface",
+   "archivo": "inertia-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.ModifiersPluginClass": {
+   "tipo": "interface",
+   "archivo": "gsap-plugins.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.MorphSVGPlugin": {
+   "tipo": "interface",
+   "archivo": "morph-svg-plugin.d.ts",
+   "miembros": {
+    "defaultRender": {
+     "k": "prop",
+     "st": false
+    },
+    "defaultType": {
+     "k": "prop",
+     "st": false
+    },
+    "defaultUpdateTarget": {
+     "k": "prop",
+     "st": false
+    },
+    "convertToPath": {
+     "k": "metodo",
+     "st": false
+    },
+    "getRawPath": {
+     "k": "metodo",
+     "st": false
+    },
+    "normalizeStrings": {
+     "k": "metodo",
+     "st": false
+    },
+    "rawPathToString": {
+     "k": "metodo",
+     "st": false
+    },
+    "stringToRawPath": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.MorphSVGPluginClass": {
+   "tipo": "interface",
+   "archivo": "morph-svg-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.MorphSVGVars": {
+   "tipo": "interface",
+   "archivo": "morph-svg-plugin.d.ts",
+   "miembros": {
+    "shape": {
+     "k": "prop",
+     "st": false
+    },
+    "type": {
+     "k": "prop",
+     "st": false
+    },
+    "origin": {
+     "k": "prop",
+     "st": false
+    },
+    "shapeIndex": {
+     "k": "prop",
+     "st": false
+    },
+    "precompile": {
+     "k": "prop",
+     "st": false
+    },
+    "map": {
+     "k": "prop",
+     "st": false
+    },
+    "render": {
+     "k": "prop",
+     "st": false
+    },
+    "updateTarget": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.MotionPathPlugin": {
+   "tipo": "interface",
+   "archivo": "motion-path-plugin.d.ts",
+   "miembros": {
+    "arrayToRawPath": {
+     "k": "metodo",
+     "st": false
+    },
+    "cacheRawPathMeasurements": {
+     "k": "metodo",
+     "st": false
+    },
+    "convertCoordinates": {
+     "k": "metodo",
+     "st": false
+    },
+    "convertToPath": {
+     "k": "metodo",
+     "st": false
+    },
+    "getAlignMatrix": {
+     "k": "metodo",
+     "st": false
+    },
+    "getGlobalMatrix": {
+     "k": "metodo",
+     "st": false
+    },
+    "getPositionOnPath": {
+     "k": "metodo",
+     "st": false
+    },
+    "getRawPath": {
+     "k": "metodo",
+     "st": false
+    },
+    "getRelativePosition": {
+     "k": "metodo",
+     "st": false
+    },
+    "pointsToSegment": {
+     "k": "metodo",
+     "st": false
+    },
+    "rawPathToString": {
+     "k": "metodo",
+     "st": false
+    },
+    "sliceRawPath": {
+     "k": "metodo",
+     "st": false
+    },
+    "stringToRawPath": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.MotionPathPluginClass": {
+   "tipo": "interface",
+   "archivo": "motion-path-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.NormalizeVars": {
+   "tipo": "interface",
+   "archivo": "morph-svg-plugin.d.ts",
+   "miembros": {
+    "shapeIndex": {
+     "k": "prop",
+     "st": false
+    },
+    "map": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.PathSegment": {
+   "tipo": "interface",
+   "archivo": "gsap-plugins.d.ts",
+   "miembros": {
+    "closed": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.Physics2DPluginClass": {
+   "tipo": "interface",
+   "archivo": "physics-2d-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.PhysicsPropsPluginClass": {
+   "tipo": "interface",
+   "archivo": "physics-props-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.PixiPlugin": {
+   "tipo": "interface",
+   "archivo": "pixi-plugin.d.ts",
+   "miembros": {
+    "registerPIXI": {
+     "k": "metodo",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.PixiPluginClass": {
+   "tipo": "interface",
+   "archivo": "pixi-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.RawPath": {
+   "tipo": "interface",
+   "archivo": "gsap-plugins.d.ts",
+   "miembros": {
+    "totalPoints": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.ScrambleTextPluginClass": {
+   "tipo": "interface",
+   "archivo": "scramble-text-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.SnapPluginClass": {
+   "tipo": "interface",
+   "archivo": "gsap-plugins.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.TextPluginClass": {
+   "tipo": "interface",
+   "archivo": "text-plugin.d.ts",
+   "miembros": {
+    "new": {
+     "k": "metodo",
+     "st": false
+    },
+    "prototype": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.plugins.getRelativePositionObject": {
+   "tipo": "interface",
+   "archivo": "motion-path-plugin.d.ts",
+   "miembros": {
+    "angle": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.utils": {
+   "tipo": "namespace",
+   "archivo": "gsap-utils.d.ts",
+   "miembros": {
+    "checkPrefix": {
+     "k": "funcion",
+     "st": true
+    },
+    "clamp": {
+     "k": "funcion",
+     "st": true
+    },
+    "distribute": {
+     "k": "funcion",
+     "st": true
+    },
+    "getUnit": {
+     "k": "funcion",
+     "st": true
+    },
+    "interpolate": {
+     "k": "funcion",
+     "st": true
+    },
+    "mapRange": {
+     "k": "funcion",
+     "st": true
+    },
+    "normalize": {
+     "k": "funcion",
+     "st": true
+    },
+    "pipe": {
+     "k": "funcion",
+     "st": true
+    },
+    "random": {
+     "k": "funcion",
+     "st": true
+    },
+    "selector": {
+     "k": "funcion",
+     "st": true
+    },
+    "shuffle": {
+     "k": "funcion",
+     "st": true
+    },
+    "snap": {
+     "k": "funcion",
+     "st": true
+    },
+    "splitColor": {
+     "k": "funcion",
+     "st": true
+    },
+    "toArray": {
+     "k": "funcion",
+     "st": true
+    },
+    "unitize": {
+     "k": "funcion",
+     "st": true
+    },
+    "wrap": {
+     "k": "funcion",
+     "st": true
+    },
+    "wrapYoyo": {
+     "k": "funcion",
+     "st": true
+    }
+   }
+  },
+  "gsap.utils.DistributeConfig": {
+   "tipo": "interface",
+   "archivo": "gsap-utils.d.ts",
+   "miembros": {
+    "amount": {
+     "k": "prop",
+     "st": false
+    },
+    "axis": {
+     "k": "prop",
+     "st": false
+    },
+    "base": {
+     "k": "prop",
+     "st": false
+    },
+    "each": {
+     "k": "prop",
+     "st": false
+    },
+    "ease": {
+     "k": "prop",
+     "st": false
+    },
+    "from": {
+     "k": "prop",
+     "st": false
+    },
+    "grid": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.utils.SnapNumberConfig": {
+   "tipo": "interface",
+   "archivo": "gsap-utils.d.ts",
+   "miembros": {
+    "increment": {
+     "k": "prop",
+     "st": false
+    },
+    "values": {
+     "k": "prop",
+     "st": false
+    },
+    "radius": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap.utils.SnapPoint2DConfig": {
+   "tipo": "interface",
+   "archivo": "gsap-utils.d.ts",
+   "miembros": {
+    "values": {
+     "k": "prop",
+     "st": false
+    },
+    "radius": {
+     "k": "prop",
+     "st": false
+    }
+   }
+  },
+  "gsap/CSSPlugin": {
+   "tipo": "namespace",
+   "archivo": "css-plugin.d.ts",
+   "miembros": {
+    "CSSPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/CSSRulePlugin": {
+   "tipo": "namespace",
+   "archivo": "css-rule-plugin.d.ts",
+   "miembros": {
+    "CSSRulePlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/DrawSVGPlugin": {
+   "tipo": "namespace",
+   "archivo": "draw-svg-plugin.d.ts",
+   "miembros": {
+    "DrawSVGPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/EasePack": {
+   "tipo": "namespace",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "EasePack": {
+     "k": "const",
+     "st": true
+    },
+    "ExpoScaleEase": {
+     "k": "const",
+     "st": true
+    },
+    "SlowMo": {
+     "k": "const",
+     "st": true
+    },
+    "RoughEase": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/EaselPlugin": {
+   "tipo": "namespace",
+   "archivo": "easel-plugin.d.ts",
+   "miembros": {
+    "EaselPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/InertiaPlugin": {
+   "tipo": "namespace",
+   "archivo": "inertia-plugin.d.ts",
+   "miembros": {
+    "InertiaPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/MorphSVGPlugin": {
+   "tipo": "namespace",
+   "archivo": "morph-svg-plugin.d.ts",
+   "miembros": {
+    "MorphSVGPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/MotionPathPlugin": {
+   "tipo": "namespace",
+   "archivo": "motion-path-plugin.d.ts",
+   "miembros": {
+    "MotionPathPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/Physics2DPlugin": {
+   "tipo": "namespace",
+   "archivo": "physics-2d-plugin.d.ts",
+   "miembros": {
+    "Physics2DPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/PhysicsPropsPlugin": {
+   "tipo": "namespace",
+   "archivo": "physics-props-plugin.d.ts",
+   "miembros": {
+    "PhysicsPropsPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/PixiPlugin": {
+   "tipo": "namespace",
+   "archivo": "pixi-plugin.d.ts",
+   "miembros": {
+    "PixiPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/ScrambleTextPlugin": {
+   "tipo": "namespace",
+   "archivo": "scramble-text-plugin.d.ts",
+   "miembros": {
+    "ScrambleTextPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/TextPlugin": {
+   "tipo": "namespace",
+   "archivo": "text-plugin.d.ts",
+   "miembros": {
+    "TextPlugin": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/gsap-core": {
+   "tipo": "namespace",
+   "archivo": "ease.d.ts",
+   "miembros": {
+    "Back": {
+     "k": "const",
+     "st": true
+    },
+    "Bounce": {
+     "k": "const",
+     "st": true
+    },
+    "Circ": {
+     "k": "const",
+     "st": true
+    },
+    "Cubic": {
+     "k": "const",
+     "st": true
+    },
+    "Elastic": {
+     "k": "const",
+     "st": true
+    },
+    "Expo": {
+     "k": "const",
+     "st": true
+    },
+    "Linear": {
+     "k": "const",
+     "st": true
+    },
+    "Power0": {
+     "k": "const",
+     "st": true
+    },
+    "Power1": {
+     "k": "const",
+     "st": true
+    },
+    "Power2": {
+     "k": "const",
+     "st": true
+    },
+    "Power3": {
+     "k": "const",
+     "st": true
+    },
+    "Power4": {
+     "k": "const",
+     "st": true
+    },
+    "Quad": {
+     "k": "const",
+     "st": true
+    },
+    "Quart": {
+     "k": "const",
+     "st": true
+    },
+    "Quint": {
+     "k": "const",
+     "st": true
+    },
+    "Sine": {
+     "k": "const",
+     "st": true
+    },
+    "SteppedEase": {
+     "k": "const",
+     "st": true
+    },
+    "Strong": {
+     "k": "const",
+     "st": true
+    },
+    "_gsap": {
+     "k": "const",
+     "st": true
+    },
+    "clamp": {
+     "k": "const",
+     "st": true
+    },
+    "distribute": {
+     "k": "const",
+     "st": true
+    },
+    "getUnit": {
+     "k": "const",
+     "st": true
+    },
+    "interpolate": {
+     "k": "const",
+     "st": true
+    },
+    "mapRange": {
+     "k": "const",
+     "st": true
+    },
+    "normalize": {
+     "k": "const",
+     "st": true
+    },
+    "pipe": {
+     "k": "const",
+     "st": true
+    },
+    "random": {
+     "k": "const",
+     "st": true
+    },
+    "selector": {
+     "k": "const",
+     "st": true
+    },
+    "shuffle": {
+     "k": "const",
+     "st": true
+    },
+    "snap": {
+     "k": "const",
+     "st": true
+    },
+    "splitColor": {
+     "k": "const",
+     "st": true
+    },
+    "toArray": {
+     "k": "const",
+     "st": true
+    },
+    "unitize": {
+     "k": "const",
+     "st": true
+    },
+    "wrap": {
+     "k": "const",
+     "st": true
+    },
+    "wrapYoyo": {
+     "k": "const",
+     "st": true
+    }
+   }
+  },
+  "gsap/utils/VelocityTracker": {
+   "tipo": "namespace",
+   "archivo": "utils/VelocityTracker.d.ts",
+   "miembros": {
+    "VelocityTracker": {
+     "k": "const",
+     "st": true
+    }
+   }
+  }
+ }
+}

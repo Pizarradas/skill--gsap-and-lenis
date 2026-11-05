@@ -1,0 +1,55 @@
+{
+  "_nota": "Fuente de verdad de la decisión. decidir.py la resuelve y generar_indices.py escribe con ella la tabla de orq-por-tarea. gsap: true la exige. scroll: suave pide suavizado; nativo lo veta; lenis lo exige; smoother lo exige por existir ya; smoother-pref lo prefiere si hay suavizado; no-smoother lo descarta; efectos pide suavizado solo si ScrollSmoother es posible.",
+  "grupos": [
+    {"grupo": "Tipo de proyecto", "necesidades": [
+      {"id": "sitio-contenido", "texto": "Blog, documentación, comercio o aplicación con datos", "gsap": false, "scroll": ["nativo"], "como": "Scroll del navegador", "lee": ["lenis:fun-cuando-usarlo"]},
+      {"id": "formulario-largo", "texto": "Formulario largo o flujo de trabajo", "gsap": false, "scroll": ["nativo"], "como": "Scroll del navegador", "lee": ["lenis:fun-cuando-usarlo"]},
+      {"id": "lista-virtual", "texto": "La página es una tabla enorme o una lista virtualizada", "gsap": false, "scroll": ["nativo"], "como": "Scroll del navegador", "lee": ["lenis:fun-cuando-usarlo", "lenis:cal-rendimiento"]},
+      {"id": "zona-scroll-propio", "texto": "Una zona interior conserva su scroll nativo: tabla, mapa o panel", "gsap": false, "scroll": [], "como": "Nativo; con Lenis, `data-lenis-prevent`", "lee": ["lenis:com-anidado", "cmb-gestos"]}
+    ]},
+    {"grupo": "Resolver sin biblioteca", "necesidades": [
+      {"id": "transicion-simple", "texto": "`hover`, foco o un cambio de estado", "gsap": false, "scroll": [], "como": "CSS `transition`", "lee": []},
+      {"id": "revelar-simple", "texto": "Aparecer al entrar en pantalla, sin secuencia", "gsap": false, "scroll": [], "como": "`IntersectionObserver` y CSS", "lee": ["lenis:fun-cuando-usarlo"]},
+      {"id": "ir-a-punto", "texto": "Ir suavemente a un punto o un ancla", "gsap": false, "scroll": [], "como": "`scrollIntoView`; con biblioteca, `mov.irA`", "lee": ["orq-propiedad", "cmb-scroll-programatico", "cmb-anclas"]},
+      {"id": "encajar-secciones", "texto": "Secciones que encajan al desplazar", "gsap": false, "scroll": [], "como": "CSS `scroll-snap`; con Lenis, `lenis/snap`", "lee": ["orq-propiedad", "cmb-snap", "gsap:scr-snap", "lenis:snp-snap"]},
+      {"id": "progreso-lectura", "texto": "Barra de progreso de lectura", "gsap": false, "scroll": [], "como": "`animation-timeline: scroll()` o evento `scroll`", "lee": ["lenis:rec-barra-progreso"]},
+      {"id": "modal", "texto": "Modal con el fondo bloqueado", "gsap": false, "scroll": [], "como": "`<dialog>`; con biblioteca, `mov.bloquear`", "lee": ["orq-propiedad", "cmb-modal", "lenis:rec-modal"]}
+    ]},
+    {"grupo": "Animación que exige GSAP", "necesidades": [
+      {"id": "secuencia", "texto": "Secuencia coordinada de varios elementos", "gsap": true, "scroll": [], "como": "`gsap.timeline`", "lee": ["gsap:tim-basico", "gsap:tim-posicion"]},
+      {"id": "scrub", "texto": "Animación ligada a la posición del scroll", "gsap": true, "scroll": [], "como": "ScrollTrigger `scrub`", "lee": ["gsap:scr-scrub", "cmb-scrub"]},
+      {"id": "pin", "texto": "Fijar una sección mientras se avanza", "gsap": true, "scroll": [], "como": "ScrollTrigger `pin`", "lee": ["gsap:scr-pin", "cmb-pin"]},
+      {"id": "pista-horizontal", "texto": "Tramo horizontal dentro de una página vertical", "gsap": true, "scroll": [], "como": "Pista con `pin` y `containerAnimation`", "lee": ["gsap:rec-pin-horizontal", "gsap:scr-horizontal", "cmb-horizontal"]},
+      {"id": "parallax", "texto": "Parallax", "gsap": true, "scroll": [], "como": "`scrub`; en `gsap-smoother`, `data-speed`", "lee": ["gsap:rec-parallax", "cmb-scrub"]},
+      {"id": "cambio-layout", "texto": "Animar un cambio de disposición", "gsap": true, "scroll": [], "como": "Flip", "lee": ["gsap:int-flip", "cmb-flip-split"]},
+      {"id": "texto", "texto": "Animar texto por letras, palabras o líneas", "gsap": true, "scroll": [], "como": "SplitText", "lee": ["gsap:txt-splittext", "cmb-flip-split"]},
+      {"id": "svg", "texto": "Morfismo, trazado o recorrido SVG", "gsap": true, "scroll": [], "como": "MorphSVG, DrawSVG, MotionPath", "lee": ["gsap:svg-guia"]},
+      {"id": "arrastre", "texto": "Arrastrar, con o sin inercia", "gsap": true, "scroll": [], "como": "Draggable e Inertia", "lee": ["gsap:int-draggable", "cmb-gestos"]},
+      {"id": "paginar-gestos", "texto": "Pasar de sección a sección por gesto", "gsap": true, "scroll": [], "como": "Observer", "lee": ["gsap:scr-observer", "cmb-observer"]},
+      {"id": "transicion-vistas", "texto": "Transición animada entre vistas", "gsap": true, "scroll": [], "como": "Timeline y `mov.navegar`", "lee": ["orq-navegacion", "gsap:rec-transicion-paginas"]}
+    ]},
+    {"grupo": "Scroll que exige suavizado", "necesidades": [
+      {"id": "scroll-suave", "texto": "El encargo pide scroll suave en toda la página", "gsap": false, "scroll": ["suave"], "como": "Lenis, salvo preferencia por ScrollSmoother", "lee": ["orq-perfiles", "cmb-smoother"]},
+      {"id": "canvas-dom", "texto": "Escena `canvas` o WebGL alineada con el DOM", "gsap": false, "scroll": ["suave"], "como": "Una posición única; con GSAP, `gsap.ticker` manda", "lee": ["lenis:int-canvas-webgl", "lenis:rec-canvas-sync", "gsap:fra-canvas-webgl", "cmb-reloj"]},
+      {"id": "suave-contenedor", "texto": "Suavizar el scroll de un contenedor", "gsap": false, "scroll": ["suave", "lenis"], "como": "Lenis con `wrapper` y `content`", "lee": ["lenis:opc-contenedores", "cmb-contenedor"]},
+      {"id": "eje-horizontal", "texto": "Toda la página se desplaza en horizontal", "gsap": false, "scroll": ["suave", "lenis"], "como": "Lenis con `orientation`", "lee": ["lenis:com-horizontal", "cmb-horizontal"]},
+      {"id": "infinito", "texto": "Scroll infinito en bucle", "gsap": false, "scroll": ["suave", "lenis"], "como": "Lenis con `infinite`", "lee": ["lenis:com-infinito", "cmb-infinito"]}
+    ]},
+    {"grupo": "Inclina hacia ScrollSmoother", "necesidades": [
+      {"id": "teclado-barra-suave", "texto": "Teclado y barra deben suavizarse como la rueda", "gsap": false, "scroll": ["suave", "smoother-pref"], "como": "ScrollSmoother, si el proyecto ya usa GSAP", "lee": ["cmb-smoother"]},
+      {"id": "efectos-data", "texto": "Efectos declarativos `data-speed` y `data-lag`", "gsap": true, "scroll": ["efectos", "smoother-pref"], "como": "ScrollSmoother `effects`; si queda descartado, `scrub`", "lee": ["gsap:scr-smoother-efectos", "cmb-smoother"]},
+      {"id": "terceros-escriben", "texto": "Código ajeno escribe el scroll sin coordinarse", "gsap": false, "scroll": ["smoother-pref"], "como": "Con suavizado, ScrollSmoother tolera esas escrituras", "lee": ["cmb-smoother", "cmb-scroll-programatico"]}
+    ]},
+    {"grupo": "Descarta ScrollSmoother", "necesidades": [
+      {"id": "sticky-fixed", "texto": "`sticky` o `fixed` dentro del contenido que no se pueden sacar", "gsap": false, "scroll": ["no-smoother"], "como": "Funcionan con Lenis y con nativo", "lee": ["lenis:com-sticky-fixed", "cmb-smoother"]},
+      {"id": "marcado-fijo", "texto": "No se puede envolver el marcado", "gsap": false, "scroll": ["no-smoother"], "como": "Lenis no pide marcado", "lee": ["cmb-smoother"]},
+      {"id": "pagina-pesada", "texto": "Página pesada: sombras, filtros, muchas capas", "gsap": false, "scroll": ["no-smoother"], "como": "Mide en tu página: traslada una capa entera", "lee": ["cmb-smoother", "lenis:cal-rendimiento"]},
+      {"id": "timeline-css", "texto": "Se usa `animation-timeline: scroll()`", "gsap": false, "scroll": ["no-smoother"], "como": "ScrollSmoother la adelanta al contenido", "lee": ["cmb-smoother"]}
+    ]},
+    {"grupo": "Lo que el proyecto ya tiene", "necesidades": [
+      {"id": "ya-gsap", "texto": "El proyecto ya usa GSAP", "gsap": true, "scroll": [], "como": "Se mantiene", "lee": []},
+      {"id": "ya-lenis", "texto": "El proyecto ya usa Lenis", "gsap": false, "scroll": ["suave", "lenis"], "como": "Se mantiene", "lee": []},
+      {"id": "ya-smoother", "texto": "El proyecto ya usa ScrollSmoother", "gsap": true, "scroll": ["suave", "smoother"], "como": "Se mantiene", "lee": []}
+    ]}
+  ]
+}

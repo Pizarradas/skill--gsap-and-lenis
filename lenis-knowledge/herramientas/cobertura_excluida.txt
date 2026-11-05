@@ -1,0 +1,1 @@
+CONTRIBUTING.md  # guía para contribuir al repositorio, sin conocimiento de uso

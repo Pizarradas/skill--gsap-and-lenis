@@ -1,0 +1,1 @@
+{ "name": "svelte-correcto", "private": true, "dependencies": { "svelte": "^5.0.0", "lenis": "1.3.27" } }

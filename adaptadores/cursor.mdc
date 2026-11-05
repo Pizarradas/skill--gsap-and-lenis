@@ -1,0 +1,8 @@
+---
+description: Animación y scroll con GSAP y Lenis
+globs: ["**/*.{js,mjs,cjs,ts,jsx,tsx,vue,svelte,astro,html,php,liquid,twig,erb,ejs,hbs,njk,cshtml}"]
+alwaysApply: false
+---
+Consulta RUTA/AGENTS.md antes de escribir código con GSAP o Lenis, o de decidir qué usar. No entres directamente en sus bases: RUTA/herramientas/decidir.py da el perfil y qué leer.
+
+Reglas al combinar GSAP y Lenis: (1) antes de escribir código, fija un perfil: ninguno, gsap, gsap-smoother, lenis o gsap+lenis, por defecto el mínimo; pin y scrub no piden scroll suave; (2) un dueño por responsabilidad, según RUTA/02-reglas/orq-propiedad.md; (3) nunca Lenis con ScrollSmoother ni con normalizeScroll; (4) en gsap+lenis: gsap.ticker llama a lenis.raf(time * 1000), sin autoRaf ni lagSmoothing(0), lenis.on("scroll", ScrollTrigger.update), lenis.resize() en el evento refresh, lenis.scrollTo en lugar de ScrollToPlugin, y lenis/snap como ajuste; (5) al salir, quita el reloj del ticker además de destroy(); (6) usa RUTA/plantillas/orquestador.js; (7) antes de aplicar una ficha de las bases, búscala en RUTA/02-reglas/orq-anulaciones.md; (8) al terminar, ejecuta RUTA/herramientas/auditar_proyecto.py; (9) no inventes API, y di lo que no se probó: Safari, iOS y toque real no están verificados.
